@@ -1,0 +1,105 @@
+/* 
+ * Стили области ошибок
+ * Отображение ошибок, сообщения, управление ошибками
+ */
+
+/* Область отображения ошибок */
+.errors-section {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.errors-header {
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.errors-icon {
+  font-size: 16px;
+  color: #fff;
+}
+
+.errors-title {
+  font-weight: 600;
+  font-size: 14px;
+  flex: 1;
+}
+
+.errors-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.errors-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.errors-content {
+  padding: 15px 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.error-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  border-left: 3px solid #fff;
+}
+
+.error-item:last-child {
+  margin-bottom: 0;
+}
+
+.error-icon {
+  font-size: 12px;
+  margin-top: 2px;
+  opacity: 0.8;
+}
+
+.error-text {
+  font-size: 14px;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.error-time {
+  font-size: 12px;
+  opacity: 0.7;
+  font-family: monospace;
+}
+
+/* Скрытие области ошибок */
+.errors-section.hidden {
+  display: none;
+}

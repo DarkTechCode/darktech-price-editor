@@ -1,0 +1,509 @@
+/*
+ * Стили таблицы продуктов
+ * DataTables стили, кастомные колонки, строки и ячейки
+ */
+
+/* DataTables стили */
+#products-table {
+  width: 100% !important;
+  border-collapse: collapse;
+  table-layout: auto; /* Позволяет таблице адаптироваться */
+  font-size: 14px;
+}
+
+#products-table thead th {
+  background: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  padding: 15px 12px;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  white-space: nowrap; /* Предотвращает перенос заголовков */
+}
+
+#products-table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #f1f3f4;
+  vertical-align: middle;
+  font-size: 14px;
+  /* Улучшенное отображение длинного текста */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+#products-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+#products-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Кастомные стили для конкретных колонок */
+#products-table .category-column {
+  max-width: 250px;
+  min-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#products-table .category-names {
+  display: inline-block;
+  max-width: 100%;
+  cursor: help; /* Указывает что есть tooltip */
+  /* Улучшенное отображение */
+  line-height: 1.3;
+}
+
+#products-table .category-empty {
+  color: #6c757d;
+  font-style: italic;
+}
+
+#products-table .title-column {
+  max-width: 300px;
+  min-width: 250px;
+  /* Улучшенная адаптивность */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  /* Предотвращаем перекрытие артикула */
+  overflow: hidden;
+}
+
+#products-table .title-cell {
+  position: relative;
+}
+
+#products-table .title-text {
+  display: inline-block;
+  max-width: 100%;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  /* Улучшенное отображение */
+  line-height: 1.3;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  /* Предотвращаем перекрытие артикула */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#products-table .title-text:hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+}
+
+#products-table .sku-column {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  color: #666;
+  max-width: 80px;
+  min-width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: help; /* Показывает что есть подсказка */
+  /* Гарантируем что артикул не будет перекрыт */
+  position: relative;
+  z-index: 1;
+  background: inherit;
+}
+
+#products-table .price-column {
+  text-align: right;
+  min-width: 80px;
+  max-width: 80px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+#products-table .stock-column {
+  text-align: center;
+  min-width: 70px;
+  white-space: nowrap;
+}
+
+#products-table .tax-column {
+  min-width: 120px;
+  text-align: center;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+#products-table .old-price-column {
+  text-align: center;
+  min-width: 80px;
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+}
+
+#products-table .tax-class-column {
+  text-align: center;
+  min-width: 120px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+#products-table .actions-column {
+  min-width: 100px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* DataTables customizations */
+.dataTables_wrapper {
+  position: relative;
+  overflow-x: auto !important;
+  overflow-y: visible;
+  width: 100% !important;
+}
+
+/* Горизонтальный скроллинг для таблицы - ПК версия */
+.table-section {
+  overflow-x: auto !important;
+  overflow-y: visible;
+  position: relative;
+  /* Добавляем тень для индикации прокрутки только при необходимости */
+  box-shadow: inset -10px 0 10px -10px rgba(0, 0, 0, 0.1);
+  /* Плавная прокрутка */
+  scroll-behavior: smooth;
+}
+
+/* Таблица всегда может быть шире контейнера */
+#products-table {
+  width: auto !important;
+  min-width: 100%;
+  table-layout: auto;
+  white-space: nowrap;
+}
+
+/* Индикатор прокрутки для узких экранов */
+@media (max-width: 1200px) {
+  .table-section::before {
+    content: "← Прокрутить по горизонтали →";
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 11px;
+    color: #999;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3px 8px;
+    border-radius: 3px;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  #products-table {
+    min-width: 900px; /* Минимальная ширина для прокрутки на экранах меньше 1200px */
+  }
+}
+
+/* Адаптивные скроллбары для всех устройств */
+.table-section::-webkit-scrollbar,
+.dataTables_wrapper::-webkit-scrollbar,
+.horizontal-scroll-bar::-webkit-scrollbar {
+  height: 16px; /* В 2 раза толще */
+}
+
+.table-section::-webkit-scrollbar-track,
+.dataTables_wrapper::-webkit-scrollbar-track,
+.horizontal-scroll-bar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.table-section::-webkit-scrollbar-thumb,
+.dataTables_wrapper::-webkit-scrollbar-thumb,
+.horizontal-scroll-bar::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.table-section::-webkit-scrollbar-thumb:hover,
+.dataTables_wrapper::-webkit-scrollbar-thumb:hover,
+.horizontal-scroll-bar::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Скрытие индикатора на больших экранах */
+@media (min-width: 1201px) {
+  .table-section {
+    box-shadow: none;
+  }
+
+  .table-section::before {
+    display: none;
+  }
+
+  #products-table {
+    min-width: 100%;
+  }
+}
+
+/* Отдельный элемент для горизонтального скролла */
+.horizontal-scroll-bar {
+  position: fixed;
+  bottom: 50px; /* Выше технической строки */
+  left: 0;
+  right: 0;
+  /* Убираем все параметры высоты и отступов */
+  background: rgba(248, 249, 250, 0.98);
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  z-index: 999; /* Под технической строкой (z-index: 1000) */
+  display: none; /* Скрыт по умолчанию */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Показываем скроллбар когда таблица шире экрана */
+.horizontal-scroll-bar.visible {
+  display: block;
+  animation: slideUpScroll 0.3s ease;
+}
+
+@keyframes slideUpScroll {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.horizontal-scroll-bar .scroll-content {
+  width: 100%;
+  /* Убираем фиксированную высоту - автоматическая */
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  /* Кастомный скроллбар для содержимого */
+  scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+.horizontal-scroll-bar .scroll-content::-webkit-scrollbar {
+  height: 35px; /* Увеличиваем высоту скроллбара */
+}
+
+.horizontal-scroll-bar .scroll-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0;
+}
+
+.horizontal-scroll-bar .scroll-content::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #c1c1c1, #a8a8a8);
+  border-radius: 0;
+  border: none;
+  transition: background 0.2s ease;
+  /* Делаем сам скроллбар толще */
+  min-height: 30px !important;
+  height: 30px;
+}
+
+.horizontal-scroll-bar .scroll-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #a8a8a8, #909090);
+}
+
+.horizontal-scroll-bar .scroll-spacer {
+  height: 1px;
+  background: transparent;
+}
+
+.dataTables_wrapper .dataTables_filter {
+  float: right;
+  margin-bottom: 15px;
+}
+
+.dataTables_wrapper .dataTables_length {
+  float: left;
+  margin-bottom: 15px;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  float: right;
+  margin-top: 15px;
+}
+
+/* Улучшенная прокрутка для DataTables */
+.dataTables_wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.dataTables_wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.dataTables_wrapper::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.dataTables_wrapper::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Фон для анимации загрузки DataTables */
+.dataTables_processing {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  color: #495057 !important;
+  font-weight: 500;
+  padding: 15px 25px 15px !important;
+  margin-bottom: 10px;
+  backdrop-filter: blur(5px);
+}
+
+/* Современные версии DataTables используют другой класс */
+.dtfh-Processing {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  color: #495057 !important;
+  font-weight: 500;
+  padding: 15px 25px 15px !important;
+  margin-bottom: 10px;
+  backdrop-filter: blur(5px);
+}
+
+/* Стили для spinner в индикаторе загрузки */
+.dataTables_processing .spinner,
+.dtfh-Processing .spinner {
+  margin-right: 10px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+}
+
+/* Улучшенная адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  #products-table {
+    font-size: 13px;
+  }
+
+  #products-table thead th {
+    padding: 12px 8px;
+    font-size: 0.8em;
+  }
+
+  #products-table tbody td {
+    padding: 10px 8px;
+  }
+
+  #products-table .title-text {
+    max-width: 200px;
+  }
+
+  #products-table .category-names {
+    max-width: 180px;
+  }
+}
+
+/* Адаптивность для очень маленьких экранов */
+@media (max-width: 480px) {
+  #products-table {
+    font-size: 12px;
+  }
+
+  #products-table thead th {
+    padding: 10px 6px;
+    font-size: 0.75em;
+  }
+
+  #products-table tbody td {
+    padding: 8px 6px;
+  }
+
+  #products-table .title-text {
+    max-width: 150px;
+  }
+
+  #products-table .category-names {
+    max-width: 120px;
+  }
+
+  #products-table .price-column,
+  #products-table .stock-column {
+    font-size: 11px;
+  }
+}
+
+/* Анимация загрузки */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Улучшенные стили для состояний наведения */
+#products-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+#products-table .editable:hover {
+  background-color: rgba(102, 126, 234, 0.05);
+}
+
+/* Подпись разработчика */
+.developer-signature {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  color: #6c757d;
+  font-size: 13px;
+  border-top: 1px solid #e9ecef;
+}
+
+.developer-signature a {
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.developer-signature a:hover {
+  color: #495057;
+  text-decoration: underline;
+}
+
+/* Адаптивность подписи */
+@media (max-width: 768px) {
+  .developer-signature {
+    margin-top: 30px;
+    padding: 15px 0;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .developer-signature {
+    margin-top: 25px;
+    padding: 12px 0;
+    font-size: 11px;
+  }
+}

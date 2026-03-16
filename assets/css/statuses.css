@@ -1,0 +1,98 @@
+/* 
+ * Стили статусов товаров
+ * Статусы публикации, наличие, налоговые статусы и классы
+ */
+
+/* Статусы товаров */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-publish {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-draft {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-private {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Наличие товара */
+.stock-status {
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.stock-status:hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+}
+
+.stock-instock {
+  color: #28a745;
+}
+
+.stock-outofstock {
+  color: #dc3545;
+}
+
+.stock-onbackorder {
+  color: #ffc107;
+}
+
+/* Статусы налога */
+.tax-status {
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.tax-status:hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+}
+
+.tax-taxable {
+  color: #28a745;
+}
+
+.tax-shipping {
+  color: #17a2b8;
+}
+
+.tax-none {
+  color: #6c757d;
+}
+
+/* Налоговый класс */
+.tax-class {
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.tax-class:hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+}

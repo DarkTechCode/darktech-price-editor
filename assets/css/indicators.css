@@ -1,0 +1,162 @@
+/* 
+ * Стили индикаторов состояния
+ * Индикаторы автосохранения, успешного сохранения, ошибок, визуальные индикаторы строк
+ */
+
+/* Индикаторы состояния сохранения */
+.editable.saving {
+  position: relative;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.editable.saving::after {
+  content: "💾";
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 2;
+  animation: pulse 1s infinite;
+}
+
+.editable[data-field="regular_price"].saving::after,
+.editable[data-field="sale_price"].saving::after {
+  left: 8px;
+  right: auto;
+}
+
+.editable[data-field="regular_price"].saving input,
+.editable[data-field="sale_price"].saving input {
+  padding-left: 28px;
+}
+
+#products-table .title-cell,
+#products-table .sku-cell {
+  position: relative;
+}
+
+#products-table .title-cell.display-saving,
+#products-table .sku-cell.display-saving {
+  padding-right: 18px;
+}
+
+#products-table .title-cell.display-saving::after,
+#products-table .sku-cell.display-saving::after {
+  content: "💾";
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  line-height: 1;
+  animation: none;
+}
+
+#products-table .title-cell.display-saving .title-text,
+#products-table .sku-cell.display-saving .sku-text {
+  max-width: 100%;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.editable.save-success {
+  background-color: #d4edda;
+  transition: background-color 0.3s ease;
+}
+
+.editable.save-success::after {
+  content: "✅";
+  color: #28a745;
+}
+
+.editable.save-error {
+  background-color: #f8d7da;
+  animation: shake 0.5s;
+  transition: background-color 0.3s ease;
+}
+
+.editable.save-error::after {
+  content: "❌";
+  color: #dc3545;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+/* Визуальные индикаторы для строк таблицы */
+.dataTables_wrapper tbody tr.saved-success {
+  background-color: rgba(40, 167, 69, 0.1) !important;
+  transition: background-color 0.5s ease;
+}
+
+.dataTables_wrapper tbody tr.saved-success td {
+  position: relative;
+}
+
+.dataTables_wrapper tbody tr.saved-success td:first-child::before {
+  content: "✓";
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #28a745;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Индикатор debounce ожидания */
+.autosave-pending {
+  position: relative;
+}
+
+.autosave-pending::before {
+  content: "⏳";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  opacity: 0.7;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 0.7;
+  }
+  51%,
+  100% {
+    opacity: 0.3;
+  }
+}

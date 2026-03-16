@@ -1,0 +1,490 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DarkTech Price Editor 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-16 06:32+0000\n"
+"PO-Revision-Date: 2026-03-16 06:32+0000\n"
+"Last-Translator: Codex\n"
+"Language-Team: DarkTech\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Codex\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "[DarkTech] Price Editor:"
+msgstr ""
+
+msgid "WooCommerce is required for the plugin to work."
+msgstr ""
+
+msgid "Price Editor"
+msgstr ""
+
+msgid "You do not have permission to access this page."
+msgstr ""
+
+msgid "Published"
+msgstr ""
+
+msgid "Draft"
+msgstr ""
+
+msgid "Private"
+msgstr ""
+
+msgid "In stock"
+msgstr ""
+
+msgid "Out of stock"
+msgstr ""
+
+msgid "On backorder"
+msgstr ""
+
+msgid "Taxable"
+msgstr ""
+
+msgid "Shipping only"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Standard"
+msgstr ""
+
+msgid "Uncategorized"
+msgstr ""
+
+msgid "No data available in table"
+msgstr ""
+
+msgid "Showing _START_ to _END_ of _TOTAL_ entries"
+msgstr ""
+
+msgid "Showing 0 to 0 of 0 entries"
+msgstr ""
+
+msgid "(filtered from _MAX_ total entries)"
+msgstr ""
+
+msgid "Show _MENU_ entries"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "Processing..."
+msgstr ""
+
+msgid "Search:"
+msgstr ""
+
+msgid "No matching records found"
+msgstr ""
+
+msgid "First"
+msgstr ""
+
+msgid "Last"
+msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Previous"
+msgstr ""
+
+msgid ": activate to sort column ascending"
+msgstr ""
+
+msgid ": activate to sort column descending"
+msgstr ""
+
+msgid "[DarkTech] Product Price Editor"
+msgstr ""
+
+msgid "Product Price Editor"
+msgstr ""
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "Clear cache and reload data (for example, after adding categories)"
+msgstr ""
+
+msgid "Product status:"
+msgstr ""
+
+msgid "All statuses"
+msgstr ""
+
+msgid "Category:"
+msgstr ""
+
+msgid "All categories"
+msgstr ""
+
+msgid "Title, SKU, ID..."
+msgstr ""
+
+msgid "Tax status:"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "Stock status:"
+msgstr ""
+
+msgid "Manage columns"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Manage table columns"
+msgstr ""
+
+msgid "Show all"
+msgstr ""
+
+msgid "Hide all"
+msgstr ""
+
+msgid "Reset"
+msgstr ""
+
+msgid "Column \"{column}\" shown"
+msgstr ""
+
+msgid "Column \"{column}\" hidden"
+msgstr ""
+
+msgid "Column settings reset"
+msgstr ""
+
+msgid "All columns are visible"
+msgstr ""
+
+msgid "All columns hidden except the row number"
+msgstr ""
+
+msgid "#"
+msgstr ""
+
+msgid "ID"
+msgstr ""
+
+msgid "Category"
+msgstr ""
+
+msgid "Product title"
+msgstr ""
+
+msgid "SKU"
+msgstr ""
+
+msgid "Price"
+msgstr ""
+
+msgid "Sale price"
+msgstr ""
+
+msgid "Was"
+msgstr ""
+
+msgid "Stock status"
+msgstr ""
+
+msgid "Tax status"
+msgstr ""
+
+msgid "Tax class"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Click to view the product"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "Data loading errors:"
+msgstr ""
+
+msgid "Ready to work"
+msgstr ""
+
+msgid "Loading data..."
+msgstr ""
+
+msgid "Saving changes..."
+msgstr ""
+
+msgid "Saving the product title..."
+msgstr ""
+
+msgid "Saving the SKU..."
+msgstr ""
+
+msgid "Saving the stock status..."
+msgstr ""
+
+msgid "Saving the tax status..."
+msgstr ""
+
+msgid "Saving the tax class..."
+msgstr ""
+
+msgid "Saving the category..."
+msgstr ""
+
+msgid "New filters applied"
+msgstr ""
+
+msgid "Filters reset"
+msgstr ""
+
+msgid "Clearing cache and reloading..."
+msgstr ""
+
+msgid "Cache cleared, reloading data..."
+msgstr ""
+
+msgid "Confirmation"
+msgstr ""
+
+msgid "Yes"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Enter title"
+msgstr ""
+
+msgid "Enter SKU"
+msgstr ""
+
+msgid "Click to edit the product title"
+msgstr ""
+
+msgid "Click to edit the category"
+msgstr ""
+
+msgid "Click to edit the stock status"
+msgstr ""
+
+msgid "Click to edit the tax status"
+msgstr ""
+
+msgid "Click to edit the tax class"
+msgstr ""
+
+msgid "Click to edit the SKU"
+msgstr ""
+
+msgid "Click to add a SKU"
+msgstr ""
+
+msgid "Changes saved"
+msgstr ""
+
+msgid "Title updated"
+msgstr ""
+
+msgid "SKU updated"
+msgstr ""
+
+msgid "Stock status updated"
+msgstr ""
+
+msgid "Tax status updated"
+msgstr ""
+
+msgid "Tax class updated"
+msgstr ""
+
+msgid "Category updated"
+msgstr ""
+
+msgid "Unknown error"
+msgstr ""
+
+msgid "Error loading data: {message}"
+msgstr ""
+
+msgid "Error loading categories"
+msgstr ""
+
+msgid "Error loading categories: {message}"
+msgstr ""
+
+msgid "Error loading tax classes"
+msgstr ""
+
+msgid "Error loading tax classes: {message}"
+msgstr ""
+
+msgid "Save error: {message}"
+msgstr ""
+
+msgid "Error saving the title: {message}"
+msgstr ""
+
+msgid "Error saving the SKU: {message}"
+msgstr ""
+
+msgid "Error saving the stock status: {message}"
+msgstr ""
+
+msgid "Error saving the tax status: {message}"
+msgstr ""
+
+msgid "Error saving the tax class: {message}"
+msgstr ""
+
+msgid "Error saving the category: {message}"
+msgstr ""
+
+msgid "Error: DataTables library is not loaded"
+msgstr ""
+
+msgid "jQuery is not loaded"
+msgstr ""
+
+msgid "DataTables is not loaded"
+msgstr ""
+
+msgid "Updated {field} for product #{id}"
+msgstr ""
+
+msgid "Updated product #{id} title: {old} -> {new}"
+msgstr ""
+
+msgid "Updated product #{id} SKU: \"{old}\" -> \"{new}\""
+msgstr ""
+
+msgid "Updated product #{id} stock status: \"{old}\" -> \"{new}\""
+msgstr ""
+
+msgid "Updated product #{id} tax status: \"{old}\" -> \"{new}\""
+msgstr ""
+
+msgid "Updated product #{id} tax class: \"{old}\" -> \"{new}\""
+msgstr ""
+
+msgid "Updated product #{id} category: \"{old}\" -> \"{new}\""
+msgstr ""
+
+msgid "regular price"
+msgstr ""
+
+msgid "sale price"
+msgstr ""
+
+msgid "product title"
+msgstr ""
+
+msgid "tax status"
+msgstr ""
+
+msgid "tax class"
+msgstr ""
+
+msgid "stock status"
+msgstr ""
+
+msgid "category"
+msgstr ""
+
+msgid "Scroll horizontally"
+msgstr ""
+
+msgid "Rotate the device to portrait mode for a better view"
+msgstr ""
+
+msgid "Developed by"
+msgstr ""
+
+msgid "Open in a new tab"
+msgstr ""
+
+msgid "Security check failed."
+msgstr ""
+
+msgid "You do not have permission to edit products."
+msgstr ""
+
+msgid "Not enough data to update the product."
+msgstr ""
+
+msgid "Product not found."
+msgstr ""
+
+msgid "Updated product #%1$d title: %2$s -> %3$s"
+msgstr ""
+
+msgid "Updated product #%1$d SKU: \"%2$s\" -> \"%3$s\""
+msgstr ""
+
+msgid "Updated product #%1$d regular price: \"%2$s\" -> \"%3$s\""
+msgstr ""
+
+msgid "Updated product #%1$d sale price: \"%2$s\" -> \"%3$s\""
+msgstr ""
+
+msgid "Updated product #%1$d tax status: \"%2$s\" -> \"%3$s\""
+msgstr ""
+
+msgid "Updated product #%1$d tax class: \"%2$s\" -> \"%3$s\""
+msgstr ""
+
+msgid "Updated product #%1$d stock status: \"%2$s\" -> \"%3$s\""
+msgstr ""
+
+msgid "Updated product #%1$d category: \"%2$s\" -> \"%3$s\""
+msgstr ""
+
+msgid "Unknown field for update."
+msgstr ""
+
+msgid "Error saving changes."
+msgstr ""
+msgid "Tax class:"
+msgstr ""
+
+msgid "All tax classes"
+msgstr ""
+
+msgid "Change history"
+msgstr ""
+
+msgid "Click to view the latest 100 changes"
+msgstr ""
+
+msgid "Loading history..."
+msgstr ""
+
+msgid "Change history is empty so far."
+msgstr ""
+
+msgid "Date and time"
+msgstr ""
+
+msgid "What happened"
+msgstr ""
+
+msgid "Author"
+msgstr ""
+
+msgid "Error loading history: {message}"
+msgstr ""
+
+msgid "Unknown user"
+msgstr ""

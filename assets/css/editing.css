@@ -1,0 +1,151 @@
+/* 
+ * Стили редактируемых полей
+ * Inline-редактирование, поля ввода, индикаторы редактирования
+ */
+
+/* Редактируемые поля */
+.editable {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.editable:hover {
+  background-color: #fff3cd;
+  border-radius: 4px;
+}
+
+.editable input {
+  width: 100%;
+  border: 2px solid #ffc107;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 14px;
+  background: #fff;
+}
+
+/* Индикатор редактирования */
+.edit-icon {
+  display: inline-block;
+  margin-left: 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 12px;
+}
+
+.editable:hover .edit-icon {
+  opacity: 1;
+}
+
+/* Поля для цен */
+.price-input {
+  width: 100%;
+  max-width: 100px;
+  box-sizing: border-box;
+  text-align: right;
+  font-family: "Courier New", monospace;
+}
+
+.title-input {
+  width: 100%;
+  min-width: 200px;
+  border: 2px solid #ffc107;
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-size: 14px;
+  background: #fff;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.title-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+.sku-input {
+  width: 100%;
+  min-width: 80px;
+  border: 2px solid #ffc107;
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-size: 13px;
+  background: #fff;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.sku-input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+/* Выпадающие списки */
+.select-tax-status,
+.select-tax-class,
+.select-stock-status,
+.select-category {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 13px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.select-tax-status:hover,
+.select-tax-class:hover,
+.select-stock-status:hover,
+.select-category:hover {
+  border-color: #667eea;
+}
+
+.select-tax-status:focus,
+.select-tax-class:focus,
+.select-stock-status:focus,
+.select-category:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+/* Цены */
+.price {
+  font-weight: 600;
+  font-family: "Courier New", monospace;
+  text-align: right;
+}
+
+.price.empty {
+  color: #6c757d;
+  font-weight: normal;
+}
+
+.old-price {
+  color: #dc3545;
+  text-decoration: line-through;
+  font-weight: normal;
+}
+
+.old-price-label {
+  color: #6c757d;
+  font-size: 11px;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Улучшенные стили для ячеек с автосохранением */
+.cell-with-autosave {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.cell-with-autosave:hover {
+  box-shadow: inset 0 0 0 2px rgba(102, 126, 234, 0.3);
+}
