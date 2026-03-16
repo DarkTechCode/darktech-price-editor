@@ -88,13 +88,51 @@ class DarkTech_Price_Editor
     }
 
     /**
+     * Returns unslashed POST data after verify_request() has run.
+     */
+    private function get_post_data(): array
+    {
+        // phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- verify_request() validates the nonce and the getter methods sanitize individual values.
+        $post_data = wp_unslash($_POST);
+
+        return is_array($post_data) ? $post_data : [];
+    }
+
+    /**
      * Returns a sanitized text request value.
      */
     private function get_text_request_value(string $key): string
     {
-        $value = $_POST[$key] ?? '';
+        $post_data = $this->get_post_data();
+        $value = $post_data[$key] ?? '';
 
-        return is_string($value) ? sanitize_text_field(wp_unslash($value)) : '';
+        return is_string($value) ? sanitize_text_field($value) : '';
+    }
+
+    /**
+     * Returns a slug-like request value while keeping percent-encoded chars.
+     */
+    private function get_slug_request_value(string $key): string
+    {
+        $post_data = $this->get_post_data();
+        $value = $post_data[$key] ?? '';
+
+        return is_string($value) ? trim($value) : '';
+    }
+
+    /**
+     * Returns a positive integer request value.
+     */
+    private function get_int_request_value(string $key): int
+    {
+        $post_data = $this->get_post_data();
+        $value = $post_data[$key] ?? 0;
+
+        if (! is_scalar($value)) {
+            return 0;
+        }
+
+        return absint((string) $value);
     }
 
     /**
@@ -125,12 +163,12 @@ class DarkTech_Price_Editor
         $this->verify_request();
 
         wp_send_json_success($this->catalog_service->get_products([
-            'status'       => $_POST['status'] ?? '',
-            'category'     => $_POST['category'] ?? '',
-            'search'       => $_POST['search'] ?? '',
-            'tax_status'   => $_POST['tax_status'] ?? '',
-            'tax_class'    => $_POST['tax_class'] ?? '',
-            'stock_status' => $_POST['stock_status'] ?? '',
+            'status'       => $this->get_text_request_value('status'),
+            'category'     => $this->get_slug_request_value('category'),
+            'search'       => $this->get_text_request_value('search'),
+            'tax_status'   => $this->get_text_request_value('tax_status'),
+            'tax_class'    => $this->get_slug_request_value('tax_class'),
+            'stock_status' => $this->get_text_request_value('stock_status'),
         ]));
     }
 
@@ -153,9 +191,11 @@ class DarkTech_Price_Editor
     {
         $this->verify_request();
 
-        $product_id = (int) ($_POST['product_id'] ?? 0);
+        $product_id = $this->get_int_request_value('product_id');
         $field = $this->get_text_request_value('field');
-        $value = $this->get_text_request_value('value');
+        $value = $field === 'tax_class'
+            ? $this->get_slug_request_value('value')
+            : $this->get_text_request_value('value');
 
         $result = $this->product_updater->update_product($product_id, $field, $value);
 
@@ -183,7 +223,7 @@ class DarkTech_Price_Editor
     {
         $this->verify_request();
 
-        $limit = (int) ($_POST['limit'] ?? 0);
+        $limit = $this->get_int_request_value('limit');
 
         if ($limit <= 0) {
             wp_send_json_error([

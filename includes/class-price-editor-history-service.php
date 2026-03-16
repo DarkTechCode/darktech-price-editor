@@ -153,6 +153,7 @@ class DarkTech_Price_Editor_History_Service
         switch ($field_name) {
             case 'title':
                 return sprintf(
+                    /* translators: 1: Product ID, 2: previous title, 3: new title. */
                     __('Updated product #%1$d title: %2$s -> %3$s', 'darktech-price-editor'),
                     $product_id,
                     $old_value,
@@ -161,6 +162,7 @@ class DarkTech_Price_Editor_History_Service
 
             case 'sku':
                 return sprintf(
+                    /* translators: 1: Product ID, 2: previous SKU, 3: new SKU. */
                     __('Updated product #%1$d SKU: "%2$s" -> "%3$s"', 'darktech-price-editor'),
                     $product_id,
                     $old_value,
@@ -169,6 +171,7 @@ class DarkTech_Price_Editor_History_Service
 
             case 'regular_price':
                 return sprintf(
+                    /* translators: 1: Product ID, 2: previous regular price, 3: new regular price. */
                     __('Updated product #%1$d regular price: "%2$s" -> "%3$s"', 'darktech-price-editor'),
                     $product_id,
                     $old_value,
@@ -177,6 +180,7 @@ class DarkTech_Price_Editor_History_Service
 
             case 'sale_price':
                 return sprintf(
+                    /* translators: 1: Product ID, 2: previous sale price, 3: new sale price. */
                     __('Updated product #%1$d sale price: "%2$s" -> "%3$s"', 'darktech-price-editor'),
                     $product_id,
                     $old_value,
@@ -185,6 +189,7 @@ class DarkTech_Price_Editor_History_Service
 
             case 'tax_status':
                 return sprintf(
+                    /* translators: 1: Product ID, 2: previous tax status label, 3: new tax status label. */
                     __('Updated product #%1$d tax status: "%2$s" -> "%3$s"', 'darktech-price-editor'),
                     $product_id,
                     $old_value,
@@ -193,6 +198,7 @@ class DarkTech_Price_Editor_History_Service
 
             case 'tax_class':
                 return sprintf(
+                    /* translators: 1: Product ID, 2: previous tax class label, 3: new tax class label. */
                     __('Updated product #%1$d tax class: "%2$s" -> "%3$s"', 'darktech-price-editor'),
                     $product_id,
                     $old_value,
@@ -201,6 +207,7 @@ class DarkTech_Price_Editor_History_Service
 
             case 'stock_status':
                 return sprintf(
+                    /* translators: 1: Product ID, 2: previous stock status label, 3: new stock status label. */
                     __('Updated product #%1$d stock status: "%2$s" -> "%3$s"', 'darktech-price-editor'),
                     $product_id,
                     $old_value,
@@ -209,6 +216,7 @@ class DarkTech_Price_Editor_History_Service
 
             case 'category':
                 return sprintf(
+                    /* translators: 1: Product ID, 2: previous category name, 3: new category name. */
                     __('Updated product #%1$d category: "%2$s" -> "%3$s"', 'darktech-price-editor'),
                     $product_id,
                     $old_value,

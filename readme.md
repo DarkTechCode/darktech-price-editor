@@ -61,7 +61,7 @@ Bundled locales:
 
 ## Requirements
 
-- WordPress 5.0+
+- WordPress 6.2+
 - WooCommerce 5.0+
 - PHP 7.4+
 

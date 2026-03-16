@@ -7,38 +7,16 @@ if (! defined('ABSPATH')) {
 }
 
 /**
- * Returns the plugin text domain.
- */
-function darktech_pe_get_text_domain(): string
-{
-    return 'darktech-price-editor';
-}
-
-/**
- * Loads plugin translations.
- */
-function darktech_pe_load_textdomain(): void
-{
-    load_plugin_textdomain(
-        darktech_pe_get_text_domain(),
-        false,
-        dirname(DARKTECH_PE_PLUGIN_BASENAME) . '/languages'
-    );
-}
-
-/**
  * Returns localized product status labels.
  *
  * @return array<string, string>
  */
 function darktech_pe_get_product_status_labels(): array
 {
-    $text_domain = darktech_pe_get_text_domain();
-
     return [
-        'publish' => __('Published', $text_domain),
-        'draft' => __('Draft', $text_domain),
-        'private' => __('Private', $text_domain),
+        'publish' => __('Published', 'darktech-price-editor'),
+        'draft' => __('Draft', 'darktech-price-editor'),
+        'private' => __('Private', 'darktech-price-editor'),
     ];
 }
 
@@ -49,12 +27,10 @@ function darktech_pe_get_product_status_labels(): array
  */
 function darktech_pe_get_stock_status_labels(): array
 {
-    $text_domain = darktech_pe_get_text_domain();
-
     return [
-        'instock' => __('In stock', $text_domain),
-        'outofstock' => __('Out of stock', $text_domain),
-        'onbackorder' => __('On backorder', $text_domain),
+        'instock' => __('In stock', 'darktech-price-editor'),
+        'outofstock' => __('Out of stock', 'darktech-price-editor'),
+        'onbackorder' => __('On backorder', 'darktech-price-editor'),
     ];
 }
 
@@ -65,12 +41,10 @@ function darktech_pe_get_stock_status_labels(): array
  */
 function darktech_pe_get_tax_status_labels(): array
 {
-    $text_domain = darktech_pe_get_text_domain();
-
     return [
-        'taxable' => __('Taxable', $text_domain),
-        'shipping' => __('Shipping only', $text_domain),
-        'none' => __('None', $text_domain),
+        'taxable' => __('Taxable', 'darktech-price-editor'),
+        'shipping' => __('Shipping only', 'darktech-price-editor'),
+        'none' => __('None', 'darktech-price-editor'),
     ];
 }
 
@@ -79,7 +53,7 @@ function darktech_pe_get_tax_status_labels(): array
  */
 function darktech_pe_get_default_tax_class_label(): string
 {
-    return __('Standard', darktech_pe_get_text_domain());
+    return __('Standard', 'darktech-price-editor');
 }
 
 /**
@@ -95,7 +69,7 @@ function darktech_pe_get_default_tax_class_filter_value(): string
  */
 function darktech_pe_get_uncategorized_label(): string
 {
-    return __('Uncategorized', darktech_pe_get_text_domain());
+    return __('Uncategorized', 'darktech-price-editor');
 }
 
 /**
@@ -105,27 +79,25 @@ function darktech_pe_get_uncategorized_label(): string
  */
 function darktech_pe_get_datatables_language(): array
 {
-    $text_domain = darktech_pe_get_text_domain();
-
     return [
-        'emptyTable' => __('No data available in table', $text_domain),
-        'info' => __('Showing _START_ to _END_ of _TOTAL_ entries', $text_domain),
-        'infoEmpty' => __('Showing 0 to 0 of 0 entries', $text_domain),
-        'infoFiltered' => __('(filtered from _MAX_ total entries)', $text_domain),
-        'lengthMenu' => __('Show _MENU_ entries', $text_domain),
-        'loadingRecords' => __('Loading...', $text_domain),
-        'processing' => __('Processing...', $text_domain),
-        'search' => __('Search:', $text_domain),
-        'zeroRecords' => __('No matching records found', $text_domain),
+        'emptyTable' => __('No data available in table', 'darktech-price-editor'),
+        'info' => __('Showing _START_ to _END_ of _TOTAL_ entries', 'darktech-price-editor'),
+        'infoEmpty' => __('Showing 0 to 0 of 0 entries', 'darktech-price-editor'),
+        'infoFiltered' => __('(filtered from _MAX_ total entries)', 'darktech-price-editor'),
+        'lengthMenu' => __('Show _MENU_ entries', 'darktech-price-editor'),
+        'loadingRecords' => __('Loading...', 'darktech-price-editor'),
+        'processing' => __('Processing...', 'darktech-price-editor'),
+        'search' => __('Search:', 'darktech-price-editor'),
+        'zeroRecords' => __('No matching records found', 'darktech-price-editor'),
         'paginate' => [
-            'first' => __('First', $text_domain),
-            'last' => __('Last', $text_domain),
-            'next' => __('Next', $text_domain),
-            'previous' => __('Previous', $text_domain),
+            'first' => __('First', 'darktech-price-editor'),
+            'last' => __('Last', 'darktech-price-editor'),
+            'next' => __('Next', 'darktech-price-editor'),
+            'previous' => __('Previous', 'darktech-price-editor'),
         ],
         'aria' => [
-            'sortAscending' => __(': activate to sort column ascending', $text_domain),
-            'sortDescending' => __(': activate to sort column descending', $text_domain),
+            'sortAscending' => __(': activate to sort column ascending', 'darktech-price-editor'),
+            'sortDescending' => __(': activate to sort column descending', 'darktech-price-editor'),
         ],
     ];
 }
@@ -137,8 +109,6 @@ function darktech_pe_get_datatables_language(): array
  */
 function darktech_pe_get_frontend_config(): array
 {
-    $text_domain = darktech_pe_get_text_domain();
-
     return [
         'ajax_url' => admin_url('admin-ajax.php'),
         'nonce' => wp_create_nonce('darktech_pe_nonce'),
@@ -153,160 +123,160 @@ function darktech_pe_get_frontend_config(): array
         'datatables' => darktech_pe_get_datatables_language(),
         'i18n' => [
             'page' => [
-                'title' => __('[DarkTech] Product Price Editor', $text_domain),
-                'heading' => __('Product Price Editor', $text_domain),
-                'breadcrumbAdmin' => __('Dashboard', $text_domain),
-                'breadcrumbCurrent' => __('Price Editor', $text_domain),
-                'clearCacheTitle' => __('Clear cache and reload data (for example, after adding categories)', $text_domain),
-                'productsShown' => __('Products shown: {count}', $text_domain),
-                'productsLimitPrompt' => __('How many products to show at most?', $text_domain),
-                'productsLimitSaved' => __('Product limit updated to {limit}', $text_domain),
-                'productsLimitInvalid' => __('Please enter a valid number greater than 0.', $text_domain),
-                'productsLimitSaveError' => __('Error saving the product limit: {message}', $text_domain),
+                'title' => __('[DarkTech] Product Price Editor', 'darktech-price-editor'),
+                'heading' => __('Product Price Editor', 'darktech-price-editor'),
+                'breadcrumbAdmin' => __('Dashboard', 'darktech-price-editor'),
+                'breadcrumbCurrent' => __('Price Editor', 'darktech-price-editor'),
+                'clearCacheTitle' => __('Clear cache and reload data (for example, after adding categories)', 'darktech-price-editor'),
+                'productsShown' => __('Products shown: {count}', 'darktech-price-editor'),
+                'productsLimitPrompt' => __('How many products to show at most?', 'darktech-price-editor'),
+                'productsLimitSaved' => __('Product limit updated to {limit}', 'darktech-price-editor'),
+                'productsLimitInvalid' => __('Please enter a valid number greater than 0.', 'darktech-price-editor'),
+                'productsLimitSaveError' => __('Error saving the product limit: {message}', 'darktech-price-editor'),
             ],
             'filters' => [
-                'status' => __('Product status:', $text_domain),
-                'allStatuses' => __('All statuses', $text_domain),
-                'category' => __('Category:', $text_domain),
-                'allCategories' => __('All categories', $text_domain),
-                'search' => __('Search:', $text_domain),
-                'searchPlaceholder' => __('Title, SKU, ID...', $text_domain),
-                'taxStatus' => __('Tax status:', $text_domain),
-                'taxClass' => __('Tax class:', $text_domain),
-                'allTaxClasses' => __('All tax classes', $text_domain),
-                'all' => __('All', $text_domain),
-                'stockStatus' => __('Stock status:', $text_domain),
+                'status' => __('Product status:', 'darktech-price-editor'),
+                'allStatuses' => __('All statuses', 'darktech-price-editor'),
+                'category' => __('Category:', 'darktech-price-editor'),
+                'allCategories' => __('All categories', 'darktech-price-editor'),
+                'search' => __('Search:', 'darktech-price-editor'),
+                'searchPlaceholder' => __('Title, SKU, ID...', 'darktech-price-editor'),
+                'taxStatus' => __('Tax status:', 'darktech-price-editor'),
+                'taxClass' => __('Tax class:', 'darktech-price-editor'),
+                'allTaxClasses' => __('All tax classes', 'darktech-price-editor'),
+                'all' => __('All', 'darktech-price-editor'),
+                'stockStatus' => __('Stock status:', 'darktech-price-editor'),
             ],
             'columnManager' => [
-                'title' => __('Manage columns', $text_domain),
-                'close' => __('Close', $text_domain),
-                'toggleTitle' => __('Manage table columns', $text_domain),
-                'showAll' => __('Show all', $text_domain),
-                'hideAll' => __('Hide all', $text_domain),
-                'reset' => __('Reset', $text_domain),
-                'shownMessage' => __('Column "{column}" shown', $text_domain),
-                'hiddenMessage' => __('Column "{column}" hidden', $text_domain),
-                'resetMessage' => __('Column settings reset', $text_domain),
-                'showAllMessage' => __('All columns are visible', $text_domain),
-                'hideAllMessage' => __('All columns hidden except the row number', $text_domain),
+                'title' => __('Manage columns', 'darktech-price-editor'),
+                'close' => __('Close', 'darktech-price-editor'),
+                'toggleTitle' => __('Manage table columns', 'darktech-price-editor'),
+                'showAll' => __('Show all', 'darktech-price-editor'),
+                'hideAll' => __('Hide all', 'darktech-price-editor'),
+                'reset' => __('Reset', 'darktech-price-editor'),
+                'shownMessage' => __('Column "{column}" shown', 'darktech-price-editor'),
+                'hiddenMessage' => __('Column "{column}" hidden', 'darktech-price-editor'),
+                'resetMessage' => __('Column settings reset', 'darktech-price-editor'),
+                'showAllMessage' => __('All columns are visible', 'darktech-price-editor'),
+                'hideAllMessage' => __('All columns hidden except the row number', 'darktech-price-editor'),
             ],
             'columns' => [
-                'rowNumber' => __('#', $text_domain),
-                'id' => __('ID', $text_domain),
-                'category' => __('Category', $text_domain),
-                'title' => __('Product title', $text_domain),
-                'sku' => __('SKU', $text_domain),
-                'regularPrice' => __('Price', $text_domain),
-                'salePrice' => __('Sale price', $text_domain),
-                'oldPrice' => __('Was', $text_domain),
-                'stockStatus' => __('Stock status', $text_domain),
-                'taxStatus' => __('Tax status', $text_domain),
-                'taxClass' => __('Tax class', $text_domain),
-                'actions' => __('Actions', $text_domain),
+                'rowNumber' => __('#', 'darktech-price-editor'),
+                'id' => __('ID', 'darktech-price-editor'),
+                'category' => __('Category', 'darktech-price-editor'),
+                'title' => __('Product title', 'darktech-price-editor'),
+                'sku' => __('SKU', 'darktech-price-editor'),
+                'regularPrice' => __('Price', 'darktech-price-editor'),
+                'salePrice' => __('Sale price', 'darktech-price-editor'),
+                'oldPrice' => __('Was', 'darktech-price-editor'),
+                'stockStatus' => __('Stock status', 'darktech-price-editor'),
+                'taxStatus' => __('Tax status', 'darktech-price-editor'),
+                'taxClass' => __('Tax class', 'darktech-price-editor'),
+                'actions' => __('Actions', 'darktech-price-editor'),
             ],
             'table' => [
-                'viewProduct' => __('Click to view the product', $text_domain),
-                'edit' => __('Edit', $text_domain),
+                'viewProduct' => __('Click to view the product', 'darktech-price-editor'),
+                'edit' => __('Edit', 'darktech-price-editor'),
             ],
             'errors' => [
-                'title' => __('Data loading errors:', $text_domain),
-                'close' => __('Close', $text_domain),
+                'title' => __('Data loading errors:', 'darktech-price-editor'),
+                'close' => __('Close', 'darktech-price-editor'),
             ],
             'tech' => [
-                'ready' => __('Ready to work', $text_domain),
-                'loadingInitialData' => __('Loading data...', $text_domain),
-                'savingChanges' => __('Saving changes...', $text_domain),
-                'savingTitle' => __('Saving the product title...', $text_domain),
-                'savingSku' => __('Saving the SKU...', $text_domain),
-                'savingStockStatus' => __('Saving the stock status...', $text_domain),
-                'savingTaxStatus' => __('Saving the tax status...', $text_domain),
-                'savingTaxClass' => __('Saving the tax class...', $text_domain),
-                'savingCategory' => __('Saving the category...', $text_domain),
-                'filtersApplied' => __('New filters applied', $text_domain),
-                'filtersReset' => __('Filters reset', $text_domain),
-                'cacheReloading' => __('Clearing cache and reloading...', $text_domain),
-                'cacheReloaded' => __('Cache cleared, reloading data...', $text_domain),
+                'ready' => __('Ready to work', 'darktech-price-editor'),
+                'loadingInitialData' => __('Loading data...', 'darktech-price-editor'),
+                'savingChanges' => __('Saving changes...', 'darktech-price-editor'),
+                'savingTitle' => __('Saving the product title...', 'darktech-price-editor'),
+                'savingSku' => __('Saving the SKU...', 'darktech-price-editor'),
+                'savingStockStatus' => __('Saving the stock status...', 'darktech-price-editor'),
+                'savingTaxStatus' => __('Saving the tax status...', 'darktech-price-editor'),
+                'savingTaxClass' => __('Saving the tax class...', 'darktech-price-editor'),
+                'savingCategory' => __('Saving the category...', 'darktech-price-editor'),
+                'filtersApplied' => __('New filters applied', 'darktech-price-editor'),
+                'filtersReset' => __('Filters reset', 'darktech-price-editor'),
+                'cacheReloading' => __('Clearing cache and reloading...', 'darktech-price-editor'),
+                'cacheReloaded' => __('Cache cleared, reloading data...', 'darktech-price-editor'),
             ],
             'history' => [
-                'title' => __('Change history', $text_domain),
-                'openHint' => __('Click to view the latest 100 changes', $text_domain),
-                'close' => __('Close', $text_domain),
-                'loading' => __('Loading history...', $text_domain),
-                'empty' => __('Change history is empty so far.', $text_domain),
-                'dateColumn' => __('Date and time', $text_domain),
-                'messageColumn' => __('What happened', $text_domain),
-                'userColumn' => __('Author', $text_domain),
-                'loadError' => __('Error loading history: {message}', $text_domain),
+                'title' => __('Change history', 'darktech-price-editor'),
+                'openHint' => __('Click to view the latest 100 changes', 'darktech-price-editor'),
+                'close' => __('Close', 'darktech-price-editor'),
+                'loading' => __('Loading history...', 'darktech-price-editor'),
+                'empty' => __('Change history is empty so far.', 'darktech-price-editor'),
+                'dateColumn' => __('Date and time', 'darktech-price-editor'),
+                'messageColumn' => __('What happened', 'darktech-price-editor'),
+                'userColumn' => __('Author', 'darktech-price-editor'),
+                'loadError' => __('Error loading history: {message}', 'darktech-price-editor'),
             ],
             'confirm' => [
-                'title' => __('Confirmation', $text_domain),
-                'yes' => __('Yes', $text_domain),
-                'no' => __('No', $text_domain),
+                'title' => __('Confirmation', 'darktech-price-editor'),
+                'yes' => __('Yes', 'darktech-price-editor'),
+                'no' => __('No', 'darktech-price-editor'),
             ],
             'placeholders' => [
-                'title' => __('Enter title', $text_domain),
-                'sku' => __('Enter SKU', $text_domain),
+                'title' => __('Enter title', 'darktech-price-editor'),
+                'sku' => __('Enter SKU', 'darktech-price-editor'),
             ],
             'editing' => [
-                'clickToEditTitle' => __('Click to edit the product title', $text_domain),
-                'clickToEditCategory' => __('Click to edit the category', $text_domain),
-                'clickToEditStockStatus' => __('Click to edit the stock status', $text_domain),
-                'clickToEditTaxStatus' => __('Click to edit the tax status', $text_domain),
-                'clickToEditTaxClass' => __('Click to edit the tax class', $text_domain),
-                'clickToEditSku' => __('Click to edit the SKU', $text_domain),
-                'clickToAddSku' => __('Click to add a SKU', $text_domain),
+                'clickToEditTitle' => __('Click to edit the product title', 'darktech-price-editor'),
+                'clickToEditCategory' => __('Click to edit the category', 'darktech-price-editor'),
+                'clickToEditStockStatus' => __('Click to edit the stock status', 'darktech-price-editor'),
+                'clickToEditTaxStatus' => __('Click to edit the tax status', 'darktech-price-editor'),
+                'clickToEditTaxClass' => __('Click to edit the tax class', 'darktech-price-editor'),
+                'clickToEditSku' => __('Click to edit the SKU', 'darktech-price-editor'),
+                'clickToAddSku' => __('Click to add a SKU', 'darktech-price-editor'),
             ],
             'notifications' => [
-                'changesSaved' => __('Changes saved', $text_domain),
-                'titleUpdated' => __('Title updated', $text_domain),
-                'skuUpdated' => __('SKU updated', $text_domain),
-                'stockStatusUpdated' => __('Stock status updated', $text_domain),
-                'taxStatusUpdated' => __('Tax status updated', $text_domain),
-                'taxClassUpdated' => __('Tax class updated', $text_domain),
-                'categoryUpdated' => __('Category updated', $text_domain),
+                'changesSaved' => __('Changes saved', 'darktech-price-editor'),
+                'titleUpdated' => __('Title updated', 'darktech-price-editor'),
+                'skuUpdated' => __('SKU updated', 'darktech-price-editor'),
+                'stockStatusUpdated' => __('Stock status updated', 'darktech-price-editor'),
+                'taxStatusUpdated' => __('Tax status updated', 'darktech-price-editor'),
+                'taxClassUpdated' => __('Tax class updated', 'darktech-price-editor'),
+                'categoryUpdated' => __('Category updated', 'darktech-price-editor'),
             ],
             'messages' => [
-                'unknownError' => __('Unknown error', $text_domain),
-                'dataLoadError' => __('Error loading data: {message}', $text_domain),
-                'categoriesLoadError' => __('Error loading categories', $text_domain),
-                'categoriesLoadErrorDetailed' => __('Error loading categories: {message}', $text_domain),
-                'taxClassesLoadError' => __('Error loading tax classes', $text_domain),
-                'taxClassesLoadErrorDetailed' => __('Error loading tax classes: {message}', $text_domain),
-                'saveError' => __('Save error: {message}', $text_domain),
-                'titleSaveError' => __('Error saving the title: {message}', $text_domain),
-                'skuSaveError' => __('Error saving the SKU: {message}', $text_domain),
-                'stockStatusSaveError' => __('Error saving the stock status: {message}', $text_domain),
-                'taxStatusSaveError' => __('Error saving the tax status: {message}', $text_domain),
-                'taxClassSaveError' => __('Error saving the tax class: {message}', $text_domain),
-                'categorySaveError' => __('Error saving the category: {message}', $text_domain),
-                'missingDataTables' => __('Error: DataTables library is not loaded', $text_domain),
-                'missingJQuery' => __('jQuery is not loaded', $text_domain),
-                'missingDataTablesConsole' => __('DataTables is not loaded', $text_domain),
-                'fieldUpdatedMessage' => __('Updated {field} for product #{id}', $text_domain),
-                'titleUpdatedMessage' => __('Updated product #{id} title: {old} -> {new}', $text_domain),
-                'skuUpdatedMessage' => __('Updated product #{id} SKU: "{old}" -> "{new}"', $text_domain),
-                'stockStatusUpdatedMessage' => __('Updated product #{id} stock status: "{old}" -> "{new}"', $text_domain),
-                'taxStatusUpdatedMessage' => __('Updated product #{id} tax status: "{old}" -> "{new}"', $text_domain),
-                'taxClassUpdatedMessage' => __('Updated product #{id} tax class: "{old}" -> "{new}"', $text_domain),
-                'categoryUpdatedMessage' => __('Updated product #{id} category: "{old}" -> "{new}"', $text_domain),
+                'unknownError' => __('Unknown error', 'darktech-price-editor'),
+                'dataLoadError' => __('Error loading data: {message}', 'darktech-price-editor'),
+                'categoriesLoadError' => __('Error loading categories', 'darktech-price-editor'),
+                'categoriesLoadErrorDetailed' => __('Error loading categories: {message}', 'darktech-price-editor'),
+                'taxClassesLoadError' => __('Error loading tax classes', 'darktech-price-editor'),
+                'taxClassesLoadErrorDetailed' => __('Error loading tax classes: {message}', 'darktech-price-editor'),
+                'saveError' => __('Save error: {message}', 'darktech-price-editor'),
+                'titleSaveError' => __('Error saving the title: {message}', 'darktech-price-editor'),
+                'skuSaveError' => __('Error saving the SKU: {message}', 'darktech-price-editor'),
+                'stockStatusSaveError' => __('Error saving the stock status: {message}', 'darktech-price-editor'),
+                'taxStatusSaveError' => __('Error saving the tax status: {message}', 'darktech-price-editor'),
+                'taxClassSaveError' => __('Error saving the tax class: {message}', 'darktech-price-editor'),
+                'categorySaveError' => __('Error saving the category: {message}', 'darktech-price-editor'),
+                'missingDataTables' => __('Error: DataTables library is not loaded', 'darktech-price-editor'),
+                'missingJQuery' => __('jQuery is not loaded', 'darktech-price-editor'),
+                'missingDataTablesConsole' => __('DataTables is not loaded', 'darktech-price-editor'),
+                'fieldUpdatedMessage' => __('Updated {field} for product #{id}', 'darktech-price-editor'),
+                'titleUpdatedMessage' => __('Updated product #{id} title: {old} -> {new}', 'darktech-price-editor'),
+                'skuUpdatedMessage' => __('Updated product #{id} SKU: "{old}" -> "{new}"', 'darktech-price-editor'),
+                'stockStatusUpdatedMessage' => __('Updated product #{id} stock status: "{old}" -> "{new}"', 'darktech-price-editor'),
+                'taxStatusUpdatedMessage' => __('Updated product #{id} tax status: "{old}" -> "{new}"', 'darktech-price-editor'),
+                'taxClassUpdatedMessage' => __('Updated product #{id} tax class: "{old}" -> "{new}"', 'darktech-price-editor'),
+                'categoryUpdatedMessage' => __('Updated product #{id} category: "{old}" -> "{new}"', 'darktech-price-editor'),
             ],
             'fields' => [
-                'regularPrice' => __('regular price', $text_domain),
-                'salePrice' => __('sale price', $text_domain),
-                'title' => __('product title', $text_domain),
-                'taxStatus' => __('tax status', $text_domain),
-                'taxClass' => __('tax class', $text_domain),
-                'stockStatus' => __('stock status', $text_domain),
-                'category' => __('category', $text_domain),
-                'sku' => __('SKU', $text_domain),
+                'regularPrice' => __('regular price', 'darktech-price-editor'),
+                'salePrice' => __('sale price', 'darktech-price-editor'),
+                'title' => __('product title', 'darktech-price-editor'),
+                'taxStatus' => __('tax status', 'darktech-price-editor'),
+                'taxClass' => __('tax class', 'darktech-price-editor'),
+                'stockStatus' => __('stock status', 'darktech-price-editor'),
+                'category' => __('category', 'darktech-price-editor'),
+                'sku' => __('SKU', 'darktech-price-editor'),
             ],
             'mobile' => [
-                'scrollIndicator' => __('Scroll horizontally', $text_domain),
-                'rotateToPortrait' => __('Rotate the device to portrait mode for a better view', $text_domain),
+                'scrollIndicator' => __('Scroll horizontally', 'darktech-price-editor'),
+                'rotateToPortrait' => __('Rotate the device to portrait mode for a better view', 'darktech-price-editor'),
             ],
             'developer' => [
-                'label' => __('Developed by', $text_domain),
-                'linkTitle' => __('Open in a new tab', $text_domain),
+                'label' => __('Developed by', 'darktech-price-editor'),
+                'linkTitle' => __('Open in a new tab', 'darktech-price-editor'),
                 'year' => '2025',
             ],
             'defaults' => [

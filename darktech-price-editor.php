@@ -13,7 +13,7 @@ declare(strict_types=1);
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: darktech-price-editor
  * Domain Path: /languages
- * Requires at least: 5.0
+ * Requires at least: 6.2
  * Requires PHP: 7.4
  * Requires Plugins: woocommerce
  * WC requires at least: 5.0
@@ -77,6 +77,177 @@ function darktech_pe_install_or_update_database(): void
     dbDelta($sql);
 
     update_option('darktech_pe_db_version', DARKTECH_PE_DB_VERSION);
+}
+
+/**
+ * Enqueues styles and scripts for the fullscreen editor page.
+ */
+function darktech_pe_enqueue_fullscreen_assets(): void
+{
+    $darktech_pe_config = darktech_pe_get_frontend_config();
+    $darktech_pe_style_handles = [
+        'darktech-pe-datatables' => 'assets/css/jquery.dataTables.min.css',
+        'darktech-pe-base' => 'assets/css/base.css',
+        'darktech-pe-header' => 'assets/css/header.css',
+        'darktech-pe-filters' => 'assets/css/filters.css',
+        'darktech-pe-column-manager' => 'assets/css/column-manager.css',
+        'darktech-pe-table' => 'assets/css/table.css',
+        'darktech-pe-editing' => 'assets/css/editing.css',
+        'darktech-pe-statuses' => 'assets/css/statuses.css',
+        'darktech-pe-links-buttons' => 'assets/css/links-buttons.css',
+        'darktech-pe-system' => 'assets/css/system.css',
+        'darktech-pe-errors' => 'assets/css/errors.css',
+        'darktech-pe-indicators' => 'assets/css/indicators.css',
+        'darktech-pe-datatables-custom' => 'assets/css/datatables-custom.css',
+        'darktech-pe-responsive' => 'assets/css/responsive.css',
+    ];
+
+    foreach ($darktech_pe_style_handles as $darktech_pe_handle => $darktech_pe_relative_path) {
+        wp_enqueue_style(
+            $darktech_pe_handle,
+            DARKTECH_PE_PLUGIN_URL . $darktech_pe_relative_path,
+            [],
+            DARKTECH_PE_VERSION
+        );
+    }
+
+    wp_enqueue_script(
+        'darktech-pe-datatables',
+        DARKTECH_PE_PLUGIN_URL . 'assets/js/jquery.dataTables.min.js',
+        ['jquery'],
+        '1.13.7',
+        true
+    );
+
+    wp_enqueue_script(
+        'darktech-pe-ui-module',
+        DARKTECH_PE_PLUGIN_URL . 'assets/js/price_editor.ui.js',
+        ['jquery'],
+        DARKTECH_PE_VERSION,
+        true
+    );
+
+    wp_enqueue_script(
+        'darktech-pe-history-module',
+        DARKTECH_PE_PLUGIN_URL . 'assets/js/price_editor.history.js',
+        ['jquery'],
+        DARKTECH_PE_VERSION,
+        true
+    );
+
+    wp_enqueue_script(
+        'darktech-pe-filters-module',
+        DARKTECH_PE_PLUGIN_URL . 'assets/js/price_editor.filters.js',
+        ['jquery'],
+        DARKTECH_PE_VERSION,
+        true
+    );
+
+    wp_enqueue_script(
+        'darktech-pe-columns-module',
+        DARKTECH_PE_PLUGIN_URL . 'assets/js/price_editor.columns.js',
+        ['jquery'],
+        DARKTECH_PE_VERSION,
+        true
+    );
+
+    wp_enqueue_script(
+        'darktech-pe-editing-markup',
+        DARKTECH_PE_PLUGIN_URL . 'assets/js/price_editor.editing.markup.js',
+        [],
+        DARKTECH_PE_VERSION,
+        true
+    );
+
+    wp_enqueue_script(
+        'darktech-pe-save-base',
+        DARKTECH_PE_PLUGIN_URL . 'assets/js/price_editor.data.save-base.js',
+        ['jquery'],
+        DARKTECH_PE_VERSION,
+        true
+    );
+
+    wp_enqueue_script(
+        'darktech-pe-save-service',
+        DARKTECH_PE_PLUGIN_URL . 'assets/js/price_editor.data.saves.js',
+        ['darktech-pe-save-base'],
+        DARKTECH_PE_VERSION,
+        true
+    );
+
+    wp_enqueue_script(
+        'darktech-pe-data-module',
+        DARKTECH_PE_PLUGIN_URL . 'assets/js/price_editor.data.js',
+        ['jquery', 'darktech-pe-save-service'],
+        DARKTECH_PE_VERSION,
+        true
+    );
+
+    wp_enqueue_script(
+        'darktech-pe-editing-module',
+        DARKTECH_PE_PLUGIN_URL . 'assets/js/price_editor.editing.js',
+        ['jquery', 'darktech-pe-editing-markup'],
+        DARKTECH_PE_VERSION,
+        true
+    );
+
+    wp_enqueue_script(
+        'darktech-pe-mobile-module',
+        DARKTECH_PE_PLUGIN_URL . 'assets/js/price_editor.mobile.js',
+        ['jquery'],
+        DARKTECH_PE_VERSION,
+        true
+    );
+
+    wp_enqueue_script(
+        'darktech-pe-horizontal-scroll-module',
+        DARKTECH_PE_PLUGIN_URL . 'assets/js/price_editor.horizontal-scroll.js',
+        ['jquery'],
+        DARKTECH_PE_VERSION,
+        true
+    );
+
+    wp_enqueue_script(
+        'darktech-pe-table-columns',
+        DARKTECH_PE_PLUGIN_URL . 'assets/js/price_editor.table-columns.js',
+        [],
+        DARKTECH_PE_VERSION,
+        true
+    );
+
+    wp_enqueue_script(
+        'darktech-pe-core',
+        DARKTECH_PE_PLUGIN_URL . 'assets/js/price_editor.core.js',
+        [
+            'jquery',
+            'darktech-pe-datatables',
+            'darktech-pe-data-module',
+            'darktech-pe-editing-module',
+            'darktech-pe-ui-module',
+            'darktech-pe-history-module',
+            'darktech-pe-filters-module',
+            'darktech-pe-columns-module',
+            'darktech-pe-mobile-module',
+            'darktech-pe-horizontal-scroll-module',
+            'darktech-pe-table-columns',
+        ],
+        DARKTECH_PE_VERSION,
+        true
+    );
+
+    wp_enqueue_script(
+        'darktech-pe-main',
+        DARKTECH_PE_PLUGIN_URL . 'assets/js/price_editor.js',
+        ['jquery', 'darktech-pe-core'],
+        DARKTECH_PE_VERSION,
+        true
+    );
+
+    wp_add_inline_script(
+        'darktech-pe-main',
+        'window.darktech_pe = ' . wp_json_encode($darktech_pe_config) . ';',
+        'before'
+    );
 }
 
 /**
@@ -161,7 +332,6 @@ function darktech_pe_init(): void
     // Инициализируем
     DarkTech_Price_Editor::get_instance();
 }
-add_action('init', 'darktech_pe_load_textdomain');
 add_action('plugins_loaded', 'darktech_pe_maybe_upgrade_database', 5);
 add_action('plugins_loaded', 'darktech_pe_init');
 
@@ -187,8 +357,11 @@ function darktech_pe_add_admin_menu(): void
  */
 function darktech_pe_intercept_fullscreen(): void
 {
+    // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Reading the current admin page slug does not change state.
+    $darktech_pe_page = isset($_GET['page']) ? sanitize_key(wp_unslash($_GET['page'])) : '';
+
     // Проверяем, что это наша страница
-    if (! isset($_GET['page']) || $_GET['page'] !== 'darktech-price-editor') {
+    if ($darktech_pe_page !== 'darktech-price-editor') {
         return;
     }
 
@@ -196,6 +369,8 @@ function darktech_pe_intercept_fullscreen(): void
     if (! current_user_can('edit_products')) {
         wp_die(esc_html__('You do not have permission to access this page.', 'darktech-price-editor'));
     }
+
+    darktech_pe_enqueue_fullscreen_assets();
 
     // Выводим полноэкранную страницу и завершаем выполнение
     include DARKTECH_PE_PLUGIN_DIR . 'templates/fullscreen-page.php';

@@ -36,9 +36,11 @@ class DarkTech_Price_Editor_Catalog_Service
                 WHERE tt.taxonomy = 'product_cat'
                 ORDER BY t.name ASC";
 
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.NotPrepared -- Reads core taxonomy tables for the admin editor screen.
         $results = $wpdb->get_results($sql);
         $category_map = $this->build_category_map($results);
 
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching -- Reads a single aggregate value from the posts table for the admin editor screen.
         $total_count = (int) $wpdb->get_var(
             "SELECT COUNT(*) FROM {$wpdb->posts} WHERE post_type = 'product' AND post_status IN ('publish', 'draft', 'pending', 'private')"
         );
@@ -150,8 +152,10 @@ class DarkTech_Price_Editor_Catalog_Service
         $limit = $this->get_products_limit();
         $params[] = $limit;
 
+        // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- Query uses placeholders and trusted core table names.
         $sql = $wpdb->prepare($sql, ...$params);
 
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, PluginCheck.Security.DirectDB.UnescapedDBParameter, WordPress.DB.PreparedSQL.NotPrepared -- Prepared query against core tables for the admin bulk editor.
         $results = $wpdb->get_results($sql);
 
         return [
@@ -277,13 +281,16 @@ class DarkTech_Price_Editor_Catalog_Service
         }
 
         if (! empty($params)) {
+            // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared -- Query uses placeholders and trusted core table names.
             $count_sql = $wpdb->prepare($count_sql, ...$params);
         }
 
         if ($has_search) {
+            // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, PluginCheck.Security.DirectDB.UnescapedDBParameter, WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Wraps a prepared grouped query to count filtered rows.
             return (int) $wpdb->get_var("SELECT COUNT(*) FROM ({$count_sql}) as filtered_results");
         }
 
+        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, PluginCheck.Security.DirectDB.UnescapedDBParameter, WordPress.DB.PreparedSQL.NotPrepared -- Query is prepared above when parameters are present and only reads core tables.
         return (int) $wpdb->get_var($count_sql);
     }
 
