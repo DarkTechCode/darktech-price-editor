@@ -3,6 +3,7 @@
 **Версия:** 1.0.0  
 **Автор:** DarkTech  
 **Сайт:** [darktech.ru](https://darktech.ru)  
+**GitHub:** [DarkTechCode/darktech-price-editor](https://github.com/DarkTechCode/darktech-price-editor)  
 **Лицензия:** GPL v2 or later
 
 ---
@@ -159,3 +160,5 @@ darktech-price-editor/
 Разработано **DarkTech**.
 По вопросам поддержки, баг-репортам и предложениям:
 🌐 [darktech.ru](https://darktech.ru)
+💻 [github.com/DarkTechCode/darktech-price-editor](https://github.com/DarkTechCode/darktech-price-editor)
+✉️ github@darktech.ru

@@ -2,16 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: DarkTech Price Editor 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-16 06:32+0000\n"
-"PO-Revision-Date: 2026-03-16 06:32+0000\n"
+"POT-Creation-Date: 2026-03-16 11:09+0000\n"
+"PO-Revision-Date: 2026-03-16 11:09+0000\n"
 "Last-Translator: Codex\n"
-"Language-Team: DarkTech\n"
+"Language-Team: \n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Codex\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "[DarkTech] Price Editor:"
 msgstr ""
@@ -456,6 +455,7 @@ msgstr ""
 
 msgid "Error saving changes."
 msgstr ""
+
 msgid "Tax class:"
 msgstr ""
 
@@ -487,4 +487,25 @@ msgid "Error loading history: {message}"
 msgstr ""
 
 msgid "Unknown user"
+msgstr ""
+
+msgid "Invalid tax status value."
+msgstr ""
+
+msgid "Invalid stock status value."
+msgstr ""
+
+msgid "Please enter a valid number greater than 0."
+msgstr ""
+
+msgid "Products shown: {count}"
+msgstr ""
+
+msgid "How many products to show at most?"
+msgstr ""
+
+msgid "Product limit updated to {limit}"
+msgstr ""
+
+msgid "Error saving the product limit: {message}"
 msgstr ""

@@ -1,0 +1,512 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DarkTech Price Editor 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-16 06:32+0000\n"
+"PO-Revision-Date: 2026-03-16 11:10+0000\n"
+"Last-Translator: Codex\n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Codex\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "[DarkTech] Price Editor:"
+msgstr "[DarkTech] Prijseditor:"
+
+msgid "WooCommerce is required for the plugin to work."
+msgstr "WooCommerce is vereist om de plug-in te laten werken."
+
+msgid "Price Editor"
+msgstr "Prijs-editor"
+
+msgid "You do not have permission to access this page."
+msgstr "U heeft geen toestemming om deze pagina te bezoeken."
+
+msgid "Published"
+msgstr "Gepubliceerd"
+
+msgid "Draft"
+msgstr "Diepgang"
+
+msgid "Private"
+msgstr "Privé"
+
+msgid "In stock"
+msgstr "Op voorraad"
+
+msgid "Out of stock"
+msgstr "Niet op voorraad"
+
+msgid "On backorder"
+msgstr "In nabestelling"
+
+msgid "Taxable"
+msgstr "Belastbaar"
+
+msgid "Shipping only"
+msgstr "Alleen verzending"
+
+msgid "None"
+msgstr "Geen"
+
+msgid "Standard"
+msgstr "Standaard"
+
+msgid "Uncategorized"
+msgstr "Niet gecategoriseerd"
+
+msgid "No data available in table"
+msgstr "Geen gegevens beschikbaar in tabel"
+
+msgid "Showing _START_ to _END_ of _TOTAL_ entries"
+msgstr "Toont _START_ tot _END_ van _TOTAL_ vermeldingen"
+
+msgid "Showing 0 to 0 of 0 entries"
+msgstr "Toont 0 tot 0 van 0 vermeldingen"
+
+msgid "(filtered from _MAX_ total entries)"
+msgstr "(gefilterd uit _MAX_ totaal aantal vermeldingen)"
+
+msgid "Show _MENU_ entries"
+msgstr "Toon _MENU_-items"
+
+msgid "Loading..."
+msgstr "Laden..."
+
+msgid "Processing..."
+msgstr "Verwerken..."
+
+msgid "Search:"
+msgstr "Zoeken:"
+
+msgid "No matching records found"
+msgstr "Geen overeenkomende records gevonden"
+
+msgid "First"
+msgstr "Ten eerste"
+
+msgid "Last"
+msgstr "Laatste"
+
+msgid "Next"
+msgstr "Volgende"
+
+msgid "Previous"
+msgstr "Vorige"
+
+msgid ": activate to sort column ascending"
+msgstr ": activeren om de kolom oplopend te sorteren"
+
+msgid ": activate to sort column descending"
+msgstr ": activeren om de kolom aflopend te sorteren"
+
+msgid "[DarkTech] Product Price Editor"
+msgstr "[DarkTech] Productprijseditor"
+
+msgid "Product Price Editor"
+msgstr "Productprijseditor"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Clear cache and reload data (for example, after adding categories)"
+msgstr "Cache wissen en gegevens opnieuw laden (bijvoorbeeld na het toevoegen van categorieën)"
+
+msgid "Product status:"
+msgstr "Productstatus:"
+
+msgid "All statuses"
+msgstr "Alle statussen"
+
+msgid "Category:"
+msgstr "Categorie:"
+
+msgid "All categories"
+msgstr "Alle categorieën"
+
+msgid "Title, SKU, ID..."
+msgstr "Titel, SKU, ID..."
+
+msgid "Tax status:"
+msgstr "Belastingstatus:"
+
+msgid "All"
+msgstr "Allemaal"
+
+msgid "Stock status:"
+msgstr "Voorraadstatus:"
+
+msgid "Manage columns"
+msgstr "Kolommen beheren"
+
+msgid "Close"
+msgstr "Sluiten"
+
+msgid "Manage table columns"
+msgstr "Beheer tabelkolommen"
+
+msgid "Show all"
+msgstr "Toon alles"
+
+msgid "Hide all"
+msgstr "Alles verbergen"
+
+msgid "Reset"
+msgstr "Opnieuw instellen"
+
+msgid "Column \"{column}\" shown"
+msgstr "Kolom \"{column}\" weergegeven"
+
+msgid "Column \"{column}\" hidden"
+msgstr "Kolom \"{column}\" verborgen"
+
+msgid "Column settings reset"
+msgstr "Kolominstellingen gereset"
+
+msgid "All columns are visible"
+msgstr "Alle kolommen zijn zichtbaar"
+
+msgid "All columns hidden except the row number"
+msgstr "Alle kolommen verborgen behalve het rijnummer"
+
+msgid "#"
+msgstr "#"
+
+msgid "ID"
+msgstr "Identiteitskaart"
+
+msgid "Category"
+msgstr "Categorie"
+
+msgid "Product title"
+msgstr "Producttitel"
+
+msgid "SKU"
+msgstr "SKU"
+
+msgid "Price"
+msgstr "Prijs"
+
+msgid "Sale price"
+msgstr "Verkoopprijs"
+
+msgid "Was"
+msgstr "Was"
+
+msgid "Stock status"
+msgstr "Voorraadstatus"
+
+msgid "Tax status"
+msgstr "Belastingstatus"
+
+msgid "Tax class"
+msgstr "Belastingklasse"
+
+msgid "Actions"
+msgstr "Acties"
+
+msgid "Click to view the product"
+msgstr "Klik om het product te bekijken"
+
+msgid "Edit"
+msgstr "Bewerken"
+
+msgid "Data loading errors:"
+msgstr "Fouten bij het laden van gegevens:"
+
+msgid "Ready to work"
+msgstr "Klaar om te werken"
+
+msgid "Loading data..."
+msgstr "Gegevens laden..."
+
+msgid "Saving changes..."
+msgstr "Wijzigingen opslaan..."
+
+msgid "Saving the product title..."
+msgstr "De producttitel opslaan..."
+
+msgid "Saving the SKU..."
+msgstr "De SKU opslaan..."
+
+msgid "Saving the stock status..."
+msgstr "De voorraadstatus opslaan..."
+
+msgid "Saving the tax status..."
+msgstr "De belastingstatus opslaan..."
+
+msgid "Saving the tax class..."
+msgstr "De belastingklasse opslaan..."
+
+msgid "Saving the category..."
+msgstr "De categorie opslaan..."
+
+msgid "New filters applied"
+msgstr "Nieuwe filters toegepast"
+
+msgid "Filters reset"
+msgstr "Filters gereset"
+
+msgid "Clearing cache and reloading..."
+msgstr "Cache wissen en opnieuw laden..."
+
+msgid "Cache cleared, reloading data..."
+msgstr "Cache gewist, gegevens opnieuw laden..."
+
+msgid "Confirmation"
+msgstr "Bevestiging"
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "No"
+msgstr "Nee"
+
+msgid "Enter title"
+msgstr "Titel invoeren"
+
+msgid "Enter SKU"
+msgstr "Voer SKU in"
+
+msgid "Click to edit the product title"
+msgstr "Klik om de producttitel te bewerken"
+
+msgid "Click to edit the category"
+msgstr "Klik om de categorie te bewerken"
+
+msgid "Click to edit the stock status"
+msgstr "Klik om de voorraadstatus te bewerken"
+
+msgid "Click to edit the tax status"
+msgstr "Klik om de belastingstatus te bewerken"
+
+msgid "Click to edit the tax class"
+msgstr "Klik om de belastingklasse te bewerken"
+
+msgid "Click to edit the SKU"
+msgstr "Klik om de SKU te bewerken"
+
+msgid "Click to add a SKU"
+msgstr "Klik om een SKU toe te voegen"
+
+msgid "Changes saved"
+msgstr "Wijzigingen opgeslagen"
+
+msgid "Title updated"
+msgstr "Titel bijgewerkt"
+
+msgid "SKU updated"
+msgstr "SKU bijgewerkt"
+
+msgid "Stock status updated"
+msgstr "Voorraadstatus bijgewerkt"
+
+msgid "Tax status updated"
+msgstr "Belastingstatus bijgewerkt"
+
+msgid "Tax class updated"
+msgstr "Belastingklasse bijgewerkt"
+
+msgid "Category updated"
+msgstr "Categorie bijgewerkt"
+
+msgid "Unknown error"
+msgstr "Onbekende fout"
+
+msgid "Error loading data: {message}"
+msgstr "Fout bij laden van gegevens: {message}"
+
+msgid "Error loading categories"
+msgstr "Fout bij laden van categorieën"
+
+msgid "Error loading categories: {message}"
+msgstr "Fout bij laden van categorieën: {message}"
+
+msgid "Error loading tax classes"
+msgstr "Fout bij het laden van belastingklassen"
+
+msgid "Error loading tax classes: {message}"
+msgstr "Fout bij laden van belastingklassen: {message}"
+
+msgid "Save error: {message}"
+msgstr "Fout bij opslaan: {message}"
+
+msgid "Error saving the title: {message}"
+msgstr "Fout bij het opslaan van de titel: {message}"
+
+msgid "Error saving the SKU: {message}"
+msgstr "Fout bij het opslaan van de SKU: {message}"
+
+msgid "Error saving the stock status: {message}"
+msgstr "Fout bij het opslaan van de voorraadstatus: {message}"
+
+msgid "Error saving the tax status: {message}"
+msgstr "Fout bij het opslaan van de belastingstatus: {message}"
+
+msgid "Error saving the tax class: {message}"
+msgstr "Fout bij het opslaan van de belastingklasse: {message}"
+
+msgid "Error saving the category: {message}"
+msgstr "Fout bij het opslaan van de categorie: {message}"
+
+msgid "Error: DataTables library is not loaded"
+msgstr "Fout: DataTables-bibliotheek is niet geladen"
+
+msgid "jQuery is not loaded"
+msgstr "jQuery is niet geladen"
+
+msgid "DataTables is not loaded"
+msgstr "DataTables is niet geladen"
+
+msgid "Updated {field} for product #{id}"
+msgstr "{field} bijgewerkt voor product #{id}"
+
+msgid "Updated product #{id} title: {old} -> {new}"
+msgstr "Titel van productnummer{id} bijgewerkt: {old} -> {new}"
+
+msgid "Updated product #{id} SKU: \"{old}\" -> \"{new}\""
+msgstr "Bijgewerkt productnummer{id} SKU: \"{old}\" -> \"{new}\""
+
+msgid "Updated product #{id} stock status: \"{old}\" -> \"{new}\""
+msgstr "Voorraadstatus van product #{id} bijgewerkt: \"{old}\" -> \"{new}\""
+
+msgid "Updated product #{id} tax status: \"{old}\" -> \"{new}\""
+msgstr "Belastingstatus van product #{id} bijgewerkt: \"{old}\" -> \"{new}\""
+
+msgid "Updated product #{id} tax class: \"{old}\" -> \"{new}\""
+msgstr "Belastingklasse van product #{id} bijgewerkt: \"{old}\" -> \"{new}\""
+
+msgid "Updated product #{id} category: \"{old}\" -> \"{new}\""
+msgstr "Categorie van product #{id} bijgewerkt: \"{old}\" -> \"{new}\""
+
+msgid "regular price"
+msgstr "normale prijs"
+
+msgid "sale price"
+msgstr "verkoop prijs"
+
+msgid "product title"
+msgstr "producttitel"
+
+msgid "tax status"
+msgstr "fiscale status"
+
+msgid "tax class"
+msgstr "belastingklasse"
+
+msgid "stock status"
+msgstr "voorraadstatus"
+
+msgid "category"
+msgstr "categorie"
+
+msgid "Scroll horizontally"
+msgstr "Horizontaal scrollen"
+
+msgid "Rotate the device to portrait mode for a better view"
+msgstr "Draai het apparaat naar portretmodus voor een beter zicht"
+
+msgid "Developed by"
+msgstr "Ontwikkeld door"
+
+msgid "Open in a new tab"
+msgstr "Openen in een nieuw tabblad"
+
+msgid "Security check failed."
+msgstr "Beveiligingscontrole mislukt."
+
+msgid "You do not have permission to edit products."
+msgstr "U heeft geen toestemming om producten te bewerken."
+
+msgid "Not enough data to update the product."
+msgstr "Onvoldoende gegevens om het product te updaten."
+
+msgid "Product not found."
+msgstr "Product niet gevonden."
+
+msgid "Updated product #%1$d title: %2$s -> %3$s"
+msgstr "Titel van productnummer%1$d bijgewerkt: %2$s -> %3$s"
+
+msgid "Updated product #%1$d SKU: \"%2$s\" -> \"%3$s\""
+msgstr "Bijgewerkt productnummer%1$d SKU: \"%2$s\" -> \"%3$s\""
+
+msgid "Updated product #%1$d regular price: \"%2$s\" -> \"%3$s\""
+msgstr "Bijgewerkt product #%1$d normale prijs: \"%2$s\" -> \"%3$s\""
+
+msgid "Updated product #%1$d sale price: \"%2$s\" -> \"%3$s\""
+msgstr "Uitverkoopprijs van product #%1$d bijgewerkt: \"%2$s\" -> \"%3$s\""
+
+msgid "Updated product #%1$d tax status: \"%2$s\" -> \"%3$s\""
+msgstr "Belastingstatus van product #%1$d bijgewerkt: \"%2$s\" -> \"%3$s\""
+
+msgid "Updated product #%1$d tax class: \"%2$s\" -> \"%3$s\""
+msgstr "Belastingklasse van product #%1$d bijgewerkt: \"%2$s\" -> \"%3$s\""
+
+msgid "Updated product #%1$d stock status: \"%2$s\" -> \"%3$s\""
+msgstr "Voorraadstatus van product #%1$d bijgewerkt: \"%2$s\" -> \"%3$s\""
+
+msgid "Updated product #%1$d category: \"%2$s\" -> \"%3$s\""
+msgstr "Categorie van product #%1$d bijgewerkt: \"%2$s\" -> \"%3$s\""
+
+msgid "Unknown field for update."
+msgstr "Onbekend veld voor update."
+
+msgid "Error saving changes."
+msgstr "Fout bij het opslaan van wijzigingen."
+
+msgid "Tax class:"
+msgstr "Belastingklasse:"
+
+msgid "All tax classes"
+msgstr "Alle belastingklassen"
+
+msgid "Change history"
+msgstr "Verander de geschiedenis"
+
+msgid "Click to view the latest 100 changes"
+msgstr "Klik om de laatste 100 wijzigingen te bekijken"
+
+msgid "Loading history..."
+msgstr "Geschiedenis laden..."
+
+msgid "Change history is empty so far."
+msgstr "De wijzigingsgeschiedenis is tot nu toe leeg."
+
+msgid "Date and time"
+msgstr "Datum en tijd"
+
+msgid "What happened"
+msgstr "Wat is er gebeurd"
+
+msgid "Author"
+msgstr "Auteur"
+
+msgid "Error loading history: {message}"
+msgstr "Fout bij laden van geschiedenis: {message}"
+
+msgid "Unknown user"
+msgstr "Onbekende gebruiker"
+
+msgid "Invalid tax status value."
+msgstr "Ongeldige belastingstatuswaarde."
+
+msgid "Invalid stock status value."
+msgstr "Ongeldige voorraadstatuswaarde."
+
+msgid "Please enter a valid number greater than 0."
+msgstr "Voer een geldig getal in dat groter is dan 0."
+
+msgid "Products shown: {count}"
+msgstr "Getoonde producten: {count}"
+
+msgid "How many products to show at most?"
+msgstr "Hoeveel producten mogen er maximaal worden getoond?"
+
+msgid "Product limit updated to {limit}"
+msgstr "Productlimiet bijgewerkt naar {limit}"
+
+msgid "Error saving the product limit: {message}"
+msgstr "Fout bij het opslaan van de productlimiet: {message}"

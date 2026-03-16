@@ -1,0 +1,512 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DarkTech Price Editor 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-16 06:32+0000\n"
+"PO-Revision-Date: 2026-03-16 11:10+0000\n"
+"Last-Translator: Codex\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Codex\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "[DarkTech] Price Editor:"
+msgstr "[DarkTech] Preiseditor:"
+
+msgid "WooCommerce is required for the plugin to work."
+msgstr "Damit das Plugin funktioniert, ist WooCommerce erforderlich."
+
+msgid "Price Editor"
+msgstr "Preiseditor"
+
+msgid "You do not have permission to access this page."
+msgstr "Sie haben keine Berechtigung, auf diese Seite zuzugreifen."
+
+msgid "Published"
+msgstr "Veröffentlicht"
+
+msgid "Draft"
+msgstr "Entwurf"
+
+msgid "Private"
+msgstr "Privat"
+
+msgid "In stock"
+msgstr "Auf Lager"
+
+msgid "Out of stock"
+msgstr "Ausverkauft"
+
+msgid "On backorder"
+msgstr "Im Rückstand"
+
+msgid "Taxable"
+msgstr "Steuerpflichtig"
+
+msgid "Shipping only"
+msgstr "Nur Versand"
+
+msgid "None"
+msgstr "Keine"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "Uncategorized"
+msgstr "Nicht kategorisiert"
+
+msgid "No data available in table"
+msgstr "Keine Daten in der Tabelle verfügbar"
+
+msgid "Showing _START_ to _END_ of _TOTAL_ entries"
+msgstr "Zeigt _START_ bis _END_ von _TOTAL_ Einträgen"
+
+msgid "Showing 0 to 0 of 0 entries"
+msgstr "Zeigt 0 bis 0 von 0 Einträgen"
+
+msgid "(filtered from _MAX_ total entries)"
+msgstr "(gefiltert aus _MAX_ Gesamteinträgen)"
+
+msgid "Show _MENU_ entries"
+msgstr "_MENU_ Einträge anzeigen"
+
+msgid "Loading..."
+msgstr "Laden..."
+
+msgid "Processing..."
+msgstr "Verarbeitung..."
+
+msgid "Search:"
+msgstr "Suche:"
+
+msgid "No matching records found"
+msgstr "Keine passenden Datensätze gefunden"
+
+msgid "First"
+msgstr "Erstens"
+
+msgid "Last"
+msgstr "Zuletzt"
+
+msgid "Next"
+msgstr "Als nächstes"
+
+msgid "Previous"
+msgstr "Zurück"
+
+msgid ": activate to sort column ascending"
+msgstr ": aktivieren, um die Spalte aufsteigend zu sortieren"
+
+msgid ": activate to sort column descending"
+msgstr ": aktivieren, um die Spalte absteigend zu sortieren"
+
+msgid "[DarkTech] Product Price Editor"
+msgstr "[DarkTech] Produktpreis-Editor"
+
+msgid "Product Price Editor"
+msgstr "Produktpreis-Editor"
+
+msgid "Dashboard"
+msgstr "Armaturenbrett"
+
+msgid "Clear cache and reload data (for example, after adding categories)"
+msgstr "Cache leeren und Daten neu laden (z. B. nach dem Hinzufügen von Kategorien)"
+
+msgid "Product status:"
+msgstr "Produktstatus:"
+
+msgid "All statuses"
+msgstr "Alle Status"
+
+msgid "Category:"
+msgstr "Kategorie:"
+
+msgid "All categories"
+msgstr "Alle Kategorien"
+
+msgid "Title, SKU, ID..."
+msgstr "Titel, SKU, ID..."
+
+msgid "Tax status:"
+msgstr "Steuerstatus:"
+
+msgid "All"
+msgstr "Alle"
+
+msgid "Stock status:"
+msgstr "Lagerstatus:"
+
+msgid "Manage columns"
+msgstr "Spalten verwalten"
+
+msgid "Close"
+msgstr "Schließen"
+
+msgid "Manage table columns"
+msgstr "Tabellenspalten verwalten"
+
+msgid "Show all"
+msgstr "Alle anzeigen"
+
+msgid "Hide all"
+msgstr "Alles ausblenden"
+
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+msgid "Column \"{column}\" shown"
+msgstr "Spalte „{column}“ angezeigt"
+
+msgid "Column \"{column}\" hidden"
+msgstr "Spalte „{column}“ ausgeblendet"
+
+msgid "Column settings reset"
+msgstr "Spalteneinstellungen zurückgesetzt"
+
+msgid "All columns are visible"
+msgstr "Alle Spalten sind sichtbar"
+
+msgid "All columns hidden except the row number"
+msgstr "Alle Spalten außer der Zeilennummer sind ausgeblendet"
+
+msgid "#"
+msgstr "#"
+
+msgid "ID"
+msgstr "Ausweis"
+
+msgid "Category"
+msgstr "Kategorie"
+
+msgid "Product title"
+msgstr "Produkttitel"
+
+msgid "SKU"
+msgstr "Artikelnummer"
+
+msgid "Price"
+msgstr "Preis"
+
+msgid "Sale price"
+msgstr "Verkaufspreis"
+
+msgid "Was"
+msgstr "War"
+
+msgid "Stock status"
+msgstr "Lagerstatus"
+
+msgid "Tax status"
+msgstr "Steuerstatus"
+
+msgid "Tax class"
+msgstr "Steuerklasse"
+
+msgid "Actions"
+msgstr "Aktionen"
+
+msgid "Click to view the product"
+msgstr "Klicken Sie hier, um das Produkt anzuzeigen"
+
+msgid "Edit"
+msgstr "Bearbeiten"
+
+msgid "Data loading errors:"
+msgstr "Fehler beim Laden der Daten:"
+
+msgid "Ready to work"
+msgstr "Bereit zur Arbeit"
+
+msgid "Loading data..."
+msgstr "Daten werden geladen..."
+
+msgid "Saving changes..."
+msgstr "Änderungen werden gespeichert..."
+
+msgid "Saving the product title..."
+msgstr "Der Produkttitel wird gespeichert..."
+
+msgid "Saving the SKU..."
+msgstr "SKU wird gespeichert..."
+
+msgid "Saving the stock status..."
+msgstr "Lagerstatus wird gespeichert..."
+
+msgid "Saving the tax status..."
+msgstr "Steuerstatus speichern..."
+
+msgid "Saving the tax class..."
+msgstr "Steuerklasse speichern..."
+
+msgid "Saving the category..."
+msgstr "Kategorie wird gespeichert..."
+
+msgid "New filters applied"
+msgstr "Neue Filter angewendet"
+
+msgid "Filters reset"
+msgstr "Filter zurückgesetzt"
+
+msgid "Clearing cache and reloading..."
+msgstr "Cache leeren und neu laden..."
+
+msgid "Cache cleared, reloading data..."
+msgstr "Cache geleert, Daten werden neu geladen..."
+
+msgid "Confirmation"
+msgstr "Bestätigung"
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "No"
+msgstr "Nein"
+
+msgid "Enter title"
+msgstr "Titel eingeben"
+
+msgid "Enter SKU"
+msgstr "Geben Sie die Artikelnummer ein"
+
+msgid "Click to edit the product title"
+msgstr "Klicken Sie, um den Produkttitel zu bearbeiten"
+
+msgid "Click to edit the category"
+msgstr "Klicken Sie, um die Kategorie zu bearbeiten"
+
+msgid "Click to edit the stock status"
+msgstr "Klicken Sie hier, um den Lagerstatus zu bearbeiten"
+
+msgid "Click to edit the tax status"
+msgstr "Klicken Sie hier, um den Steuerstatus zu bearbeiten"
+
+msgid "Click to edit the tax class"
+msgstr "Klicken Sie hier, um die Steuerklasse zu bearbeiten"
+
+msgid "Click to edit the SKU"
+msgstr "Klicken Sie, um die SKU zu bearbeiten"
+
+msgid "Click to add a SKU"
+msgstr "Klicken Sie, um eine SKU hinzuzufügen"
+
+msgid "Changes saved"
+msgstr "Änderungen gespeichert"
+
+msgid "Title updated"
+msgstr "Titel aktualisiert"
+
+msgid "SKU updated"
+msgstr "SKU aktualisiert"
+
+msgid "Stock status updated"
+msgstr "Lagerstatus aktualisiert"
+
+msgid "Tax status updated"
+msgstr "Steuerstatus aktualisiert"
+
+msgid "Tax class updated"
+msgstr "Steuerklasse aktualisiert"
+
+msgid "Category updated"
+msgstr "Kategorie aktualisiert"
+
+msgid "Unknown error"
+msgstr "Unbekannter Fehler"
+
+msgid "Error loading data: {message}"
+msgstr "Fehler beim Laden der Daten: {message}"
+
+msgid "Error loading categories"
+msgstr "Fehler beim Laden der Kategorien"
+
+msgid "Error loading categories: {message}"
+msgstr "Fehler beim Laden der Kategorien: {message}"
+
+msgid "Error loading tax classes"
+msgstr "Fehler beim Laden der Steuerklassen"
+
+msgid "Error loading tax classes: {message}"
+msgstr "Fehler beim Laden der Steuerklassen: {message}"
+
+msgid "Save error: {message}"
+msgstr "Speicherfehler: {message}"
+
+msgid "Error saving the title: {message}"
+msgstr "Fehler beim Speichern des Titels: {message}"
+
+msgid "Error saving the SKU: {message}"
+msgstr "Fehler beim Speichern der SKU: {message}"
+
+msgid "Error saving the stock status: {message}"
+msgstr "Fehler beim Speichern des Lagerstatus: {message}"
+
+msgid "Error saving the tax status: {message}"
+msgstr "Fehler beim Speichern des Steuerstatus: {message}"
+
+msgid "Error saving the tax class: {message}"
+msgstr "Fehler beim Speichern der Steuerklasse: {message}"
+
+msgid "Error saving the category: {message}"
+msgstr "Fehler beim Speichern der Kategorie: {message}"
+
+msgid "Error: DataTables library is not loaded"
+msgstr "Fehler: Die DataTables-Bibliothek ist nicht geladen"
+
+msgid "jQuery is not loaded"
+msgstr "jQuery ist nicht geladen"
+
+msgid "DataTables is not loaded"
+msgstr "DataTables ist nicht geladen"
+
+msgid "Updated {field} for product #{id}"
+msgstr "{field} für Produkt Nr.{id} aktualisiert"
+
+msgid "Updated product #{id} title: {old} -> {new}"
+msgstr "Aktualisierter Titel des Produkts Nr. {id}: {old} -> {new}"
+
+msgid "Updated product #{id} SKU: \"{old}\" -> \"{new}\""
+msgstr "Aktualisierte Produktnummer{id} SKU: „{old}“ -> „{new}“"
+
+msgid "Updated product #{id} stock status: \"{old}\" -> \"{new}\""
+msgstr "Aktualisierter Lagerstatus von Produkt Nr. {id}: „{old}“ -> „{new}“"
+
+msgid "Updated product #{id} tax status: \"{old}\" -> \"{new}\""
+msgstr "Aktualisierter Steuerstatus für Produkt Nr. {id}: „{old}“ -> „{new}“"
+
+msgid "Updated product #{id} tax class: \"{old}\" -> \"{new}\""
+msgstr "Aktualisierte Steuerklasse für Produkt Nr. {id}: „{old}“ -> „{new}“"
+
+msgid "Updated product #{id} category: \"{old}\" -> \"{new}\""
+msgstr "Aktualisierte Produktkategorie Nr. {id}: „{old}“ -> „{new}“"
+
+msgid "regular price"
+msgstr "regulärer Preis"
+
+msgid "sale price"
+msgstr "Verkaufspreis"
+
+msgid "product title"
+msgstr "Produkttitel"
+
+msgid "tax status"
+msgstr "Steuerstatus"
+
+msgid "tax class"
+msgstr "Steuerklasse"
+
+msgid "stock status"
+msgstr "Lagerstatus"
+
+msgid "category"
+msgstr "Kategorie"
+
+msgid "Scroll horizontally"
+msgstr "Scrollen Sie horizontal"
+
+msgid "Rotate the device to portrait mode for a better view"
+msgstr "Drehen Sie das Gerät für eine bessere Sicht in den Hochformatmodus"
+
+msgid "Developed by"
+msgstr "Entwickelt von"
+
+msgid "Open in a new tab"
+msgstr "In einem neuen Tab öffnen"
+
+msgid "Security check failed."
+msgstr "Sicherheitsüberprüfung fehlgeschlagen."
+
+msgid "You do not have permission to edit products."
+msgstr "Sie haben keine Berechtigung zum Bearbeiten von Produkten."
+
+msgid "Not enough data to update the product."
+msgstr "Nicht genügend Daten, um das Produkt zu aktualisieren."
+
+msgid "Product not found."
+msgstr "Produkt nicht gefunden."
+
+msgid "Updated product #%1$d title: %2$s -> %3$s"
+msgstr "Aktualisierter Titel des Produkts Nr. %1$d: %2$s -> %3$s"
+
+msgid "Updated product #%1$d SKU: \"%2$s\" -> \"%3$s\""
+msgstr "Aktualisierte Produktnummer%1$d SKU: „%2$s“ -> „%3$s“"
+
+msgid "Updated product #%1$d regular price: \"%2$s\" -> \"%3$s\""
+msgstr "Aktualisierter regulärer Preis für Produkt Nr. %1$d: „%2$s“ -> „%3$s“"
+
+msgid "Updated product #%1$d sale price: \"%2$s\" -> \"%3$s\""
+msgstr "Aktualisierter Verkaufspreis für Produkt Nr. %1$d: „%2$s“ -> „%3$s“"
+
+msgid "Updated product #%1$d tax status: \"%2$s\" -> \"%3$s\""
+msgstr "Aktualisierter Steuerstatus für Produkt Nr. %1$d: „%2$s“ -> „%3$s“"
+
+msgid "Updated product #%1$d tax class: \"%2$s\" -> \"%3$s\""
+msgstr "Aktualisierte Steuerklasse für Produkt Nr. %1$d: „%2$s“ -> „%3$s“"
+
+msgid "Updated product #%1$d stock status: \"%2$s\" -> \"%3$s\""
+msgstr "Aktualisierter Lagerstatus von Produkt Nr. %1$d: „%2$s“ -> „%3$s“"
+
+msgid "Updated product #%1$d category: \"%2$s\" -> \"%3$s\""
+msgstr "Aktualisierte Produktkategorie Nr. %1$d: „%2$s“ -> „%3$s“"
+
+msgid "Unknown field for update."
+msgstr "Unbekanntes Feld für Aktualisierung."
+
+msgid "Error saving changes."
+msgstr "Fehler beim Speichern der Änderungen."
+
+msgid "Tax class:"
+msgstr "Steuerklasse:"
+
+msgid "All tax classes"
+msgstr "Alle Steuerklassen"
+
+msgid "Change history"
+msgstr "Geschichte ändern"
+
+msgid "Click to view the latest 100 changes"
+msgstr "Klicken Sie hier, um die letzten 100 Änderungen anzuzeigen"
+
+msgid "Loading history..."
+msgstr "Verlauf wird geladen..."
+
+msgid "Change history is empty so far."
+msgstr "Der Änderungsverlauf ist bisher leer."
+
+msgid "Date and time"
+msgstr "Datum und Uhrzeit"
+
+msgid "What happened"
+msgstr "Was ist passiert?"
+
+msgid "Author"
+msgstr "Autor"
+
+msgid "Error loading history: {message}"
+msgstr "Fehler beim Laden des Verlaufs: {message}"
+
+msgid "Unknown user"
+msgstr "Unbekannter Benutzer"
+
+msgid "Invalid tax status value."
+msgstr "Ungültiger Steuerstatuswert."
+
+msgid "Invalid stock status value."
+msgstr "Ungültiger Lagerstatuswert."
+
+msgid "Please enter a valid number greater than 0."
+msgstr "Bitte geben Sie eine gültige Zahl größer als 0 ein."
+
+msgid "Products shown: {count}"
+msgstr "Angezeigte Produkte: {count}"
+
+msgid "How many products to show at most?"
+msgstr "Wie viele Produkte dürfen maximal angezeigt werden?"
+
+msgid "Product limit updated to {limit}"
+msgstr "Produktlimit auf {limit} aktualisiert"
+
+msgid "Error saving the product limit: {message}"
+msgstr "Fehler beim Speichern des Produktlimits: {message}"

@@ -1,0 +1,512 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DarkTech Price Editor 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-16 06:32+0000\n"
+"PO-Revision-Date: 2026-03-16 11:10+0000\n"
+"Last-Translator: Codex\n"
+"Language-Team: Turkish\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Codex\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "[DarkTech] Price Editor:"
+msgstr "[DarkTech] Fiyat Editörü:"
+
+msgid "WooCommerce is required for the plugin to work."
+msgstr "Eklentinin çalışması için WooCommerce gereklidir."
+
+msgid "Price Editor"
+msgstr "Fiyat Editörü"
+
+msgid "You do not have permission to access this page."
+msgstr "Bu sayfaya erişim izniniz yok."
+
+msgid "Published"
+msgstr "Yayınlandı"
+
+msgid "Draft"
+msgstr "Taslak"
+
+msgid "Private"
+msgstr "Özel"
+
+msgid "In stock"
+msgstr "Stokta var"
+
+msgid "Out of stock"
+msgstr "Stokta yok"
+
+msgid "On backorder"
+msgstr "Ön siparişte"
+
+msgid "Taxable"
+msgstr "Vergiye tabi"
+
+msgid "Shipping only"
+msgstr "Yalnızca nakliye"
+
+msgid "None"
+msgstr "Yok"
+
+msgid "Standard"
+msgstr "Standart"
+
+msgid "Uncategorized"
+msgstr "Kategorize edilmemiş"
+
+msgid "No data available in table"
+msgstr "Tabloda veri yok"
+
+msgid "Showing _START_ to _END_ of _TOTAL_ entries"
+msgstr "_TOTAL_ girişlerinden _START_ ile _END_ arası gösteriliyor"
+
+msgid "Showing 0 to 0 of 0 entries"
+msgstr "0 girişten 0 ile 0 arası gösteriliyor"
+
+msgid "(filtered from _MAX_ total entries)"
+msgstr "(toplam _MAX_ girişten filtrelendi)"
+
+msgid "Show _MENU_ entries"
+msgstr "_MENU_ girişlerini göster"
+
+msgid "Loading..."
+msgstr "Yükleniyor..."
+
+msgid "Processing..."
+msgstr "İşleniyor..."
+
+msgid "Search:"
+msgstr "Arama:"
+
+msgid "No matching records found"
+msgstr "Eşleşen kayıt bulunamadı"
+
+msgid "First"
+msgstr "İlk"
+
+msgid "Last"
+msgstr "Son"
+
+msgid "Next"
+msgstr "Sonraki"
+
+msgid "Previous"
+msgstr "Önceki"
+
+msgid ": activate to sort column ascending"
+msgstr ": sütunları artan şekilde sıralamak için etkinleştirin"
+
+msgid ": activate to sort column descending"
+msgstr ": sütunları azalan şekilde sıralamak için etkinleştirin"
+
+msgid "[DarkTech] Product Price Editor"
+msgstr "[DarkTech] Ürün Fiyat Düzenleyicisi"
+
+msgid "Product Price Editor"
+msgstr "Ürün Fiyat Editörü"
+
+msgid "Dashboard"
+msgstr "Kontrol Paneli"
+
+msgid "Clear cache and reload data (for example, after adding categories)"
+msgstr "Önbelleği temizleyin ve verileri yeniden yükleyin (örneğin, kategorileri ekledikten sonra)"
+
+msgid "Product status:"
+msgstr "Ürün durumu:"
+
+msgid "All statuses"
+msgstr "Tüm durumlar"
+
+msgid "Category:"
+msgstr "Kategori:"
+
+msgid "All categories"
+msgstr "Tüm kategoriler"
+
+msgid "Title, SKU, ID..."
+msgstr "Başlık, SKU, kimlik..."
+
+msgid "Tax status:"
+msgstr "Vergi durumu:"
+
+msgid "All"
+msgstr "Hepsi"
+
+msgid "Stock status:"
+msgstr "Stok durumu:"
+
+msgid "Manage columns"
+msgstr "Sütunları yönet"
+
+msgid "Close"
+msgstr "Kapat"
+
+msgid "Manage table columns"
+msgstr "Tablo sütunlarını yönet"
+
+msgid "Show all"
+msgstr "Tümünü göster"
+
+msgid "Hide all"
+msgstr "Tümünü gizle"
+
+msgid "Reset"
+msgstr "Sıfırla"
+
+msgid "Column \"{column}\" shown"
+msgstr "\"{column}\" sütunu gösteriliyor"
+
+msgid "Column \"{column}\" hidden"
+msgstr "\"{column}\" sütunu gizlendi"
+
+msgid "Column settings reset"
+msgstr "Sütun ayarları sıfırlandı"
+
+msgid "All columns are visible"
+msgstr "Tüm sütunlar görünür"
+
+msgid "All columns hidden except the row number"
+msgstr "Satır numarası dışında tüm sütunlar gizlendi"
+
+msgid "#"
+msgstr "#"
+
+msgid "ID"
+msgstr "kimlik"
+
+msgid "Category"
+msgstr "Kategori"
+
+msgid "Product title"
+msgstr "Ürün başlığı"
+
+msgid "SKU"
+msgstr "Stok Kodu"
+
+msgid "Price"
+msgstr "Fiyat"
+
+msgid "Sale price"
+msgstr "Satış fiyatı"
+
+msgid "Was"
+msgstr "Oldu"
+
+msgid "Stock status"
+msgstr "Stok durumu"
+
+msgid "Tax status"
+msgstr "Vergi durumu"
+
+msgid "Tax class"
+msgstr "Vergi sınıfı"
+
+msgid "Actions"
+msgstr "Eylemler"
+
+msgid "Click to view the product"
+msgstr "Ürünü incelemek için tıklayın"
+
+msgid "Edit"
+msgstr "Düzenle"
+
+msgid "Data loading errors:"
+msgstr "Veri yükleme hataları:"
+
+msgid "Ready to work"
+msgstr "Çalışmaya hazır"
+
+msgid "Loading data..."
+msgstr "Veri yükleniyor..."
+
+msgid "Saving changes..."
+msgstr "Değişiklikler kaydediliyor..."
+
+msgid "Saving the product title..."
+msgstr "Ürün başlığı kaydediliyor..."
+
+msgid "Saving the SKU..."
+msgstr "SKU kaydediliyor..."
+
+msgid "Saving the stock status..."
+msgstr "Stok durumu kaydediliyor..."
+
+msgid "Saving the tax status..."
+msgstr "Vergi durumu kaydediliyor..."
+
+msgid "Saving the tax class..."
+msgstr "Vergi sınıfı kaydediliyor..."
+
+msgid "Saving the category..."
+msgstr "Kategori kaydediliyor..."
+
+msgid "New filters applied"
+msgstr "Yeni filtreler uygulandı"
+
+msgid "Filters reset"
+msgstr "Filtreler sıfırlandı"
+
+msgid "Clearing cache and reloading..."
+msgstr "Önbellek temizleniyor ve yeniden yükleniyor..."
+
+msgid "Cache cleared, reloading data..."
+msgstr "Önbellek temizlendi, veriler yeniden yükleniyor..."
+
+msgid "Confirmation"
+msgstr "Onay"
+
+msgid "Yes"
+msgstr "Evet"
+
+msgid "No"
+msgstr "Hayır"
+
+msgid "Enter title"
+msgstr "Başlığı girin"
+
+msgid "Enter SKU"
+msgstr "SKU'yu girin"
+
+msgid "Click to edit the product title"
+msgstr "Ürün başlığını düzenlemek için tıklayın"
+
+msgid "Click to edit the category"
+msgstr "Kategoriyi düzenlemek için tıklayın"
+
+msgid "Click to edit the stock status"
+msgstr "Stok durumunu düzenlemek için tıklayın"
+
+msgid "Click to edit the tax status"
+msgstr "Vergi durumunu düzenlemek için tıklayın"
+
+msgid "Click to edit the tax class"
+msgstr "Vergi sınıfını düzenlemek için tıklayın"
+
+msgid "Click to edit the SKU"
+msgstr "SKU'yu düzenlemek için tıklayın"
+
+msgid "Click to add a SKU"
+msgstr "SKU eklemek için tıklayın"
+
+msgid "Changes saved"
+msgstr "Değişiklikler kaydedildi"
+
+msgid "Title updated"
+msgstr "Başlık güncellendi"
+
+msgid "SKU updated"
+msgstr "SKU güncellendi"
+
+msgid "Stock status updated"
+msgstr "Stok durumu güncellendi"
+
+msgid "Tax status updated"
+msgstr "Vergi durumu güncellendi"
+
+msgid "Tax class updated"
+msgstr "Vergi sınıfı güncellendi"
+
+msgid "Category updated"
+msgstr "Kategori güncellendi"
+
+msgid "Unknown error"
+msgstr "Bilinmeyen hata"
+
+msgid "Error loading data: {message}"
+msgstr "Veriler yüklenirken hata oluştu: {message}"
+
+msgid "Error loading categories"
+msgstr "Kategoriler yüklenirken hata oluştu"
+
+msgid "Error loading categories: {message}"
+msgstr "Kategoriler yüklenirken hata oluştu: {message}"
+
+msgid "Error loading tax classes"
+msgstr "Vergi sınıfları yüklenirken hata oluştu"
+
+msgid "Error loading tax classes: {message}"
+msgstr "Vergi sınıfları yüklenirken hata oluştu: {message}"
+
+msgid "Save error: {message}"
+msgstr "Hatayı kaydet: {message}"
+
+msgid "Error saving the title: {message}"
+msgstr "Başlık kaydedilirken hata oluştu: {message}"
+
+msgid "Error saving the SKU: {message}"
+msgstr "SKU kaydedilirken hata oluştu: {message}"
+
+msgid "Error saving the stock status: {message}"
+msgstr "Stok durumu kaydedilirken hata oluştu: {message}"
+
+msgid "Error saving the tax status: {message}"
+msgstr "Vergi durumu kaydedilirken hata oluştu: {message}"
+
+msgid "Error saving the tax class: {message}"
+msgstr "Vergi sınıfı kaydedilirken hata oluştu: {message}"
+
+msgid "Error saving the category: {message}"
+msgstr "Kategori kaydedilirken hata oluştu: {message}"
+
+msgid "Error: DataTables library is not loaded"
+msgstr "Hata: DataTables kitaplığı yüklü değil"
+
+msgid "jQuery is not loaded"
+msgstr "jQuery yüklü değil"
+
+msgid "DataTables is not loaded"
+msgstr "DataTable'lar yüklü değil"
+
+msgid "Updated {field} for product #{id}"
+msgstr "Ürün #{id} için {field} güncellendi"
+
+msgid "Updated product #{id} title: {old} -> {new}"
+msgstr "Ürün #{id} başlığı güncellendi: {old} -> {new}"
+
+msgid "Updated product #{id} SKU: \"{old}\" -> \"{new}\""
+msgstr "Güncellenen ürün #{id} SKU'su: \"{old}\" -> \"{new}\""
+
+msgid "Updated product #{id} stock status: \"{old}\" -> \"{new}\""
+msgstr "Güncellenen ürün #{id} stok durumu: \"{old}\" -> \"{new}\""
+
+msgid "Updated product #{id} tax status: \"{old}\" -> \"{new}\""
+msgstr "Güncellenen ürün #{id} vergi durumu: \"{old}\" -> \"{new}\""
+
+msgid "Updated product #{id} tax class: \"{old}\" -> \"{new}\""
+msgstr "Güncellenen ürün #{id} vergi sınıfı: \"{old}\" -> \"{new}\""
+
+msgid "Updated product #{id} category: \"{old}\" -> \"{new}\""
+msgstr "Güncellenen ürün #{id} kategorisi: \"{old}\" -> \"{new}\""
+
+msgid "regular price"
+msgstr "normal fiyat"
+
+msgid "sale price"
+msgstr "satış fiyatı"
+
+msgid "product title"
+msgstr "ürün başlığı"
+
+msgid "tax status"
+msgstr "vergi durumu"
+
+msgid "tax class"
+msgstr "vergi sınıfı"
+
+msgid "stock status"
+msgstr "stok durumu"
+
+msgid "category"
+msgstr "kategori"
+
+msgid "Scroll horizontally"
+msgstr "Yatay olarak kaydır"
+
+msgid "Rotate the device to portrait mode for a better view"
+msgstr "Daha iyi bir görünüm için cihazı dikey moda çevirin"
+
+msgid "Developed by"
+msgstr "Tarafından geliştirildi"
+
+msgid "Open in a new tab"
+msgstr "Yeni bir sekmede aç"
+
+msgid "Security check failed."
+msgstr "Güvenlik kontrolü başarısız oldu."
+
+msgid "You do not have permission to edit products."
+msgstr "Ürünleri düzenleme izniniz yok."
+
+msgid "Not enough data to update the product."
+msgstr "Ürünü güncellemek için yeterli veri yok."
+
+msgid "Product not found."
+msgstr "Ürün bulunamadı."
+
+msgid "Updated product #%1$d title: %2$s -> %3$s"
+msgstr "Ürün #%1$d başlığı güncellendi: %2$s -> %3$s"
+
+msgid "Updated product #%1$d SKU: \"%2$s\" -> \"%3$s\""
+msgstr "Güncellenen ürün #%1$d SKU'su: \"%2$s\" -> \"%3$s\""
+
+msgid "Updated product #%1$d regular price: \"%2$s\" -> \"%3$s\""
+msgstr "Ürün #%1$d normal fiyatı güncellendi: \"%2$s\" -> \"%3$s\""
+
+msgid "Updated product #%1$d sale price: \"%2$s\" -> \"%3$s\""
+msgstr "Güncellenen ürün #%1$d satış fiyatı: \"%2$s\" -> \"%3$s\""
+
+msgid "Updated product #%1$d tax status: \"%2$s\" -> \"%3$s\""
+msgstr "Güncellenen ürün #%1$d vergi durumu: \"%2$s\" -> \"%3$s\""
+
+msgid "Updated product #%1$d tax class: \"%2$s\" -> \"%3$s\""
+msgstr "Güncellenen ürün #%1$d vergi sınıfı: \"%2$s\" -> \"%3$s\""
+
+msgid "Updated product #%1$d stock status: \"%2$s\" -> \"%3$s\""
+msgstr "Güncellenen ürün #%1$d stok durumu: \"%2$s\" -> \"%3$s\""
+
+msgid "Updated product #%1$d category: \"%2$s\" -> \"%3$s\""
+msgstr "Güncellenen ürün #%1$d kategorisi: \"%2$s\" -> \"%3$s\""
+
+msgid "Unknown field for update."
+msgstr "Güncelleme için bilinmeyen alan."
+
+msgid "Error saving changes."
+msgstr "Değişiklikler kaydedilirken hata oluştu."
+
+msgid "Tax class:"
+msgstr "Vergi sınıfı:"
+
+msgid "All tax classes"
+msgstr "Tüm vergi sınıfları"
+
+msgid "Change history"
+msgstr "Geçmişi değiştir"
+
+msgid "Click to view the latest 100 changes"
+msgstr "En son 100 değişikliği görüntülemek için tıklayın"
+
+msgid "Loading history..."
+msgstr "Geçmiş yükleniyor..."
+
+msgid "Change history is empty so far."
+msgstr "Değişiklik geçmişi şu ana kadar boş."
+
+msgid "Date and time"
+msgstr "Tarih ve saat"
+
+msgid "What happened"
+msgstr "Ne oldu?"
+
+msgid "Author"
+msgstr "Yazar"
+
+msgid "Error loading history: {message}"
+msgstr "Geçmiş yüklenirken hata oluştu: {message}"
+
+msgid "Unknown user"
+msgstr "Bilinmeyen kullanıcı"
+
+msgid "Invalid tax status value."
+msgstr "Geçersiz vergi durumu değeri."
+
+msgid "Invalid stock status value."
+msgstr "Geçersiz stok durumu değeri."
+
+msgid "Please enter a valid number greater than 0."
+msgstr "Lütfen 0'dan büyük geçerli bir sayı girin."
+
+msgid "Products shown: {count}"
+msgstr "Gösterilen ürünler: {count}"
+
+msgid "How many products to show at most?"
+msgstr "En fazla kaç ürün gösterilecek?"
+
+msgid "Product limit updated to {limit}"
+msgstr "Ürün sınırı {limit} olarak güncellendi"
+
+msgid "Error saving the product limit: {message}"
+msgstr "Ürün sınırı kaydedilirken hata oluştu: {message}"

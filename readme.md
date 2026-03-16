@@ -3,6 +3,7 @@
 **Version:** 1.0.0  
 **Author:** DarkTech  
 **Website:** [darktech.ru](https://darktech.ru)  
+**Repository:** [github.com/DarkTechCode/darktech-price-editor](https://github.com/DarkTechCode/darktech-price-editor)  
 **License:** GPL-2.0-or-later
 
 ## Description
@@ -20,7 +21,29 @@ DarkTech Price Editor is a WordPress plugin for WooCommerce that helps store man
 - Responsive interface for desktop and tablet use
 - Local caching for categories and tax classes, with manual cache reset
 - AJAX-based updates with nonce and capability checks
-- Localized admin interface with `ru_RU` and `en_US` translation files
+- Localized admin interface with 15 bundled translation packs
+
+## Supported Languages
+
+The plugin follows the current WordPress admin locale. Translation files are stored in [`languages/`](languages/).
+
+Bundled locales:
+
+- `ar` (Arabic)
+- `de_DE` (German)
+- `en_US` (English)
+- `es_ES` (Spanish)
+- `fr_FR` (French)
+- `hi_IN` (Hindi)
+- `id_ID` (Indonesian)
+- `it_IT` (Italian)
+- `ja` (Japanese)
+- `ko_KR` (Korean)
+- `nl_NL` (Dutch)
+- `pt_BR` (Portuguese, Brazil)
+- `ru_RU` (Russian)
+- `tr_TR` (Turkish)
+- `zh_CN` (Chinese, Simplified)
 
 ## Screenshots
 
@@ -51,8 +74,6 @@ DarkTech Price Editor is a WordPress plugin for WooCommerce that helps store man
 ## Usage
 
 Open **Price Editor** from the WordPress admin menu to launch the fullscreen interface.
-
-The plugin follows the current WordPress admin locale. Translation files are stored in [`languages/`](languages/).
 
 Typical workflow:
 
@@ -139,7 +160,7 @@ Requests are handled through `wp-admin/admin-ajax.php`.
 ## Support
 
 Developed by **DarkTech**.  
-For support, bug reports, or feature requests, visit [darktech.ru](https://darktech.ru) or github@darktech.ru.
+For support, bug reports, or feature requests, visit [darktech.ru](https://darktech.ru), the [GitHub repository](https://github.com/DarkTechCode/darktech-price-editor), or github@darktech.ru.
 
 ## License
 

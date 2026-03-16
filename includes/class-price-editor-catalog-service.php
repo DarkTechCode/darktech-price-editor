@@ -185,7 +185,9 @@ class DarkTech_Price_Editor_Catalog_Service
             return '';
         }
 
-        return sanitize_text_field(wp_unslash($value));
+        // Keep percent-encoded WooCommerce slugs intact (for example Cyrillic
+        // categories), because sanitize_text_field() strips %xx sequences.
+        return trim(wp_unslash($value));
     }
 
     /**
