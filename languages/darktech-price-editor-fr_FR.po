@@ -115,6 +115,18 @@ msgstr "Tableau de bord"
 msgid "Clear cache and reload data (for example, after adding categories)"
 msgstr "Vider le cache et recharger les données (par exemple, après avoir ajouté des catégories)"
 
+msgid "Toggle light and dark theme"
+msgstr "Basculer entre le thème clair et sombre"
+
+msgid "Switch to dark theme"
+msgstr "Passer au thème sombre"
+
+msgid "Switch to light theme"
+msgstr "Passer au thème clair"
+
+msgid "System theme is used by default until you switch manually."
+msgstr "Le thème du système est utilisé par défaut jusqu'à ce que vous changiez manuellement."
+
 msgid "Product status:"
 msgstr "Statut du produit :"
 

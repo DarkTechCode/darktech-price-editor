@@ -1,16 +1,16 @@
-/* 
+/*
  * Стили заголовка страницы редактора цен
  * Header, breadcrumbs и основные заголовки
  */
 
 /* Заголовок страницы */
 .header-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: var(--pe-header-gradient);
+  color: var(--pe-text-inverse);
   padding: 30px;
   border-radius: 12px;
   margin-bottom: 30px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--pe-shadow-header);
   position: relative;
 }
 
@@ -45,8 +45,8 @@
 
 .products-count:hover {
   opacity: 1;
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: var(--pe-header-glass);
+  border-color: var(--pe-header-border);
 }
 
 .products-count:empty {
@@ -54,14 +54,14 @@
 }
 
 .breadcrumb a {
-  color: #fff;
+  color: var(--pe-text-inverse);
   text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid var(--pe-header-border);
   transition: all 0.3s ease;
 }
 
 .breadcrumb a:hover {
-  border-bottom-color: #fff;
+  border-bottom-color: var(--pe-text-inverse);
 }
 
 /* Действия в заголовке */
@@ -71,14 +71,15 @@
   right: 20px;
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 .clear-cache-btn {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--pe-header-glass);
+  border: 1px solid var(--pe-header-border);
   border-radius: 8px;
   padding: 8px 10px;
-  color: white;
+  color: var(--pe-text-inverse);
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
@@ -87,8 +88,8 @@
 }
 
 .clear-cache-btn:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-color: rgba(255, 255, 255, 0.5);
+  background: var(--pe-header-glass-strong);
+  border-color: var(--pe-header-border-strong);
   transform: rotate(90deg);
 }
 
@@ -98,4 +99,44 @@
 
 .clear-cache-btn svg {
   display: block;
+}
+
+.theme-toggle-btn {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid var(--pe-theme-toggle-border);
+  background: linear-gradient(
+    90deg,
+    var(--pe-theme-toggle-light-half) 0 50%,
+    var(--pe-theme-toggle-dark-half) 50% 100%
+  );
+  box-shadow: var(--pe-theme-toggle-shadow);
+  opacity: 0.5;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--pe-header-border-strong);
+  box-shadow: var(--pe-theme-toggle-shadow-hover);
+  opacity: 0.5;
+}
+
+.theme-toggle-btn[data-theme="dark"] {
+  box-shadow:
+    var(--pe-theme-toggle-shadow-hover),
+    0 0 0 2px var(--pe-header-glass);
+}
+
+.theme-toggle-btn:focus-visible {
+  outline: 2px solid var(--pe-focus-ring);
+  outline-offset: 2px;
 }

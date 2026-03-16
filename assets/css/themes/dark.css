@@ -1,0 +1,135 @@
+/*
+ * Discord-inspired dark theme palette.
+ */
+
+html[data-theme="dark"],
+html.dark {
+  color-scheme: dark;
+
+  --pe-body-bg: #1e1f22;
+  --pe-body-text: #f2f3f5;
+
+  --pe-surface-primary: #2b2d31;
+  --pe-surface-primary-rgb: 43, 45, 49;
+  --pe-surface-secondary: #313338;
+  --pe-surface-tertiary: #2e3035;
+  --pe-surface-quaternary: #232428;
+  --pe-surface-muted: #2b3138;
+  --pe-surface-muted-alt: #32363c;
+  --pe-surface-hover: #35373c;
+  --pe-surface-active: #3b3e45;
+  --pe-surface-active-strong: #414552;
+  --pe-surface-active-stronger: #4a4f5c;
+  --pe-surface-frosted: rgba(30, 31, 34, 0.94);
+  --pe-surface-overlay: rgba(43, 45, 49, 0.96);
+  --pe-surface-overlay-soft: rgba(43, 45, 49, 0.92);
+  --pe-surface-ghost: rgba(255, 255, 255, 0.08);
+
+  --pe-text-primary: #f2f3f5;
+  --pe-text-secondary: #dcddde;
+  --pe-text-muted: #b5bac1;
+  --pe-text-muted-alt: #a4a9b2;
+  --pe-text-muted-soft: #c0c4cc;
+  --pe-text-subtle: #8d93a1;
+  --pe-text-strong: #ffffff;
+  --pe-text-soft: #c0c6d0;
+  --pe-text-soft-alt: #9fa6b2;
+  --pe-text-soft-strong: #adb3bd;
+  --pe-text-history: #e3e5e8;
+  --pe-text-inverse: #ffffff;
+  --pe-text-inverse-rgb: 255, 255, 255;
+
+  --pe-border-primary: #3f4147;
+  --pe-border-secondary: #40444b;
+  --pe-border-tertiary: #383b42;
+  --pe-border-quaternary: #454952;
+  --pe-border-quinary: #3a3d45;
+  --pe-border-history: #454a54;
+  --pe-border-dashed: #5b616d;
+  --pe-border-input: #4a4e57;
+  --pe-border-processing: #565b66;
+  --pe-border-danger-soft: #7c3b3e;
+
+  --pe-accent: #5865f2;
+  --pe-accent-rgb: 88, 101, 242;
+  --pe-accent-strong: #4752c4;
+  --pe-accent-secondary: #7983f5;
+  --pe-accent-soft: rgba(88, 101, 242, 0.18);
+  --pe-accent-soft-strong: rgba(88, 101, 242, 0.26);
+  --pe-accent-soft-stronger: rgba(88, 101, 242, 0.34);
+  --pe-accent-soft-subtle: rgba(88, 101, 242, 0.12);
+  --pe-focus-shadow: 0 0 0 3px rgba(88, 101, 242, 0.24);
+  --pe-focus-shadow-compact: 0 0 0 2px rgba(88, 101, 242, 0.32);
+  --pe-shadow-autosave: inset 0 0 0 2px rgba(88, 101, 242, 0.38);
+
+  --pe-info: #00a8fc;
+
+  --pe-success: #3ba55d;
+  --pe-success-strong: #2d7d46;
+  --pe-success-bg: rgba(59, 165, 93, 0.18);
+  --pe-success-text: #8de1a2;
+  --pe-success-soft: rgba(59, 165, 93, 0.16);
+
+  --pe-warning: #faa81a;
+  --pe-warning-bg: rgba(250, 168, 26, 0.18);
+  --pe-warning-text: #fff4dc;
+  --pe-warning-text-strong: #f7c66c;
+
+  --pe-danger: #ed4245;
+  --pe-danger-strong: #c73c3f;
+  --pe-danger-bg: rgba(237, 66, 69, 0.18);
+  --pe-danger-text: #ff9ea1;
+  --pe-danger-text-strong: #ffb3b5;
+  --pe-danger-soft: rgba(237, 66, 69, 0.34);
+
+  --pe-button-secondary-bg: #4e5058;
+  --pe-button-secondary-hover-bg: #5d6169;
+
+  --pe-header-gradient: linear-gradient(135deg, #1e1f22 0%, #2b2d31 55%, #313338 100%);
+  --pe-history-header-bg: linear-gradient(180deg, #32353c 0%, #2a2d33 100%);
+  --pe-notification-info-bg: linear-gradient(135deg, #5865f2 0%, #4752c4 100%);
+  --pe-errors-bg: linear-gradient(135deg, #ed4245 0%, #b83336 100%);
+  --pe-header-glass: rgba(255, 255, 255, 0.12);
+  --pe-header-glass-strong: rgba(255, 255, 255, 0.2);
+  --pe-header-border: rgba(255, 255, 255, 0.22);
+  --pe-header-border-strong: rgba(255, 255, 255, 0.34);
+  --pe-inverse-soft: rgba(255, 255, 255, 0.1);
+  --pe-inverse-medium: rgba(255, 255, 255, 0.18);
+
+  --pe-overlay: rgba(0, 0, 0, 0.62);
+  --pe-overlay-strong: rgba(7, 8, 10, 0.8);
+
+  --pe-shadow-card: 0 8px 24px rgba(0, 0, 0, 0.28);
+  --pe-shadow-header: 0 10px 28px rgba(0, 0, 0, 0.35);
+  --pe-shadow-filter-button: 0 4px 10px rgba(0, 0, 0, 0.22);
+  --pe-shadow-filter-button-hover: 0 8px 18px rgba(0, 0, 0, 0.3);
+  --pe-shadow-accent: 0 8px 18px rgba(88, 101, 242, 0.28);
+  --pe-shadow-modal: 0 18px 40px rgba(0, 0, 0, 0.38);
+  --pe-shadow-modal-strong: 0 32px 90px rgba(0, 0, 0, 0.5);
+  --pe-shadow-processing: 0 14px 32px rgba(0, 0, 0, 0.35);
+  --pe-shadow-tech-bar: 0 -4px 18px rgba(0, 0, 0, 0.3);
+  --pe-shadow-horizontal-scroll: 0 -6px 22px rgba(0, 0, 0, 0.35);
+  --pe-shadow-notification: 0 14px 28px rgba(0, 0, 0, 0.32);
+  --pe-shadow-error: 0 12px 24px rgba(237, 66, 69, 0.22);
+  --pe-shadow-inset-table: inset -10px 0 12px -10px rgba(0, 0, 0, 0.35);
+
+  --pe-spinner-track: #4c515d;
+  --pe-focus-ring: #a5adff;
+  --pe-focus-ring-strong: #8ea1ff;
+
+  --pe-scroll-track: #232428;
+  --pe-scroll-thumb: #4b4f58;
+  --pe-scroll-thumb-hover: #5b616d;
+  --pe-scroll-thumb-strong: #6d7482;
+  --pe-scroll-thumb-gradient: linear-gradient(45deg, #4b4f58, #5b616d);
+  --pe-scroll-thumb-gradient-hover: linear-gradient(45deg, #5b616d, #6d7482);
+
+  --pe-tech-bar-bg: #111214;
+  --pe-tech-bar-bg-hover: #1a1c1f;
+
+  --pe-theme-toggle-light-half: #dfe3ff;
+  --pe-theme-toggle-dark-half: #aaaaaa;
+  --pe-theme-toggle-border: rgba(255, 255, 255, 0.28);
+  --pe-theme-toggle-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --pe-theme-toggle-shadow-hover: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+}

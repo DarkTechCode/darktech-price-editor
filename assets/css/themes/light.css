@@ -1,0 +1,135 @@
+/*
+ * Light theme palette.
+ * Keeps the existing visual design as the default theme.
+ */
+
+:root {
+  color-scheme: light;
+
+  --pe-body-bg: #f8f9fa;
+  --pe-body-text: #333333;
+
+  --pe-surface-primary: #ffffff;
+  --pe-surface-primary-rgb: 255, 255, 255;
+  --pe-surface-secondary: #f8f9fa;
+  --pe-surface-tertiary: #fafafa;
+  --pe-surface-quaternary: #f5f7fa;
+  --pe-surface-muted: #eef3f8;
+  --pe-surface-muted-alt: #f7fafc;
+  --pe-surface-hover: #f2f7fc;
+  --pe-surface-active: #e9ecef;
+  --pe-surface-active-strong: #dce6f0;
+  --pe-surface-active-stronger: #c8d6e3;
+  --pe-surface-frosted: rgba(248, 249, 250, 0.98);
+  --pe-surface-overlay: rgba(255, 255, 255, 0.95);
+  --pe-surface-overlay-soft: rgba(255, 255, 255, 0.9);
+  --pe-surface-ghost: rgba(255, 255, 255, 0.3);
+
+  --pe-text-primary: #333333;
+  --pe-text-secondary: #495057;
+  --pe-text-muted: #6c757d;
+  --pe-text-muted-alt: #666666;
+  --pe-text-muted-soft: #555555;
+  --pe-text-subtle: #999999;
+  --pe-text-strong: #1e2a36;
+  --pe-text-soft: #4a5a6a;
+  --pe-text-soft-alt: #5f7082;
+  --pe-text-soft-strong: #4e6071;
+  --pe-text-history: #22313f;
+  --pe-text-inverse: #ffffff;
+  --pe-text-inverse-rgb: 255, 255, 255;
+
+  --pe-border-primary: #dee2e6;
+  --pe-border-secondary: #e9ecef;
+  --pe-border-tertiary: #f1f3f4;
+  --pe-border-quaternary: #dfe7ef;
+  --pe-border-quinary: #edf2f7;
+  --pe-border-history: #e6ecf2;
+  --pe-border-dashed: #c7d5e3;
+  --pe-border-input: #ced4da;
+  --pe-border-processing: #dddddd;
+  --pe-border-danger-soft: #f0b6b6;
+
+  --pe-accent: #667eea;
+  --pe-accent-rgb: 102, 126, 234;
+  --pe-accent-strong: #5a6fd8;
+  --pe-accent-secondary: #764ba2;
+  --pe-accent-soft: rgba(102, 126, 234, 0.1);
+  --pe-accent-soft-strong: rgba(102, 126, 234, 0.2);
+  --pe-accent-soft-stronger: rgba(102, 126, 234, 0.3);
+  --pe-accent-soft-subtle: rgba(102, 126, 234, 0.05);
+  --pe-focus-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  --pe-focus-shadow-compact: 0 0 0 2px rgba(102, 126, 234, 0.2);
+  --pe-shadow-autosave: inset 0 0 0 2px rgba(102, 126, 234, 0.3);
+
+  --pe-info: #17a2b8;
+
+  --pe-success: #28a745;
+  --pe-success-strong: #218838;
+  --pe-success-bg: #d4edda;
+  --pe-success-text: #155724;
+  --pe-success-soft: rgba(40, 167, 69, 0.1);
+
+  --pe-warning: #ffc107;
+  --pe-warning-bg: #fff3cd;
+  --pe-warning-text: #333333;
+  --pe-warning-text-strong: #856404;
+
+  --pe-danger: #dc3545;
+  --pe-danger-strong: #c82333;
+  --pe-danger-bg: #f8d7da;
+  --pe-danger-text: #721c24;
+  --pe-danger-text-strong: #9b1c1c;
+  --pe-danger-soft: rgba(220, 53, 69, 0.3);
+
+  --pe-button-secondary-bg: #6c757d;
+  --pe-button-secondary-hover-bg: #5a6268;
+
+  --pe-header-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --pe-history-header-bg: linear-gradient(180deg, #f7fafc 0%, #eef3f8 100%);
+  --pe-notification-info-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --pe-errors-bg: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  --pe-header-glass: rgba(255, 255, 255, 0.15);
+  --pe-header-glass-strong: rgba(255, 255, 255, 0.25);
+  --pe-header-border: rgba(255, 255, 255, 0.3);
+  --pe-header-border-strong: rgba(255, 255, 255, 0.5);
+  --pe-inverse-soft: rgba(255, 255, 255, 0.1);
+  --pe-inverse-medium: rgba(255, 255, 255, 0.2);
+
+  --pe-overlay: rgba(0, 0, 0, 0.5);
+  --pe-overlay-strong: rgba(12, 18, 28, 0.8);
+
+  --pe-shadow-card: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --pe-shadow-header: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --pe-shadow-filter-button: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --pe-shadow-filter-button-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --pe-shadow-accent: 0 4px 8px rgba(102, 126, 234, 0.3);
+  --pe-shadow-modal: 0 10px 30px rgba(0, 0, 0, 0.2);
+  --pe-shadow-modal-strong: 0 24px 80px rgba(0, 0, 0, 0.35);
+  --pe-shadow-processing: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --pe-shadow-tech-bar: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  --pe-shadow-horizontal-scroll: 0 -2px 15px rgba(0, 0, 0, 0.15);
+  --pe-shadow-notification: 0 4px 20px rgba(0, 0, 0, 0.25);
+  --pe-shadow-error: 0 4px 15px rgba(220, 53, 69, 0.3);
+  --pe-shadow-inset-table: inset -10px 0 10px -10px rgba(0, 0, 0, 0.1);
+
+  --pe-spinner-track: #f3f3f3;
+  --pe-focus-ring: #8dd7ff;
+  --pe-focus-ring-strong: #4da3ff;
+
+  --pe-scroll-track: #f1f1f1;
+  --pe-scroll-thumb: #c1c1c1;
+  --pe-scroll-thumb-hover: #a8a8a8;
+  --pe-scroll-thumb-strong: #909090;
+  --pe-scroll-thumb-gradient: linear-gradient(45deg, #c1c1c1, #a8a8a8);
+  --pe-scroll-thumb-gradient-hover: linear-gradient(45deg, #a8a8a8, #909090);
+
+  --pe-tech-bar-bg: #2c3e50;
+  --pe-tech-bar-bg-hover: #34495e;
+
+  --pe-theme-toggle-light-half: #f8f9fa;
+  --pe-theme-toggle-dark-half: #aaaaaa;
+  --pe-theme-toggle-border: rgba(255, 255, 255, 0.35);
+  --pe-theme-toggle-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  --pe-theme-toggle-shadow-hover: inset 0 0 0 1px rgba(255, 255, 255, 0.28);
+}

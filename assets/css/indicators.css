@@ -1,4 +1,4 @@
-/* 
+/*
  * Стили индикаторов состояния
  * Индикаторы автосохранения, успешного сохранения, ошибок, визуальные индикаторы строк
  */
@@ -73,24 +73,24 @@
 }
 
 .editable.save-success {
-  background-color: #d4edda;
+  background-color: var(--pe-success-bg);
   transition: background-color 0.3s ease;
 }
 
 .editable.save-success::after {
   content: "✅";
-  color: #28a745;
+  color: var(--pe-success);
 }
 
 .editable.save-error {
-  background-color: #f8d7da;
+  background-color: var(--pe-danger-bg);
   animation: shake 0.5s;
   transition: background-color 0.3s ease;
 }
 
 .editable.save-error::after {
   content: "❌";
-  color: #dc3545;
+  color: var(--pe-danger);
 }
 
 @keyframes shake {
@@ -115,7 +115,7 @@
 
 /* Визуальные индикаторы для строк таблицы */
 .dataTables_wrapper tbody tr.saved-success {
-  background-color: rgba(40, 167, 69, 0.1) !important;
+  background-color: var(--pe-success-soft) !important;
   transition: background-color 0.5s ease;
 }
 
@@ -129,7 +129,7 @@
   left: -15px;
   top: 50%;
   transform: translateY(-50%);
-  color: #28a745;
+  color: var(--pe-success);
   font-weight: bold;
   font-size: 14px;
 }

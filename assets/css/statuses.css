@@ -1,4 +1,4 @@
-/* 
+/*
  * Стили статусов товаров
  * Статусы публикации, наличие, налоговые статусы и классы
  */
@@ -14,18 +14,18 @@
 }
 
 .status-publish {
-  background: #d4edda;
-  color: #155724;
+  background: var(--pe-success-bg);
+  color: var(--pe-success-text);
 }
 
 .status-draft {
-  background: #fff3cd;
-  color: #856404;
+  background: var(--pe-warning-bg);
+  color: var(--pe-warning-text-strong);
 }
 
 .status-private {
-  background: #f8d7da;
-  color: #721c24;
+  background: var(--pe-danger-bg);
+  color: var(--pe-danger-text);
 }
 
 /* Наличие товара */
@@ -39,20 +39,20 @@
 }
 
 .stock-status:hover {
-  background: rgba(102, 126, 234, 0.1);
-  color: #667eea;
+  background: var(--pe-accent-soft);
+  color: var(--pe-accent);
 }
 
 .stock-instock {
-  color: #28a745;
+  color: var(--pe-success);
 }
 
 .stock-outofstock {
-  color: #dc3545;
+  color: var(--pe-danger);
 }
 
 .stock-onbackorder {
-  color: #ffc107;
+  color: var(--pe-warning);
 }
 
 /* Статусы налога */
@@ -66,20 +66,20 @@
 }
 
 .tax-status:hover {
-  background: rgba(102, 126, 234, 0.1);
-  color: #667eea;
+  background: var(--pe-accent-soft);
+  color: var(--pe-accent);
 }
 
 .tax-taxable {
-  color: #28a745;
+  color: var(--pe-success);
 }
 
 .tax-shipping {
-  color: #17a2b8;
+  color: var(--pe-info);
 }
 
 .tax-none {
-  color: #6c757d;
+  color: var(--pe-text-muted);
 }
 
 /* Налоговый класс */
@@ -93,6 +93,6 @@
 }
 
 .tax-class:hover {
-  background: rgba(102, 126, 234, 0.1);
-  color: #667eea;
+  background: var(--pe-accent-soft);
+  color: var(--pe-accent);
 }

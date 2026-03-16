@@ -115,6 +115,18 @@ msgstr "Dashboard"
 msgid "Clear cache and reload data (for example, after adding categories)"
 msgstr "Clear cache and reload data (for example, after adding categories)"
 
+msgid "Toggle light and dark theme"
+msgstr "Toggle light and dark theme"
+
+msgid "Switch to dark theme"
+msgstr "Switch to dark theme"
+
+msgid "Switch to light theme"
+msgstr "Switch to light theme"
+
+msgid "System theme is used by default until you switch manually."
+msgstr "System theme is used by default until you switch manually."
+
 msgid "Product status:"
 msgstr "Product status:"
 

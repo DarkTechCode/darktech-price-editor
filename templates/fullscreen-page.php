@@ -35,6 +35,36 @@ $darktech_pe_column_order = [
     <meta charset="<?php bloginfo('charset'); ?>">
     <title><?php echo esc_html($darktech_pe_i18n['page']['title']); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function() {
+            var storageKey = 'darktech_pe_theme';
+            var theme = 'light';
+
+            try {
+                var storedTheme = window.localStorage.getItem(storageKey);
+
+                if (storedTheme === 'light' || storedTheme === 'dark') {
+                    theme = storedTheme;
+                } else if (
+                    typeof window.matchMedia === 'function' &&
+                    window.matchMedia('(prefers-color-scheme: dark)').matches
+                ) {
+                    theme = 'dark';
+                }
+            } catch (error) {
+                if (
+                    typeof window.matchMedia === 'function' &&
+                    window.matchMedia('(prefers-color-scheme: dark)').matches
+                ) {
+                    theme = 'dark';
+                }
+            }
+
+            document.documentElement.dataset.theme = theme;
+            document.documentElement.classList.toggle('dark', theme === 'dark');
+            document.documentElement.style.colorScheme = theme;
+        })();
+    </script>
     <?php wp_print_styles(); ?>
     <?php wp_print_head_scripts(); ?>
 </head>
@@ -43,13 +73,20 @@ $darktech_pe_column_order = [
     <div class="header-section">
         <h1><?php echo esc_html($darktech_pe_i18n['page']['heading']); ?></h1>
         <div class="header-actions">
-            <button id="clear-cache-btn" class="clear-cache-btn" title="<?php echo esc_attr($darktech_pe_i18n['page']['clearCacheTitle']); ?>">
+            <button id="clear-cache-btn" class="clear-cache-btn" type="button" title="<?php echo esc_attr($darktech_pe_i18n['page']['clearCacheTitle']); ?>">
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M23 4v6h-6"></path>
                     <path d="M1 20v-6h6"></path>
                     <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
                 </svg>
             </button>
+            <button
+                id="theme-toggle-btn"
+                class="theme-toggle-btn"
+                type="button"
+                title="<?php echo esc_attr($darktech_pe_i18n['page']['themeToggleTitle']); ?>"
+                aria-label="<?php echo esc_attr($darktech_pe_i18n['page']['themeToggleTitle']); ?>"
+                aria-pressed="false"></button>
         </div>
         <div class="breadcrumb-row">
             <div class="breadcrumb">

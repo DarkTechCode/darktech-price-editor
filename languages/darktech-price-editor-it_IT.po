@@ -115,6 +115,18 @@ msgstr "Cruscotto"
 msgid "Clear cache and reload data (for example, after adding categories)"
 msgstr "Svuota la cache e ricarica i dati (ad esempio, dopo aver aggiunto le categorie)"
 
+msgid "Toggle light and dark theme"
+msgstr "Alterna tra tema chiaro e scuro"
+
+msgid "Switch to dark theme"
+msgstr "Passa al tema scuro"
+
+msgid "Switch to light theme"
+msgstr "Passa al tema chiaro"
+
+msgid "System theme is used by default until you switch manually."
+msgstr "Per impostazione predefinita viene usato il tema di sistema finché non lo cambi manualmente."
+
 msgid "Product status:"
 msgstr "Stato del prodotto:"
 

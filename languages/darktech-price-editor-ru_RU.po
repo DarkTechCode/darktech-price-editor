@@ -115,6 +115,18 @@ msgstr "Админка"
 msgid "Clear cache and reload data (for example, after adding categories)"
 msgstr "Очистить кэш и перезагрузить данные (например, после добавления категорий)"
 
+msgid "Toggle light and dark theme"
+msgstr "Переключить светлую и тёмную тему"
+
+msgid "Switch to dark theme"
+msgstr "Переключить на тёмную тему"
+
+msgid "Switch to light theme"
+msgstr "Переключить на светлую тему"
+
+msgid "System theme is used by default until you switch manually."
+msgstr "По умолчанию используется системная тема, пока вы не переключите её вручную."
+
 msgid "Product status:"
 msgstr "Статус товара:"
 

@@ -25,11 +25,17 @@
   }
 
   .header-section {
-    padding: 15px;
+    padding: 68px 15px 15px;
   }
 
   .header-section h1 {
     font-size: 1.8em;
+  }
+
+  .header-actions {
+    top: 15px;
+    right: 15px;
+    gap: 8px;
   }
 
   .filters-section {
@@ -224,7 +230,7 @@
   }
 
   .header-section {
-    padding: 12px 8px;
+    padding: 58px 8px 12px;
   }
 
   .header-section h1 {
@@ -232,8 +238,23 @@
     margin-bottom: 8px;
   }
 
+  .header-actions {
+    top: 10px;
+    right: 8px;
+    gap: 6px;
+  }
+
+  .clear-cache-btn {
+    padding: 7px 9px;
+  }
+
   .breadcrumb {
     font-size: 12px;
+  }
+
+  .breadcrumb-row {
+    align-items: flex-start;
+    flex-wrap: wrap;
   }
 
   .filters-section {

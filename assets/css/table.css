@@ -12,12 +12,12 @@
 }
 
 #products-table thead th {
-  background: #f8f9fa;
-  color: #495057;
+  background: var(--pe-surface-secondary);
+  color: var(--pe-text-secondary);
   font-weight: 600;
   padding: 15px 12px;
   text-align: left;
-  border-bottom: 2px solid #dee2e6;
+  border-bottom: 2px solid var(--pe-border-primary);
   font-size: 0.85em;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -29,7 +29,7 @@
 
 #products-table tbody td {
   padding: 12px;
-  border-bottom: 1px solid #f1f3f4;
+  border-bottom: 1px solid var(--pe-border-tertiary);
   vertical-align: middle;
   font-size: 14px;
   /* Улучшенное отображение длинного текста */
@@ -39,11 +39,11 @@
 }
 
 #products-table tbody tr:hover {
-  background-color: #f8f9fa;
+  background-color: var(--pe-surface-secondary);
 }
 
 #products-table tbody tr:nth-child(even) {
-  background-color: #fafafa;
+  background-color: var(--pe-surface-tertiary);
 }
 
 /* Кастомные стили для конкретных колонок */
@@ -64,7 +64,7 @@
 }
 
 #products-table .category-empty {
-  color: #6c757d;
+  color: var(--pe-text-muted);
   font-style: italic;
 }
 
@@ -100,14 +100,14 @@
 }
 
 #products-table .title-text:hover {
-  background: rgba(102, 126, 234, 0.1);
-  color: #667eea;
+  background: var(--pe-accent-soft);
+  color: var(--pe-accent);
 }
 
 #products-table .sku-column {
   font-family: "Courier New", monospace;
   font-size: 14px;
-  color: #666;
+  color: var(--pe-text-muted-alt);
   max-width: 80px;
   min-width: 80px;
   overflow: hidden;
@@ -145,7 +145,7 @@
   text-align: center;
   min-width: 80px;
   font-size: 12px;
-  color: #666;
+  color: var(--pe-text-muted-alt);
   white-space: nowrap;
 }
 
@@ -176,7 +176,7 @@
   overflow-y: visible;
   position: relative;
   /* Добавляем тень для индикации прокрутки только при необходимости */
-  box-shadow: inset -10px 0 10px -10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--pe-shadow-inset-table);
   /* Плавная прокрутка */
   scroll-behavior: smooth;
 }
@@ -197,8 +197,8 @@
     top: 5px;
     right: 10px;
     font-size: 11px;
-    color: #999;
-    background: rgba(255, 255, 255, 0.9);
+    color: var(--pe-text-subtle);
+    background: var(--pe-surface-overlay-soft);
     padding: 3px 8px;
     border-radius: 3px;
     pointer-events: none;
@@ -220,14 +220,14 @@
 .table-section::-webkit-scrollbar-track,
 .dataTables_wrapper::-webkit-scrollbar-track,
 .horizontal-scroll-bar::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--pe-scroll-track);
   border-radius: 8px;
 }
 
 .table-section::-webkit-scrollbar-thumb,
 .dataTables_wrapper::-webkit-scrollbar-thumb,
 .horizontal-scroll-bar::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
+  background: var(--pe-scroll-thumb);
   border-radius: 8px;
   transition: background 0.2s ease;
 }
@@ -235,7 +235,7 @@
 .table-section::-webkit-scrollbar-thumb:hover,
 .dataTables_wrapper::-webkit-scrollbar-thumb:hover,
 .horizontal-scroll-bar::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+  background: var(--pe-scroll-thumb-hover);
 }
 
 /* Скрытие индикатора на больших экранах */
@@ -260,13 +260,13 @@
   left: 0;
   right: 0;
   /* Убираем все параметры высоты и отступов */
-  background: rgba(248, 249, 250, 0.98);
-  border-top: 1px solid #dee2e6;
-  border-bottom: 1px solid #dee2e6;
+  background: var(--pe-surface-frosted);
+  border-top: 1px solid var(--pe-border-primary);
+  border-bottom: 1px solid var(--pe-border-primary);
   z-index: 999; /* Под технической строкой (z-index: 1000) */
   display: none; /* Скрыт по умолчанию */
   backdrop-filter: blur(10px);
-  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--pe-shadow-horizontal-scroll);
 }
 
 /* Показываем скроллбар когда таблица шире экрана */
@@ -293,7 +293,7 @@
   overflow-y: hidden;
   position: relative;
   /* Кастомный скроллбар для содержимого */
-  scrollbar-color: #c1c1c1 #f1f1f1;
+  scrollbar-color: var(--pe-scroll-thumb) var(--pe-scroll-track);
 }
 
 .horizontal-scroll-bar .scroll-content::-webkit-scrollbar {
@@ -301,12 +301,12 @@
 }
 
 .horizontal-scroll-bar .scroll-content::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--pe-surface-ghost);
   border-radius: 0;
 }
 
 .horizontal-scroll-bar .scroll-content::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #c1c1c1, #a8a8a8);
+  background: var(--pe-scroll-thumb-gradient);
   border-radius: 0;
   border: none;
   transition: background 0.2s ease;
@@ -316,7 +316,7 @@
 }
 
 .horizontal-scroll-bar .scroll-content::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #a8a8a8, #909090);
+  background: var(--pe-scroll-thumb-gradient-hover);
 }
 
 .horizontal-scroll-bar .scroll-spacer {
@@ -345,26 +345,26 @@
 }
 
 .dataTables_wrapper::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--pe-scroll-track);
   border-radius: 4px;
 }
 
 .dataTables_wrapper::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
+  background: var(--pe-scroll-thumb);
   border-radius: 4px;
 }
 
 .dataTables_wrapper::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+  background: var(--pe-scroll-thumb-hover);
 }
 
 /* Фон для анимации загрузки DataTables */
 .dataTables_processing {
-  background: rgba(255, 255, 255, 0.95) !important;
-  border: 1px solid #ddd;
+  background: var(--pe-surface-overlay) !important;
+  border: 1px solid var(--pe-border-processing);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  color: #495057 !important;
+  box-shadow: var(--pe-shadow-processing);
+  color: var(--pe-text-secondary) !important;
   font-weight: 500;
   padding: 15px 25px 15px !important;
   margin-bottom: 10px;
@@ -373,11 +373,11 @@
 
 /* Современные версии DataTables используют другой класс */
 .dtfh-Processing {
-  background: rgba(255, 255, 255, 0.95) !important;
-  border: 1px solid #ddd;
+  background: var(--pe-surface-overlay) !important;
+  border: 1px solid var(--pe-border-processing);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  color: #495057 !important;
+  box-shadow: var(--pe-shadow-processing);
+  color: var(--pe-text-secondary) !important;
   font-weight: 500;
   padding: 15px 25px 15px !important;
   margin-bottom: 10px;
@@ -391,8 +391,8 @@
   display: inline-block;
   width: 16px;
   height: 16px;
-  border: 2px solid #f3f3f3;
-  border-top: 2px solid #667eea;
+  border: 2px solid var(--pe-spinner-track);
+  border-top: 2px solid var(--pe-accent);
   border-radius: 50%;
   animation: spin 1s linear infinite;
   vertical-align: middle;
@@ -467,7 +467,7 @@
 }
 
 #products-table .editable:hover {
-  background-color: rgba(102, 126, 234, 0.05);
+  background-color: var(--pe-accent-soft-subtle);
 }
 
 /* Подпись разработчика */
@@ -475,19 +475,19 @@
   text-align: center;
   margin-top: 40px;
   padding: 20px 0;
-  color: #6c757d;
+  color: var(--pe-text-muted);
   font-size: 13px;
-  border-top: 1px solid #e9ecef;
+  border-top: 1px solid var(--pe-border-secondary);
 }
 
 .developer-signature a {
-  color: #667eea;
+  color: var(--pe-accent);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .developer-signature a:hover {
-  color: #495057;
+  color: var(--pe-text-secondary);
   text-decoration: underline;
 }
 

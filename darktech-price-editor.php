@@ -87,6 +87,8 @@ function darktech_pe_enqueue_fullscreen_assets(): void
     $darktech_pe_config = darktech_pe_get_frontend_config();
     $darktech_pe_style_handles = [
         'darktech-pe-datatables' => 'assets/css/jquery.dataTables.min.css',
+        'darktech-pe-theme-light' => 'assets/css/themes/light.css',
+        'darktech-pe-theme-dark' => 'assets/css/themes/dark.css',
         'darktech-pe-base' => 'assets/css/base.css',
         'darktech-pe-header' => 'assets/css/header.css',
         'darktech-pe-filters' => 'assets/css/filters.css',

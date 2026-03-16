@@ -21,6 +21,9 @@ class PriceEditor {
     this.taxClasses = [];
     this.errors = [];
     this.errorsShown = false;
+    this.themeStorageKey = "darktech_pe_theme";
+    this.systemThemeMediaQuery = null;
+    this.handleSystemThemeChange = null;
 
     this.dataModule = new PriceEditorDataModule(this);
     this.editingModule = new PriceEditorEditingModule(this);
@@ -41,6 +44,7 @@ class PriceEditor {
   init() {
     window.priceEditor = this;
 
+    this.initTheme();
     this.bindEvents();
     this.uiModule.updateTechInfo(
       this.getText("tech.loadingInitialData", "Loading data..."),
@@ -64,7 +68,130 @@ class PriceEditor {
     jQuery("#confirm-no").on("click", () => this.uiModule.confirmAction(false));
     jQuery("#errors-close").on("click", () => this.uiModule.hideErrors());
     jQuery("#clear-cache-btn").on("click", () => this.clearCacheAndReload());
+    jQuery("#theme-toggle-btn").on("click", () => this.toggleTheme());
     jQuery("#products-count").on("click", () => this.promptProductsLimit());
+  }
+
+  /**
+   * Initializes theme handling.
+   */
+  initTheme() {
+    if (typeof window.matchMedia === "function") {
+      this.systemThemeMediaQuery = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      );
+      this.handleSystemThemeChange = () => {
+        if (!this.getStoredThemePreference()) {
+          this.applyTheme(this.getSystemTheme(), false);
+        }
+      };
+
+      if (typeof this.systemThemeMediaQuery.addEventListener === "function") {
+        this.systemThemeMediaQuery.addEventListener(
+          "change",
+          this.handleSystemThemeChange
+        );
+      } else if (typeof this.systemThemeMediaQuery.addListener === "function") {
+        this.systemThemeMediaQuery.addListener(this.handleSystemThemeChange);
+      }
+    }
+
+    this.applyTheme(this.getPreferredTheme(), false);
+  }
+
+  /**
+   * Returns the saved theme override or an empty string.
+   */
+  getStoredThemePreference() {
+    try {
+      const storedTheme = window.localStorage.getItem(this.themeStorageKey);
+      return storedTheme === "light" || storedTheme === "dark"
+        ? storedTheme
+        : "";
+    } catch (error) {
+      return "";
+    }
+  }
+
+  /**
+   * Returns the active system theme.
+   */
+  getSystemTheme() {
+    return this.systemThemeMediaQuery?.matches ? "dark" : "light";
+  }
+
+  /**
+   * Resolves the preferred theme.
+   */
+  getPreferredTheme() {
+    return this.getStoredThemePreference() || this.getSystemTheme();
+  }
+
+  /**
+   * Returns the currently applied theme.
+   */
+  getResolvedTheme() {
+    return document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+  }
+
+  /**
+   * Applies a theme to the page.
+   */
+  applyTheme(theme, persist = false) {
+    const resolvedTheme = theme === "dark" ? "dark" : "light";
+    const root = document.documentElement;
+
+    root.dataset.theme = resolvedTheme;
+    root.classList.toggle("dark", resolvedTheme === "dark");
+    root.style.colorScheme = resolvedTheme;
+
+    if (persist) {
+      try {
+        window.localStorage.setItem(this.themeStorageKey, resolvedTheme);
+      } catch (error) {
+        // Ignore storage errors and keep the theme active for this page view.
+      }
+    }
+
+    this.updateThemeToggle(resolvedTheme);
+  }
+
+  /**
+   * Toggles between light and dark themes.
+   */
+  toggleTheme() {
+    const nextTheme = this.getResolvedTheme() === "dark" ? "light" : "dark";
+    this.applyTheme(nextTheme, true);
+  }
+
+  /**
+   * Synchronizes the theme toggle button state.
+   */
+  updateThemeToggle(theme = this.getResolvedTheme()) {
+    const $toggle = jQuery("#theme-toggle-btn");
+
+    if ($toggle.length === 0) {
+      return;
+    }
+
+    const followsSystem = !this.getStoredThemePreference();
+    const titleBase =
+      theme === "dark"
+        ? this.getText("page.themeSwitchToLight", "Switch to light theme")
+        : this.getText("page.themeSwitchToDark", "Switch to dark theme");
+    const title = followsSystem
+      ? `${titleBase}. ${this.getText(
+          "page.themeSystemHint",
+          "System theme is used by default until you switch manually."
+        )}`
+      : titleBase;
+
+    $toggle
+      .attr("title", title)
+      .attr("aria-label", title)
+      .attr("aria-pressed", theme === "dark" ? "true" : "false")
+      .attr("data-theme", theme)
+      .attr("data-theme-source", followsSystem ? "system" : "manual");
   }
 
   /**

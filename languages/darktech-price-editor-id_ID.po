@@ -115,6 +115,18 @@ msgstr "Dasbor"
 msgid "Clear cache and reload data (for example, after adding categories)"
 msgstr "Hapus cache dan muat ulang data (misalnya, setelah menambahkan kategori)"
 
+msgid "Toggle light and dark theme"
+msgstr "Alihkan antara tema terang dan gelap"
+
+msgid "Switch to dark theme"
+msgstr "Beralih ke tema gelap"
+
+msgid "Switch to light theme"
+msgstr "Beralih ke tema terang"
+
+msgid "System theme is used by default until you switch manually."
+msgstr "Tema sistem digunakan secara default sampai Anda beralih secara manual."
+
 msgid "Product status:"
 msgstr "Status produk:"
 

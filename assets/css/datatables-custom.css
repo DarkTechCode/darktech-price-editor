@@ -1,4 +1,4 @@
-/* 
+/*
  * Дополнительные кастомные стили DataTables
  * Специфические настройки для DataTables плагина
  */
@@ -9,7 +9,7 @@
 }
 
 .dataTables_wrapper .dataTables_info {
-  color: #6c757d;
+  color: var(--pe-text-muted);
   font-size: 13px;
   padding: 8px 0;
 }
@@ -20,7 +20,7 @@
 
 /* Стилизация поиска DataTables */
 .dataTables_wrapper .dataTables_filter input {
-  border: 2px solid #e9ecef;
+  border: 2px solid var(--pe-border-secondary);
   border-radius: 6px;
   padding: 8px 12px;
   font-size: 14px;
@@ -29,32 +29,32 @@
 
 .dataTables_wrapper .dataTables_filter input:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: var(--pe-accent);
+  box-shadow: var(--pe-focus-shadow);
 }
 
 /* Стилизация пагинации DataTables */
 .dataTables_wrapper .dataTables_paginate .paginate_button {
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--pe-border-primary);
   border-radius: 4px;
   padding: 6px 12px;
   margin: 0 2px;
-  background: #fff;
-  color: #495057 !important;
+  background: var(--pe-surface-primary);
+  color: var(--pe-text-secondary) !important;
   cursor: pointer;
   transition: all 0.2s ease;
   font-size: 14px;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-  background: #e9ecef;
-  border-color: #667eea;
+  background: var(--pe-surface-active);
+  border-color: var(--pe-accent);
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
-  background: #667eea;
-  border-color: #667eea;
-  color: white !important;
+  background: var(--pe-accent);
+  border-color: var(--pe-accent);
+  color: var(--pe-text-inverse) !important;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
@@ -63,6 +63,6 @@
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover {
-  background: #fff;
-  border-color: #dee2e6;
+  background: var(--pe-surface-primary);
+  border-color: var(--pe-border-primary);
 }

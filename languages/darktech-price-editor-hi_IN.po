@@ -115,6 +115,18 @@ msgstr "डैशबोर्ड"
 msgid "Clear cache and reload data (for example, after adding categories)"
 msgstr "कैश साफ़ करें और डेटा पुनः लोड करें (उदाहरण के लिए, श्रेणियां जोड़ने के बाद)"
 
+msgid "Toggle light and dark theme"
+msgstr "लाइट और डार्क थीम के बीच बदलें"
+
+msgid "Switch to dark theme"
+msgstr "डार्क थीम पर स्विच करें"
+
+msgid "Switch to light theme"
+msgstr "लाइट थीम पर स्विच करें"
+
+msgid "System theme is used by default until you switch manually."
+msgstr "जब तक आप मैन्युअली स्विच नहीं करते, डिफ़ॉल्ट रूप से सिस्टम थीम का उपयोग किया जाता है।"
+
 msgid "Product status:"
 msgstr "उत्पाद की स्थिति:"
 

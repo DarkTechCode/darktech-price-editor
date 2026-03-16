@@ -115,6 +115,18 @@ msgstr "Kontrol Paneli"
 msgid "Clear cache and reload data (for example, after adding categories)"
 msgstr "Önbelleği temizleyin ve verileri yeniden yükleyin (örneğin, kategorileri ekledikten sonra)"
 
+msgid "Toggle light and dark theme"
+msgstr "Açık ve koyu tema arasında geçiş yap"
+
+msgid "Switch to dark theme"
+msgstr "Koyu temaya geç"
+
+msgid "Switch to light theme"
+msgstr "Açık temaya geç"
+
+msgid "System theme is used by default until you switch manually."
+msgstr "Siz manuel olarak değiştirene kadar varsayılan olarak sistem teması kullanılır."
+
 msgid "Product status:"
 msgstr "Ürün durumu:"
 

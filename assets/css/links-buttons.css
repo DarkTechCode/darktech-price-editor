@@ -1,23 +1,23 @@
-/* 
+/*
  * Стили ссылок и кнопок
  * Кнопки действий, ссылки продуктов, ссылки редактирования
  */
 
 /* Ссылки */
 .product-link {
-  color: #667eea;
+  color: var(--pe-accent);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.2s ease;
 }
 
 .product-link:hover {
-  color: #764ba2;
+  color: var(--pe-accent-secondary);
   text-decoration: underline;
 }
 
 .product-id-link {
-  color: #667eea;
+  color: var(--pe-accent);
   text-decoration: none;
   font-weight: 600;
   font-family: "Courier New", monospace;
@@ -27,23 +27,23 @@
 }
 
 .product-id-link:hover {
-  color: #764ba2;
+  color: var(--pe-accent-secondary);
   text-decoration: underline;
-  background: rgba(102, 126, 234, 0.1);
+  background: var(--pe-accent-soft);
 }
 
 .edit-link {
-  color: #6c757d;
+  color: var(--pe-text-muted);
   text-decoration: none;
   font-size: 14px;
   padding: 4px 8px;
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--pe-border-primary);
   border-radius: 4px;
   transition: all 0.2s ease;
 }
 
 .edit-link:hover {
-  background: #e9ecef;
+  background: var(--pe-surface-active);
   text-decoration: none;
 }
 
@@ -62,31 +62,31 @@
 }
 
 .btn-primary {
-  background: #667eea;
-  color: white;
+  background: var(--pe-accent);
+  color: var(--pe-text-inverse);
 }
 
 .btn-primary:hover {
-  background: #5a6fd8;
+  background: var(--pe-accent-strong);
   transform: translateY(-1px);
 }
 
 .btn-secondary {
-  background: #6c757d;
-  color: white;
+  background: var(--pe-button-secondary-bg);
+  color: var(--pe-text-inverse);
 }
 
 .btn-secondary:hover {
-  background: #5a6268;
+  background: var(--pe-button-secondary-hover-bg);
 }
 
 .btn-success {
-  background: #28a745;
-  color: white;
+  background: var(--pe-success);
+  color: var(--pe-text-inverse);
 }
 
 .btn-success:hover {
-  background: #218838;
+  background: var(--pe-success-strong);
 }
 
 .btn-small {

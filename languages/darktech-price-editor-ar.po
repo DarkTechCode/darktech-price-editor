@@ -115,6 +115,18 @@ msgstr "لوحة القيادة"
 msgid "Clear cache and reload data (for example, after adding categories)"
 msgstr "مسح ذاكرة التخزين المؤقت وإعادة تحميل البيانات (على سبيل المثال، بعد إضافة الفئات)"
 
+msgid "Toggle light and dark theme"
+msgstr "التبديل بين المظهر الفاتح والداكن"
+
+msgid "Switch to dark theme"
+msgstr "التبديل إلى المظهر الداكن"
+
+msgid "Switch to light theme"
+msgstr "التبديل إلى المظهر الفاتح"
+
+msgid "System theme is used by default until you switch manually."
+msgstr "يتم استخدام مظهر النظام افتراضياً حتى تقوم بالتبديل يدوياً."
+
 msgid "Product status:"
 msgstr "حالة المنتج:"
 

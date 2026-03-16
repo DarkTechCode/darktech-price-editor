@@ -115,6 +115,18 @@ msgstr "仪表板"
 msgid "Clear cache and reload data (for example, after adding categories)"
 msgstr "清除缓存并重新加载数据（例如，添加类别后）"
 
+msgid "Toggle light and dark theme"
+msgstr "切换浅色和深色主题"
+
+msgid "Switch to dark theme"
+msgstr "切换到深色主题"
+
+msgid "Switch to light theme"
+msgstr "切换到浅色主题"
+
+msgid "System theme is used by default until you switch manually."
+msgstr "在你手动切换之前，默认使用系统主题。"
+
 msgid "Product status:"
 msgstr "产品状态："
 

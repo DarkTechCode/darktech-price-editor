@@ -115,6 +115,18 @@ msgstr "대시보드"
 msgid "Clear cache and reload data (for example, after adding categories)"
 msgstr "캐시 지우기 및 데이터 다시 로드(예: 카테고리 추가 후)"
 
+msgid "Toggle light and dark theme"
+msgstr "라이트 테마와 다크 테마 전환"
+
+msgid "Switch to dark theme"
+msgstr "다크 테마로 전환"
+
+msgid "Switch to light theme"
+msgstr "라이트 테마로 전환"
+
+msgid "System theme is used by default until you switch manually."
+msgstr "수동으로 전환하기 전까지는 기본적으로 시스템 테마가 사용됩니다."
+
 msgid "Product status:"
 msgstr "제품 상태:"
 
