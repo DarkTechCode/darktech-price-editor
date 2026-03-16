@@ -64,6 +64,7 @@ class PriceEditor {
     $("#confirm-no").on("click", () => this.uiModule.confirmAction(false));
     $("#errors-close").on("click", () => this.uiModule.hideErrors());
     $("#clear-cache-btn").on("click", () => this.clearCacheAndReload());
+    $("#products-count").on("click", () => this.promptProductsLimit());
   }
 
   /**
@@ -175,9 +176,12 @@ class PriceEditor {
         window.priceEditorTotalRecords = json.data.recordsTotal;
       }
 
-      return json.data.products || [];
+      const products = json.data.products || [];
+      this.updateProductsCount(products.length);
+      return products;
     }
 
+    this.updateProductsCount(0);
     return [];
   }
 
@@ -386,6 +390,94 @@ class PriceEditor {
 
   showHorizontalScrollBar() {
     this.horizontalScrollModule.updateScrollBar();
+  }
+
+  /**
+   * Updates the products count display.
+   */
+  updateProductsCount(count) {
+    const text = this.formatText(
+      "page.productsShown",
+      { count: count },
+      `Products shown: ${count}`
+    );
+
+    $("#products-count").text(text);
+  }
+
+  /**
+   * Prompts the user to change the products limit.
+   */
+  promptProductsLimit() {
+    const currentLimit = this.config.products_limit || 3000;
+    const promptText = this.getText(
+      "page.productsLimitPrompt",
+      "How many products to show at most?"
+    );
+
+    const input = prompt(promptText, currentLimit);
+    if (input === null) {
+      return;
+    }
+
+    const newLimit = parseInt(input, 10);
+    if (isNaN(newLimit) || newLimit <= 0) {
+      this.showNotification(
+        this.getText(
+          "page.productsLimitInvalid",
+          "Please enter a valid number greater than 0."
+        ),
+        "error"
+      );
+      return;
+    }
+
+    this.saveProductsLimit(newLimit);
+  }
+
+  /**
+   * Saves the new products limit via AJAX and reloads the table.
+   */
+  async saveProductsLimit(limit) {
+    try {
+      const response = await $.ajax({
+        url: this.config.ajax_url,
+        method: "POST",
+        data: {
+          action: "darktech_pe_update_products_limit",
+          nonce: this.config.nonce,
+          limit: limit,
+        },
+      });
+
+      if (!response.success) {
+        throw new Error(
+          response.data?.message || "Unknown error"
+        );
+      }
+
+      this.config.products_limit = limit;
+
+      this.showNotification(
+        this.formatText(
+          "page.productsLimitSaved",
+          { limit: limit },
+          `Product limit updated to ${limit}`
+        ),
+        "info"
+      );
+
+      this.loadProducts();
+    } catch (error) {
+      this.showNotification(
+        this.formatText(
+          "page.productsLimitSaveError",
+          { message: error?.message || "Unknown error" },
+          `Error saving the product limit: ${error?.message || "Unknown error"}`
+        ),
+        "error"
+      );
+    }
   }
 }
 

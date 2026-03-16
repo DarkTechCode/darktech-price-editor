@@ -488,3 +488,24 @@ msgstr "Ошибка загрузки истории: {message}"
 
 msgid "Unknown user"
 msgstr "Неизвестный пользователь"
+
+msgid "Products shown: {count}"
+msgstr "Показано товаров: {count}"
+
+msgid "How many products to show at most?"
+msgstr "Сколько максимум товаров показывать?"
+
+msgid "Product limit updated to {limit}"
+msgstr "Лимит товаров обновлён: {limit}"
+
+msgid "Please enter a valid number greater than 0."
+msgstr "Введите число больше 0."
+
+msgid "Error saving the product limit: {message}"
+msgstr "Ошибка сохранения лимита товаров: {message}"
+
+msgid "Invalid tax status value."
+msgstr "Недопустимое значение налогового статуса."
+
+msgid "Invalid stock status value."
+msgstr "Недопустимое значение статуса наличия."

@@ -144,11 +144,13 @@ class DarkTech_Price_Editor_Catalog_Service
                 LEFT JOIN {$wpdb->terms} c ON tt.term_id = c.term_id
                 WHERE {$where_clause}
                 GROUP BY p.ID
-                ORDER BY p.ID DESC";
+                ORDER BY p.ID DESC
+                LIMIT %d";
 
-        if (! empty($params)) {
-            $sql = $wpdb->prepare($sql, ...$params);
-        }
+        $limit = $this->get_products_limit();
+        $params[] = $limit;
+
+        $sql = $wpdb->prepare($sql, ...$params);
 
         $results = $wpdb->get_results($sql);
 
@@ -158,7 +160,7 @@ class DarkTech_Price_Editor_Catalog_Service
             'recordsFiltered' => $total,
             'total' => $total,
             'page' => 1,
-            'per_page' => $total,
+            'per_page' => $limit,
         ];
     }
 
@@ -183,7 +185,17 @@ class DarkTech_Price_Editor_Catalog_Service
             return '';
         }
 
-        return trim(wp_unslash($value));
+        return sanitize_text_field(wp_unslash($value));
+    }
+
+    /**
+     * Returns the configured products limit.
+     */
+    private function get_products_limit(): int
+    {
+        $limit = (int) get_option('darktech_pe_products_limit', 3000);
+
+        return max(1, $limit);
     }
 
     /**

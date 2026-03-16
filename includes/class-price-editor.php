@@ -66,6 +66,7 @@ class DarkTech_Price_Editor
         add_action('wp_ajax_darktech_pe_get_products', [$this, 'get_products']);
         add_action('wp_ajax_darktech_pe_get_change_history', [$this, 'get_change_history']);
         add_action('wp_ajax_darktech_pe_update_product', [$this, 'update_product']);
+        add_action('wp_ajax_darktech_pe_update_products_limit', [$this, 'update_products_limit']);
     }
 
     /**
@@ -123,7 +124,14 @@ class DarkTech_Price_Editor
     {
         $this->verify_request();
 
-        wp_send_json_success($this->catalog_service->get_products($_POST));
+        wp_send_json_success($this->catalog_service->get_products([
+            'status'       => $_POST['status'] ?? '',
+            'category'     => $_POST['category'] ?? '',
+            'search'       => $_POST['search'] ?? '',
+            'tax_status'   => $_POST['tax_status'] ?? '',
+            'tax_class'    => $_POST['tax_class'] ?? '',
+            'stock_status' => $_POST['stock_status'] ?? '',
+        ]));
     }
 
     /**
@@ -166,5 +174,27 @@ class DarkTech_Price_Editor
         }
 
         wp_send_json_success($result);
+    }
+
+    /**
+     * Updates the products display limit.
+     */
+    public function update_products_limit(): void
+    {
+        $this->verify_request();
+
+        $limit = (int) ($_POST['limit'] ?? 0);
+
+        if ($limit <= 0) {
+            wp_send_json_error([
+                'message' => __('Please enter a valid number greater than 0.', 'darktech-price-editor'),
+            ]);
+        }
+
+        update_option('darktech_pe_products_limit', $limit);
+
+        wp_send_json_success([
+            'limit' => $limit,
+        ]);
     }
 }

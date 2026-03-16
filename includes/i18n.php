@@ -144,6 +144,7 @@ function darktech_pe_get_frontend_config(): array
         'nonce' => wp_create_nonce('darktech_pe_nonce'),
         'plugin_url' => DARKTECH_PE_PLUGIN_URL,
         'locale' => str_replace('_', '-', get_user_locale()),
+        'products_limit' => (int) get_option('darktech_pe_products_limit', 3000),
         'statuses' => [
             'product' => darktech_pe_get_product_status_labels(),
             'stock' => darktech_pe_get_stock_status_labels(),
@@ -157,6 +158,11 @@ function darktech_pe_get_frontend_config(): array
                 'breadcrumbAdmin' => __('Dashboard', $text_domain),
                 'breadcrumbCurrent' => __('Price Editor', $text_domain),
                 'clearCacheTitle' => __('Clear cache and reload data (for example, after adding categories)', $text_domain),
+                'productsShown' => __('Products shown: {count}', $text_domain),
+                'productsLimitPrompt' => __('How many products to show at most?', $text_domain),
+                'productsLimitSaved' => __('Product limit updated to {limit}', $text_domain),
+                'productsLimitInvalid' => __('Please enter a valid number greater than 0.', $text_domain),
+                'productsLimitSaveError' => __('Error saving the product limit: {message}', $text_domain),
             ],
             'filters' => [
                 'status' => __('Product status:', $text_domain),

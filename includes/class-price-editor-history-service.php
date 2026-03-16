@@ -125,7 +125,7 @@ class DarkTech_Price_Editor_History_Service
         return wp_date(
             get_option('date_format') . ' ' . get_option('time_format'),
             $timestamp
-        );
+        ) ?: $created_at_gmt;
     }
 
     /**

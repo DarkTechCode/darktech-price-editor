@@ -16,6 +16,16 @@ class DarkTech_Price_Editor_Product_Updater
      */
     private $lookups;
 
+    /**
+     * Allowed values for tax_status field.
+     */
+    private const ALLOWED_TAX_STATUSES = ['taxable', 'shipping', 'none'];
+
+    /**
+     * Allowed values for stock_status field.
+     */
+    private const ALLOWED_STOCK_STATUSES = ['instock', 'outofstock', 'onbackorder'];
+
     public function __construct(DarkTech_Price_Editor_Lookups $lookups)
     {
         $this->lookups = $lookups;
@@ -57,12 +67,24 @@ class DarkTech_Price_Editor_Product_Updater
                 return $this->update_sale_price($product, $product_id, $value);
 
             case 'tax_status':
+                if (! in_array($value, self::ALLOWED_TAX_STATUSES, true)) {
+                    return new WP_Error(
+                        'darktech_pe_invalid_value',
+                        __('Invalid tax status value.', 'darktech-price-editor')
+                    );
+                }
                 return $this->update_tax_status($product, $product_id, $value);
 
             case 'tax_class':
                 return $this->update_tax_class($product, $product_id, $value);
 
             case 'stock_status':
+                if (! in_array($value, self::ALLOWED_STOCK_STATUSES, true)) {
+                    return new WP_Error(
+                        'darktech_pe_invalid_value',
+                        __('Invalid stock status value.', 'darktech-price-editor')
+                    );
+                }
                 return $this->update_stock_status($product, $product_id, $value);
 
             case 'category':
@@ -269,6 +291,7 @@ class DarkTech_Price_Editor_Product_Updater
      */
     private function update_category(int $product_id, string $value)
     {
+        $old_category_ids = wp_get_post_terms($product_id, 'product_cat', ['fields' => 'ids']);
         $old_categories = wp_get_post_terms($product_id, 'product_cat', ['fields' => 'names']);
         $old_value = ! empty($old_categories)
             ? implode(', ', $old_categories)
@@ -294,6 +317,8 @@ class DarkTech_Price_Editor_Product_Updater
             $new_value = $this->lookups->get_uncategorized_label();
         }
 
+        $old_ids_string = ! empty($old_category_ids) ? implode(',', $old_category_ids) : '0';
+
         return $this->build_success_response(
             sprintf(
                 __('Updated product #%1$d category: "%2$s" -> "%3$s"', 'darktech-price-editor'),
@@ -303,7 +328,7 @@ class DarkTech_Price_Editor_Product_Updater
             ),
             $old_value,
             $new_value,
-            $this->build_history_context($product_id, 'category', (string) $value, (string) $category_id, $old_value, $new_value)
+            $this->build_history_context($product_id, 'category', $old_ids_string, (string) $category_id, $old_value, $new_value)
         );
     }
 

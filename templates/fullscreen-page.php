@@ -8,6 +8,7 @@ if (! defined('ABSPATH')) {
 }
 
 $plugin_url = DARKTECH_PE_PLUGIN_URL;
+$asset_ver = DARKTECH_PE_VERSION;
 $config = darktech_pe_get_frontend_config();
 $i18n = $config['i18n'];
 $product_statuses = darktech_pe_get_product_status_labels();
@@ -37,19 +38,19 @@ $column_order = [
     <title><?php echo esc_html($i18n['page']['title']); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/base.css'); ?>">
-    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/header.css'); ?>">
-    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/filters.css'); ?>">
-    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/column-manager.css'); ?>">
-    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/table.css'); ?>">
-    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/editing.css'); ?>">
-    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/statuses.css'); ?>">
-    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/links-buttons.css'); ?>">
-    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/system.css'); ?>">
-    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/errors.css'); ?>">
-    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/indicators.css'); ?>">
-    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/datatables-custom.css'); ?>">
-    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/responsive.css'); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/base.css?ver=' . $asset_ver); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/header.css?ver=' . $asset_ver); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/filters.css?ver=' . $asset_ver); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/column-manager.css?ver=' . $asset_ver); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/table.css?ver=' . $asset_ver); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/editing.css?ver=' . $asset_ver); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/statuses.css?ver=' . $asset_ver); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/links-buttons.css?ver=' . $asset_ver); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/system.css?ver=' . $asset_ver); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/errors.css?ver=' . $asset_ver); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/indicators.css?ver=' . $asset_ver); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/datatables-custom.css?ver=' . $asset_ver); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/responsive.css?ver=' . $asset_ver); ?>">
     <link rel="stylesheet" href="<?php echo esc_url($plugin_url . 'assets/css/jquery.dataTables.min.css'); ?>">
 
     <script src="<?php echo esc_url($plugin_url . 'assets/js/jquery-3.6.0.min.js'); ?>"></script>
@@ -59,19 +60,19 @@ $column_order = [
         window.darktech_pe = <?php echo wp_json_encode($config, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?>;
     </script>
 
-    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.ui.js'); ?>"></script>
-    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.history.js'); ?>"></script>
-    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.filters.js'); ?>"></script>
-    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.columns.js'); ?>"></script>
-    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.editing.markup.js'); ?>"></script>
-    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.data.save-base.js'); ?>"></script>
-    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.data.saves.js'); ?>"></script>
-    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.data.js'); ?>"></script>
-    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.editing.js'); ?>"></script>
-    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.mobile.js'); ?>"></script>
-    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.horizontal-scroll.js'); ?>"></script>
-    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.table-columns.js'); ?>"></script>
-    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.core.js'); ?>"></script>
+    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.ui.js?ver=' . $asset_ver); ?>"></script>
+    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.history.js?ver=' . $asset_ver); ?>"></script>
+    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.filters.js?ver=' . $asset_ver); ?>"></script>
+    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.columns.js?ver=' . $asset_ver); ?>"></script>
+    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.editing.markup.js?ver=' . $asset_ver); ?>"></script>
+    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.data.save-base.js?ver=' . $asset_ver); ?>"></script>
+    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.data.saves.js?ver=' . $asset_ver); ?>"></script>
+    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.data.js?ver=' . $asset_ver); ?>"></script>
+    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.editing.js?ver=' . $asset_ver); ?>"></script>
+    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.mobile.js?ver=' . $asset_ver); ?>"></script>
+    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.horizontal-scroll.js?ver=' . $asset_ver); ?>"></script>
+    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.table-columns.js?ver=' . $asset_ver); ?>"></script>
+    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.core.js?ver=' . $asset_ver); ?>"></script>
 </head>
 
 <body class="price-editor-page">
@@ -86,9 +87,12 @@ $column_order = [
                 </svg>
             </button>
         </div>
-        <div class="breadcrumb">
-            <a href="<?php echo esc_url(admin_url()); ?>"><?php echo esc_html($i18n['page']['breadcrumbAdmin']); ?></a> &gt;
-            <span><?php echo esc_html($i18n['page']['breadcrumbCurrent']); ?></span>
+        <div class="breadcrumb-row">
+            <div class="breadcrumb">
+                <a href="<?php echo esc_url(admin_url()); ?>"><?php echo esc_html($i18n['page']['breadcrumbAdmin']); ?></a> &gt;
+                <span><?php echo esc_html($i18n['page']['breadcrumbCurrent']); ?></span>
+            </div>
+            <span id="products-count" class="products-count" role="button" tabindex="0" title="<?php echo esc_attr($i18n['page']['productsLimitPrompt']); ?>"></span>
         </div>
     </div>
 
@@ -278,7 +282,7 @@ $column_order = [
         </div>
     </div>
 
-    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.js'); ?>"></script>
+    <script src="<?php echo esc_url($plugin_url . 'assets/js/price_editor.js?ver=' . $asset_ver); ?>"></script>
 </body>
 
 </html>
