@@ -433,6 +433,9 @@ msgstr "Judul produk yang diperbarui #%1$d: %2$s -> %3$s"
 msgid "Updated product #%1$d SKU: \"%2$s\" -> \"%3$s\""
 msgstr "Produk yang diperbarui #%1$d SKU: \"%2$s\" -> \"%3$s\""
 
+msgid "SKU \"%1$s\" is already used by product #%2$d. SKU must be unique."
+msgstr "SKU \"%1$s\" sudah digunakan oleh produk #%2$d. SKU harus unik."
+
 msgid "Updated product #%1$d regular price: \"%2$s\" -> \"%3$s\""
 msgstr "Produk yang diperbarui #%1$d harga reguler: \"%2$s\" -> \"%3$s\""
 

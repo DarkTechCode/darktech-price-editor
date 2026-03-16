@@ -132,10 +132,41 @@ class DarkTech_Price_Editor_Product_Updater
     private function update_sku($product, int $product_id, string $value)
     {
         $old_value = (string) $product->get_sku();
-        $product->set_sku($value);
+        $value = trim($value);
 
-        if (! $this->save_product($product)) {
-            return $this->build_save_error();
+        if ($value !== '') {
+            $existing_product_id = (int) wc_get_product_id_by_sku($value);
+            if ($existing_product_id > 0 && $existing_product_id !== $product_id) {
+                return new WP_Error(
+                    'darktech_pe_duplicate_sku',
+                    sprintf(
+                        /* translators: 1: duplicated SKU, 2: product ID already using it. */
+                        __('SKU "%1$s" is already used by product #%2$d. SKU must be unique.', 'darktech-price-editor'),
+                        $value,
+                        $existing_product_id
+                    )
+                );
+            }
+        }
+
+        try {
+            $product->set_sku($value);
+
+            if (! $this->save_product($product)) {
+                return $this->build_save_error();
+            }
+        } catch (WC_Data_Exception $exception) {
+            return new WP_Error(
+                'darktech_pe_invalid_sku',
+                $exception->getMessage()
+            );
+        } catch (Throwable $throwable) {
+            return new WP_Error(
+                'darktech_pe_save_failed',
+                $throwable->getMessage() !== ''
+                    ? $throwable->getMessage()
+                    : __('Error saving changes.', 'darktech-price-editor')
+            );
         }
 
         return $this->build_success_response(

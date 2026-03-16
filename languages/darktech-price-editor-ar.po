@@ -433,6 +433,9 @@ msgstr "تم تحديث عنوان المنتج رقم %1$d: %2$s -> %3$s"
 msgid "Updated product #%1$d SKU: \"%2$s\" -> \"%3$s\""
 msgstr "تم تحديث المنتج رقم %1$d SKU: \"%2$s\" -> \"%3$s\""
 
+msgid "SKU \"%1$s\" is already used by product #%2$d. SKU must be unique."
+msgstr "رمز SKU \"%1$s\" مستخدم بالفعل بواسطة المنتج #%2$d. يجب أن يكون SKU فريدًا."
+
 msgid "Updated product #%1$d regular price: \"%2$s\" -> \"%3$s\""
 msgstr "تم تحديث المنتج رقم %1$d السعر العادي: \"%2$s\" -> \"%3$s\""
 

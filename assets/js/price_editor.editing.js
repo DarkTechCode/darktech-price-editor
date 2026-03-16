@@ -44,20 +44,20 @@ class PriceEditorEditingModule {
   bindEditableEvents() {
     const namespace = ".price-editor-editable";
 
-    $(document).off(namespace);
+    jQuery(document).off(namespace);
 
-    $(document).on(`click${namespace}`, ".editable-text", (event) => {
+    jQuery(document).on(`click${namespace}`, ".editable-text", (event) => {
       event.stopPropagation();
 
-      const $element = $(event.currentTarget);
+      const $element = jQuery(event.currentTarget);
       const field = String($element.data("field") || "");
       const $cell = $element.closest("td");
 
       this.startFieldEdit(field, $cell);
     });
 
-    $(document).on(`input${namespace}`, ".price-input", (event) => {
-      const $editable = $(event.currentTarget).closest(".editable");
+    jQuery(document).on(`input${namespace}`, ".price-input", (event) => {
+      const $editable = jQuery(event.currentTarget).closest(".editable");
       this.editor.dataModule.autoSaveField($editable);
     });
   }
@@ -72,7 +72,7 @@ class PriceEditorEditingModule {
         controlSelector: "input",
         getState: ($editableText) => ({
           productId: $editableText.data("id"),
-          value: $editableText.text().trim(),
+          value: String($editableText.data("value") || "").trim(),
         }),
         createMarkup: (state) =>
           this.markupFactory.createTitleInput(state.productId, state.value),
@@ -261,7 +261,7 @@ class PriceEditorEditingModule {
     });
 
     this.activeEdits = [];
-    $(document).off("click.editing-outside");
+    jQuery(document).off("click.editing-outside");
   }
 
   /**
@@ -316,7 +316,7 @@ class PriceEditorEditingModule {
     const $nextCell =
       moveDirection !== null
         ? this.findAdjacentEditableCell($cell, field, moveDirection)
-        : $();
+        : jQuery();
 
     const saveMethodMap = {
       title: "saveTitleEdit",
@@ -344,7 +344,7 @@ class PriceEditorEditingModule {
   findAdjacentEditableCell($cell, field, direction = "next") {
     const wrapperSelector = this.fieldConfigs[field]?.wrapperSelector;
     if (!wrapperSelector) {
-      return $();
+      return jQuery();
     }
 
     const $rows = $cell.closest("tbody").children("tr");
@@ -356,7 +356,7 @@ class PriceEditorEditingModule {
       index >= 0 && index < $rows.length;
       index += step
     ) {
-      const $candidateCell = $($rows[index])
+      const $candidateCell = jQuery($rows[index])
         .find(wrapperSelector)
         .closest("td")
         .first();
@@ -366,7 +366,7 @@ class PriceEditorEditingModule {
       }
     }
 
-    return $();
+    return jQuery();
   }
 
   /**
@@ -454,7 +454,7 @@ class PriceEditorEditingModule {
     onCancel,
     onReady,
   }) {
-    const $control = $(controlMarkup).find(controlSelector);
+    const $control = jQuery(controlMarkup).find(controlSelector);
 
     const $wrapper = $cell.find(wrapperSelector);
 
@@ -555,15 +555,15 @@ class PriceEditorEditingModule {
    * Rebinds outside click handling based on current active edits.
    */
   syncOutsideClickHandler() {
-    $(document).off("click.editing-outside");
+    jQuery(document).off("click.editing-outside");
 
     if (this.activeEdits.length === 0) {
       return;
     }
 
-    $(document).on("click.editing-outside", (event) => {
+    jQuery(document).on("click.editing-outside", (event) => {
       const clickedOnEditCell = this.activeEdits.some((editInfo) => {
-        const $activeCell = $(editInfo.cellElement);
+        const $activeCell = jQuery(editInfo.cellElement);
         return (
           $activeCell.is(event.target) ||
           $activeCell.find(event.target).length > 0

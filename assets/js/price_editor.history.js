@@ -13,11 +13,11 @@ class PriceEditorHistoryModule {
    * Binds the history popup controls.
    */
   bindEvents() {
-    $("#tech-info-bar").on("click", () => {
+    jQuery("#tech-info-bar").on("click", () => {
       this.openModal();
     });
 
-    $("#tech-info-bar").on("keydown", (event) => {
+    jQuery("#tech-info-bar").on("keydown", (event) => {
       if (event.key !== "Enter" && event.key !== " " && event.key !== "Spacebar") {
         return;
       }
@@ -26,15 +26,15 @@ class PriceEditorHistoryModule {
       this.openModal();
     });
 
-    $("#history-modal-close").on("click", () => this.closeModal());
+    jQuery("#history-modal-close").on("click", () => this.closeModal());
 
-    $("#history-modal").on("click", (event) => {
+    jQuery("#history-modal").on("click", (event) => {
       if (event.target === event.currentTarget) {
         this.closeModal();
       }
     });
 
-    $(document).on("keydown.priceEditorHistory", (event) => {
+    jQuery(document).on("keydown.priceEditorHistory", (event) => {
       if (event.key === "Escape" && this.isOpen()) {
         event.preventDefault();
         this.closeModal();
@@ -49,9 +49,9 @@ class PriceEditorHistoryModule {
     this.lastFocusedElement =
       document.activeElement instanceof HTMLElement ? document.activeElement : null;
 
-    $("body").addClass("history-modal-open");
-    $("#history-modal").css("display", "flex").attr("aria-hidden", "false");
-    $("#history-modal-close").trigger("focus");
+    jQuery("body").addClass("history-modal-open");
+    jQuery("#history-modal").css("display", "flex").attr("aria-hidden", "false");
+    jQuery("#history-modal-close").trigger("focus");
 
     this.loadHistory();
   }
@@ -64,8 +64,8 @@ class PriceEditorHistoryModule {
       this.currentRequest.abort();
     }
 
-    $("#history-modal").hide().attr("aria-hidden", "true");
-    $("body").removeClass("history-modal-open");
+    jQuery("#history-modal").hide().attr("aria-hidden", "true");
+    jQuery("body").removeClass("history-modal-open");
 
     if (this.lastFocusedElement && typeof this.lastFocusedElement.focus === "function") {
       this.lastFocusedElement.focus();
@@ -76,7 +76,7 @@ class PriceEditorHistoryModule {
    * Returns whether the popup is open.
    */
   isOpen() {
-    return $("#history-modal").is(":visible");
+    return jQuery("#history-modal").is(":visible");
   }
 
   /**
@@ -90,7 +90,7 @@ class PriceEditorHistoryModule {
     this.renderFeedback(this.editor.getText("history.loading", "Loading history..."));
 
     try {
-      this.currentRequest = $.ajax({
+      this.currentRequest = jQuery.ajax({
         url: this.editor.config.ajax_url,
         method: "POST",
         data: {
@@ -133,7 +133,7 @@ class PriceEditorHistoryModule {
    * Renders the loaded items.
    */
   renderItems(items) {
-    const $tbody = $("#history-table-body");
+    const $tbody = jQuery("#history-table-body");
     $tbody.empty();
 
     if (!items.length) {
@@ -143,8 +143,8 @@ class PriceEditorHistoryModule {
       return;
     }
 
-    $("#history-modal-feedback").hide().removeClass("is-error").text("");
-    $("#history-table-wrapper").show();
+    jQuery("#history-modal-feedback").hide().removeClass("is-error").text("");
+    jQuery("#history-table-wrapper").show();
 
     items.forEach((item) => {
       const dateDisplay = this.editor.escapeHtml(item?.date_display || "");
@@ -165,9 +165,9 @@ class PriceEditorHistoryModule {
    * Shows a feedback message and hides the table.
    */
   renderFeedback(message, isError = false) {
-    $("#history-table-wrapper").hide();
-    $("#history-table-body").empty();
-    $("#history-modal-feedback")
+    jQuery("#history-table-wrapper").hide();
+    jQuery("#history-table-body").empty();
+    jQuery("#history-modal-feedback")
       .text(message)
       .toggleClass("is-error", isError)
       .show();

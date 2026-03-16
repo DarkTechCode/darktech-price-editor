@@ -7,39 +7,50 @@ class PriceEditorSaveService extends PriceEditorBaseSaveService {
    * Saves title edits.
    */
   async saveTitleEdit($cell, newValue, oldValue, productId) {
-    if (newValue === oldValue) {
-      this.editor.editingModule.cancelTitleEdit($cell, oldValue, productId);
+    const normalizedOldValue = String(oldValue || "").trim();
+    const normalizedNewValue = String(newValue || "").trim();
+
+    if (!normalizedNewValue || normalizedNewValue === normalizedOldValue) {
+      this.editor.editingModule.cancelTitleEdit(
+        $cell,
+        normalizedOldValue,
+        productId,
+      );
       return;
     }
 
     this.editor.editingModule.showPendingTextSave(
       $cell,
       "title",
-      newValue,
+      normalizedNewValue,
       productId,
     );
 
     await this.saveManagedEdit({
       $cell,
       field: "title",
-      newValue,
+      newValue: normalizedNewValue,
       productId,
       loadingTextPath: "tech.savingTitle",
       loadingFallback: "Saving the product title...",
       notificationPath: "notifications.titleUpdated",
       notificationFallback: "Title updated",
       successMessagePath: "messages.titleUpdatedMessage",
-      successMessageFallback: `Updated product #${productId} title: ${oldValue} -> ${newValue}`,
+      successMessageFallback: `Updated product #${productId} title: ${normalizedOldValue} -> ${normalizedNewValue}`,
       buildMessageReplacements: () => ({
         id: productId,
-        old: oldValue,
-        new: newValue,
+        old: normalizedOldValue,
+        new: normalizedNewValue,
       }),
       errorMessagePath: "messages.titleSaveError",
       errorFallbackPrefix: "Error saving the title: ",
       onSuccess: null,
       onError: () =>
-        this.editor.editingModule.cancelTitleEdit($cell, oldValue, productId),
+        this.editor.editingModule.cancelTitleEdit(
+          $cell,
+          normalizedOldValue,
+          productId,
+        ),
     });
   }
 

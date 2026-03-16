@@ -433,6 +433,9 @@ msgstr "Ürün #%1$d başlığı güncellendi: %2$s -> %3$s"
 msgid "Updated product #%1$d SKU: \"%2$s\" -> \"%3$s\""
 msgstr "Güncellenen ürün #%1$d SKU'su: \"%2$s\" -> \"%3$s\""
 
+msgid "SKU \"%1$s\" is already used by product #%2$d. SKU must be unique."
+msgstr "SKU \"%1$s\" zaten #%2$d ürününde kullanılıyor. SKU benzersiz olmalıdır."
+
 msgid "Updated product #%1$d regular price: \"%2$s\" -> \"%3$s\""
 msgstr "Ürün #%1$d normal fiyatı güncellendi: \"%2$s\" -> \"%3$s\""
 

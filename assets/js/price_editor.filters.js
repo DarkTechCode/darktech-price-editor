@@ -11,14 +11,14 @@ class PriceEditorFiltersModule {
    * Binds filter inputs.
    */
   bindFilterEvents() {
-    $("#status-filter").on("change", () => this.applyFilters());
-    $("#category-filter").on("change", () => this.applyFilters());
-    $("#tax-filter").on("change", () => this.applyFilters());
-    $("#tax-class-filter").on("change", () => this.applyFilters());
-    $("#stock-filter").on("change", () => this.applyFilters());
+    jQuery("#status-filter").on("change", () => this.applyFilters());
+    jQuery("#category-filter").on("change", () => this.applyFilters());
+    jQuery("#tax-filter").on("change", () => this.applyFilters());
+    jQuery("#tax-class-filter").on("change", () => this.applyFilters());
+    jQuery("#stock-filter").on("change", () => this.applyFilters());
 
     let searchTimeout;
-    $("#search-input").on("input", () => {
+    jQuery("#search-input").on("input", () => {
       clearTimeout(searchTimeout);
       searchTimeout = setTimeout(() => this.applyFilters(), 300);
     });
@@ -43,12 +43,12 @@ class PriceEditorFiltersModule {
    */
   getCurrentFilters() {
     return {
-      status: $("#status-filter").val() || "",
-      category: $("#category-filter").val() || "",
-      search: $("#search-input").val() || "",
-      tax_status: $("#tax-filter").val() || "",
-      tax_class: $("#tax-class-filter").val() || "",
-      stock_status: $("#stock-filter").val() || "",
+      status: jQuery("#status-filter").val() || "",
+      category: jQuery("#category-filter").val() || "",
+      search: jQuery("#search-input").val() || "",
+      tax_status: jQuery("#tax-filter").val() || "",
+      tax_class: jQuery("#tax-class-filter").val() || "",
+      stock_status: jQuery("#stock-filter").val() || "",
     };
   }
 
@@ -56,12 +56,12 @@ class PriceEditorFiltersModule {
    * Resets all filters to their default state.
    */
   resetFilters() {
-    $("#status-filter").val("publish");
-    $("#category-filter").val("");
-    $("#search-input").val("");
-    $("#tax-filter").val("");
-    $("#tax-class-filter").val("");
-    $("#stock-filter").val("");
+    jQuery("#status-filter").val("publish");
+    jQuery("#category-filter").val("");
+    jQuery("#search-input").val("");
+    jQuery("#tax-filter").val("");
+    jQuery("#tax-class-filter").val("");
+    jQuery("#stock-filter").val("");
 
     this.applyFilters();
     this.editor.uiModule.updateTechInfo(

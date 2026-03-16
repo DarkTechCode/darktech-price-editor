@@ -18,7 +18,7 @@ class PriceEditorHorizontalScrollModule {
    * Инициализация модуля
    */
   init() {
-    this.horizontalScrollBar = $("#horizontal-scroll-bar");
+    this.horizontalScrollBar = jQuery("#horizontal-scroll-bar");
     this.scrollContent = this.horizontalScrollBar.find(".scroll-content");
     this.scrollSpacer = this.horizontalScrollBar.find(".scroll-spacer");
 
@@ -38,17 +38,17 @@ class PriceEditorHorizontalScrollModule {
     });
 
     // Обновление скроллбара при изменении размера окна
-    $(window).on("resize", () => {
+    jQuery(window).on("resize", () => {
       this.debounce(this.updateScrollBar.bind(this), 250)();
     });
 
     // Обновление после загрузки данных в таблицу
-    $(document).on("draw.dt", () => {
+    jQuery(document).on("draw.dt", () => {
       this.updateScrollBar();
     });
 
     // Обновление при изменении колонок
-    $(document).on("column-sizing.dt", () => {
+    jQuery(document).on("column-sizing.dt", () => {
       this.updateScrollBar();
     });
   }
@@ -58,7 +58,7 @@ class PriceEditorHorizontalScrollModule {
    */
   syncScroll() {
     const scrollLeft = this.scrollContent.scrollLeft();
-    const tableWrapper = $(".dataTables_wrapper");
+    const tableWrapper = jQuery(".dataTables_wrapper");
 
     if (tableWrapper.length) {
       tableWrapper.scrollLeft(scrollLeft);
@@ -69,8 +69,8 @@ class PriceEditorHorizontalScrollModule {
    * Обновление горизонтального скроллбара
    */
   updateScrollBar() {
-    const tableWrapper = $(".dataTables_wrapper");
-    const table = $("#products-table");
+    const tableWrapper = jQuery(".dataTables_wrapper");
+    const table = jQuery("#products-table");
 
     if (!tableWrapper.length || !table.length) {
       this.hideScrollBar();
@@ -119,7 +119,7 @@ class PriceEditorHorizontalScrollModule {
    * Синхронизация позиции прокрутки
    */
   syncScrollPosition() {
-    const tableWrapper = $(".dataTables_wrapper");
+    const tableWrapper = jQuery(".dataTables_wrapper");
     const scrollLeft = tableWrapper.scrollLeft();
 
     this.scrollContent.scrollLeft(scrollLeft);
@@ -153,9 +153,9 @@ class PriceEditorHorizontalScrollModule {
   destroy() {
     // Отвязываем события
     this.scrollContent.off("scroll");
-    $(window).off("resize");
-    $(document).off("draw.dt");
-    $(document).off("column-sizing.dt");
+    jQuery(window).off("resize");
+    jQuery(document).off("draw.dt");
+    jQuery(document).off("column-sizing.dt");
 
     this.hideScrollBar();
   }

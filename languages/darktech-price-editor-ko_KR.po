@@ -433,6 +433,9 @@ msgstr "업데이트된 제품 #%1$d 제목: %2$s -> %3$s"
 msgid "Updated product #%1$d SKU: \"%2$s\" -> \"%3$s\""
 msgstr "업데이트된 제품 #%1$d SKU: \"%2$s\" -> \"%3$s\""
 
+msgid "SKU \"%1$s\" is already used by product #%2$d. SKU must be unique."
+msgstr "SKU \"%1$s\"는 이미 상품 #%2$d에서 사용 중입니다. SKU는 고유해야 합니다."
+
 msgid "Updated product #%1$d regular price: \"%2$s\" -> \"%3$s\""
 msgstr "업데이트된 제품 #%1$d 정가: \"%2$s\" -> \"%3$s\""
 

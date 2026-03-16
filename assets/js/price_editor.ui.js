@@ -11,14 +11,14 @@ class PriceEditorUIModule {
    * Updates technical info bar.
    */
   updateTechInfo(message, loading = false) {
-    $("#tech-info-text").text(message);
-    $("#tech-info-time").text(new Date().toLocaleTimeString(this.editor.locale));
+    jQuery("#tech-info-text").text(message);
+    jQuery("#tech-info-time").text(new Date().toLocaleTimeString(this.editor.locale));
 
     if (loading) {
-      $("#tech-info-text").prev(".spinner").remove();
-      $("#tech-info-text").before('<span class="spinner"></span>');
+      jQuery("#tech-info-text").prev(".spinner").remove();
+      jQuery("#tech-info-text").before('<span class="spinner"></span>');
     } else {
-      $(".spinner").remove();
+      jQuery(".spinner").remove();
     }
   }
 
@@ -26,12 +26,12 @@ class PriceEditorUIModule {
    * Shows a temporary notification.
    */
   showNotification(message, type = "info") {
-    const $notification = $("<div>", {
+    const $notification = jQuery("<div>", {
       class: `notification ${type}`,
       text: message,
     });
 
-    $("body").append($notification);
+    jQuery("body").append($notification);
 
     setTimeout(() => $notification.addClass("show"), 100);
 
@@ -45,7 +45,7 @@ class PriceEditorUIModule {
    * Resolves a pending confirmation action.
    */
   confirmAction(confirmed) {
-    $("#confirm-modal").hide();
+    jQuery("#confirm-modal").hide();
 
     if (confirmed && this.pendingAction) {
       this.pendingAction();
@@ -62,8 +62,8 @@ class PriceEditorUIModule {
       return;
     }
 
-    const $errorsSection = $("#errors-section");
-    const $errorsContent = $("#errors-content");
+    const $errorsSection = jQuery("#errors-section");
+    const $errorsContent = jQuery("#errors-content");
 
     $errorsContent.empty();
 
@@ -91,7 +91,7 @@ class PriceEditorUIModule {
    * Hides the error panel.
    */
   hideErrors() {
-    $("#errors-section").hide();
+    jQuery("#errors-section").hide();
     this.editor.errorsShown = false;
   }
 

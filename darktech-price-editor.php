@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 /**
  * Plugin Name: DarkTech Price Editor
- * Plugin URI: https://darktech.ru
+ * Plugin URI: https://github.com/DarkTechCode/darktech-price-editor
  * Description: Bulk editor for WooCommerce product prices.
  * Version: 1.0.0
- * Author: DarkTech
+ * Author: Dark Wizard
  * Author URI: https://darktech.ru
  * License: GPL-2.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html

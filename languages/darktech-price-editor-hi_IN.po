@@ -433,6 +433,9 @@ msgstr "अद्यतन उत्पाद #%1$d शीर्षक: %2$s -> 
 msgid "Updated product #%1$d SKU: \"%2$s\" -> \"%3$s\""
 msgstr "अद्यतन उत्पाद #%1$d SKU: \"%2$s\" -> \"%3$s\""
 
+msgid "SKU \"%1$s\" is already used by product #%2$d. SKU must be unique."
+msgstr "SKU \"%1$s\" पहले से ही उत्पाद #%2$d द्वारा उपयोग किया जा रहा है। SKU अद्वितीय होना चाहिए।"
+
 msgid "Updated product #%1$d regular price: \"%2$s\" -> \"%3$s\""
 msgstr "अद्यतन उत्पाद #%1$d नियमित मूल्य: \"%2$s\" -> \"%3$s\""
 

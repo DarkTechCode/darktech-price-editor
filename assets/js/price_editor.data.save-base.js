@@ -184,7 +184,7 @@ class PriceEditorBaseSaveService {
       this.syncDisplaySavingIndicator($cell);
     }
 
-    const response = await $.ajax({
+    const response = await jQuery.ajax({
       url: this.editor.config.ajax_url,
       method: "POST",
       data: {
@@ -314,9 +314,9 @@ class PriceEditorBaseSaveService {
       return;
     }
 
-    $(rowNode).addClass("saved-success");
+    jQuery(rowNode).addClass("saved-success");
     setTimeout(() => {
-      $(rowNode).removeClass("saved-success");
+      jQuery(rowNode).removeClass("saved-success");
     }, 2000);
   }
 

@@ -101,7 +101,7 @@ class PriceEditorDataModule {
         return;
       }
 
-      const response = await $.ajax({
+      const response = await jQuery.ajax({
         url: this.editor.config.ajax_url,
         method: "POST",
         data: {
@@ -146,7 +146,7 @@ class PriceEditorDataModule {
         return;
       }
 
-      const response = await $.ajax({
+      const response = await jQuery.ajax({
         url: this.editor.config.ajax_url,
         method: "POST",
         data: {
@@ -182,7 +182,7 @@ class PriceEditorDataModule {
    * Fills the tax class filter select.
    */
   populateTaxClassFilter() {
-    const $filter = $("#tax-class-filter");
+    const $filter = jQuery("#tax-class-filter");
     if ($filter.length === 0) {
       return;
     }
@@ -212,7 +212,7 @@ class PriceEditorDataModule {
    * Fills the category filter select.
    */
   populateCategoryFilter() {
-    const $filter = $("#category-filter");
+    const $filter = jQuery("#category-filter");
     const totalCount = this.editor.totalProductCount || 0;
     const allCategoriesLabel = this.editor.getText(
       "filters.allCategories",

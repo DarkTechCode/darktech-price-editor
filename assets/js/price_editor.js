@@ -2,21 +2,30 @@
  * Main entry point for the price editor.
  */
 
-$(document).ready(function () {
+function initPriceEditor() {
   const messages = window.darktech_pe?.i18n?.messages || {};
+  const jQueryInstance = window.jQuery;
 
-  if (typeof $ === "undefined") {
+  if (typeof jQueryInstance !== "function") {
     console.error(messages.missingJQuery || "jQuery is not loaded");
     return;
   }
 
-  if (typeof $.fn.DataTable === "undefined") {
+  if (typeof jQueryInstance.fn?.DataTable === "undefined") {
     console.error(messages.missingDataTablesConsole || "DataTables is not loaded");
     return;
   }
 
   window.priceEditor = new PriceEditor();
-});
+}
+
+if (typeof document !== "undefined") {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initPriceEditor);
+  } else {
+    initPriceEditor();
+  }
+}
 
 window.showNotification = function (message, type) {
   window.priceEditor?.showNotification(message, type);

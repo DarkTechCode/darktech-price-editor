@@ -433,6 +433,9 @@ msgstr "製品番号%1$dのタイトルを更新しました: %2$s -> %3$s"
 msgid "Updated product #%1$d SKU: \"%2$s\" -> \"%3$s\""
 msgstr "製品番号%1$d SKUを更新しました: 「%2$s」 -> 「%3$s」"
 
+msgid "SKU \"%1$s\" is already used by product #%2$d. SKU must be unique."
+msgstr "SKU「%1$s」はすでに商品 #%2$d で使用されています。SKU は一意である必要があります。"
+
 msgid "Updated product #%1$d regular price: \"%2$s\" -> \"%3$s\""
 msgstr "製品番号%1$dの通常価格を更新しました: \"%2$s\" -> \"%3$s\""
 

@@ -60,11 +60,11 @@ class PriceEditor {
     this.filtersModule.bindFilterEvents();
     this.historyModule.bindEvents();
 
-    $("#confirm-yes").on("click", () => this.uiModule.confirmAction(true));
-    $("#confirm-no").on("click", () => this.uiModule.confirmAction(false));
-    $("#errors-close").on("click", () => this.uiModule.hideErrors());
-    $("#clear-cache-btn").on("click", () => this.clearCacheAndReload());
-    $("#products-count").on("click", () => this.promptProductsLimit());
+    jQuery("#confirm-yes").on("click", () => this.uiModule.confirmAction(true));
+    jQuery("#confirm-no").on("click", () => this.uiModule.confirmAction(false));
+    jQuery("#errors-close").on("click", () => this.uiModule.hideErrors());
+    jQuery("#clear-cache-btn").on("click", () => this.clearCacheAndReload());
+    jQuery("#products-count").on("click", () => this.promptProductsLimit());
   }
 
   /**
@@ -97,7 +97,7 @@ class PriceEditor {
       return;
     }
 
-    if (!$.fn.DataTable) {
+    if (!jQuery.fn.DataTable) {
       this.uiModule.addError(
         this.getText(
           "messages.missingDataTables",
@@ -107,7 +107,7 @@ class PriceEditor {
       return;
     }
 
-    this.table = $("#products-table").DataTable({
+    this.table = jQuery("#products-table").DataTable({
       processing: true,
       serverSide: false,
       ajax: this.buildAjaxConfig(),
@@ -134,10 +134,10 @@ class PriceEditor {
         this.horizontalScrollModule.refresh();
       },
       initComplete: () => {
-        $(".dataTables_length").hide();
-        $(".dataTables_filter").hide();
-        $(".dataTables_info").hide();
-        $(".dataTables_paginate").hide();
+        jQuery(".dataTables_length").hide();
+        jQuery(".dataTables_filter").hide();
+        jQuery(".dataTables_info").hide();
+        jQuery(".dataTables_paginate").hide();
 
         this.columnsModule.applyColumnSettings();
         this.horizontalScrollModule.refresh();
@@ -402,7 +402,7 @@ class PriceEditor {
       `Products shown: ${count}`
     );
 
-    $("#products-count").text(text);
+    jQuery("#products-count").text(text);
   }
 
   /**
@@ -440,7 +440,7 @@ class PriceEditor {
    */
   async saveProductsLimit(limit) {
     try {
-      const response = await $.ajax({
+      const response = await jQuery.ajax({
         url: this.config.ajax_url,
         method: "POST",
         data: {

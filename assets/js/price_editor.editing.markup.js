@@ -126,15 +126,22 @@ class PriceEditorEditingMarkupFactory {
    * Renders title view mode.
    */
   renderTitleDisplay(productId, text) {
+    const actualValue = String(text || "").trim();
+    const displayText =
+      actualValue || this.editor.getText("defaults.emptyTitle", "-");
+
     return this.renderEditableText({
       className: "title-text",
       field: "title",
       productId,
-      text,
+      text: displayText,
       title: this.editor.getText(
         "editing.clickToEditTitle",
         "Click to edit the product title",
       ),
+      dataAttributes: {
+        value: actualValue,
+      },
     });
   }
 

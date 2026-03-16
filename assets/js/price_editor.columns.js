@@ -23,36 +23,36 @@ class PriceEditorColumnsModule {
    * Binds column manager UI events.
    */
   bindEvents() {
-    $("#column-filter-toggle").on("click", (event) => {
+    jQuery("#column-filter-toggle").on("click", (event) => {
       event.preventDefault();
       this.showModal();
     });
 
-    $("#column-filter-close").on("click", () => {
+    jQuery("#column-filter-close").on("click", () => {
       this.hideModal();
     });
 
-    $("#column-filter-modal").on("click", (event) => {
+    jQuery("#column-filter-modal").on("click", (event) => {
       if (event.target === event.currentTarget) {
         this.hideModal();
       }
     });
 
-    $(document).on(
+    jQuery(document).on(
       "change",
       "#column-filter-modal input[type='checkbox']",
       (event) => {
-        const columnIndex = parseInt($(event.target).data("column"), 10);
-        const visible = $(event.target).is(":checked");
+        const columnIndex = parseInt(jQuery(event.target).data("column"), 10);
+        const visible = jQuery(event.target).is(":checked");
         this.toggleColumn(columnIndex, visible);
       }
     );
 
-    $("#show-all-columns").on("click", () => this.showAllColumns());
-    $("#hide-all-columns").on("click", () => this.hideAllColumns());
-    $("#reset-columns").on("click", () => this.resetToDefault());
+    jQuery("#show-all-columns").on("click", () => this.showAllColumns());
+    jQuery("#hide-all-columns").on("click", () => this.hideAllColumns());
+    jQuery("#reset-columns").on("click", () => this.resetToDefault());
 
-    $(document).on("keydown", (event) => {
+    jQuery(document).on("keydown", (event) => {
       if (event.key === "Escape" && this.modalVisible) {
         this.hideModal();
       }
@@ -63,8 +63,8 @@ class PriceEditorColumnsModule {
    * Shows the column manager modal.
    */
   showModal() {
-    $("#column-filter-modal").show();
-    $("#column-filter-toggle").addClass("active");
+    jQuery("#column-filter-modal").show();
+    jQuery("#column-filter-toggle").addClass("active");
     this.modalVisible = true;
   }
 
@@ -72,8 +72,8 @@ class PriceEditorColumnsModule {
    * Hides the column manager modal.
    */
   hideModal() {
-    $("#column-filter-modal").hide();
-    $("#column-filter-toggle").removeClass("active");
+    jQuery("#column-filter-modal").hide();
+    jQuery("#column-filter-toggle").removeClass("active");
     this.modalVisible = false;
   }
 
@@ -88,7 +88,7 @@ class PriceEditorColumnsModule {
     this.editor.table.column(columnIndex).visible(visible);
     this.saveColumnSettings();
 
-    const columnName = $("#column-filter-modal .column-item")
+    const columnName = jQuery("#column-filter-modal .column-item")
       .eq(columnIndex)
       .find("span")
       .text();
@@ -113,9 +113,9 @@ class PriceEditorColumnsModule {
   saveColumnSettings() {
     const settings = {};
 
-    $("#column-filter-modal input[type='checkbox']").each((index, element) => {
-      const columnIndex = $(element).data("column");
-      settings[columnIndex] = $(element).is(":checked");
+    jQuery("#column-filter-modal input[type='checkbox']").each((index, element) => {
+      const columnIndex = jQuery(element).data("column");
+      settings[columnIndex] = jQuery(element).is(":checked");
     });
 
     try {
@@ -146,7 +146,7 @@ class PriceEditorColumnsModule {
     Object.keys(settings).forEach((columnIndex) => {
       const index = parseInt(columnIndex, 10);
       const visible = settings[columnIndex];
-      const $checkbox = $(
+      const $checkbox = jQuery(
         `#column-filter-modal input[data-column="${index}"]`
       );
 
@@ -165,9 +165,9 @@ class PriceEditorColumnsModule {
         return;
       }
 
-      $("#column-filter-modal input[type='checkbox']").each((index, element) => {
-        const columnIndex = parseInt($(element).data("column"), 10);
-        const visible = $(element).is(":checked");
+      jQuery("#column-filter-modal input[type='checkbox']").each((index, element) => {
+        const columnIndex = parseInt(jQuery(element).data("column"), 10);
+        const visible = jQuery(element).is(":checked");
         this.editor.table.column(columnIndex).visible(visible);
       });
     };
@@ -183,7 +183,7 @@ class PriceEditorColumnsModule {
    * Resets all columns to visible.
    */
   resetToDefault() {
-    $("#column-filter-modal input[type='checkbox']").prop("checked", true);
+    jQuery("#column-filter-modal input[type='checkbox']").prop("checked", true);
     this.applyColumnSettings();
     this.saveColumnSettings();
     this.editor.uiModule.updateTechInfo(
@@ -198,7 +198,7 @@ class PriceEditorColumnsModule {
    * Makes all columns visible.
    */
   showAllColumns() {
-    $("#column-filter-modal input[type='checkbox']").prop("checked", true);
+    jQuery("#column-filter-modal input[type='checkbox']").prop("checked", true);
     this.applyColumnSettings();
     this.saveColumnSettings();
     this.editor.uiModule.updateTechInfo(
@@ -210,8 +210,8 @@ class PriceEditorColumnsModule {
    * Hides all columns except the row number.
    */
   hideAllColumns() {
-    $("#column-filter-modal input[type='checkbox']").prop("checked", false);
-    $("#column-filter-modal input[data-column='0']").prop("checked", true);
+    jQuery("#column-filter-modal input[type='checkbox']").prop("checked", false);
+    jQuery("#column-filter-modal input[data-column='0']").prop("checked", true);
     this.applyColumnSettings();
     this.saveColumnSettings();
     this.editor.uiModule.updateTechInfo(
@@ -228,9 +228,9 @@ class PriceEditorColumnsModule {
   getCurrentSettings() {
     const settings = {};
 
-    $("#column-filter-modal input[type='checkbox']").each((index, element) => {
-      const columnIndex = $(element).data("column");
-      settings[columnIndex] = $(element).is(":checked");
+    jQuery("#column-filter-modal input[type='checkbox']").each((index, element) => {
+      const columnIndex = jQuery(element).data("column");
+      settings[columnIndex] = jQuery(element).is(":checked");
     });
 
     return settings;
